@@ -9,20 +9,20 @@
   -webkit-border-radius: 3;
   -moz-border-radius: 3;
   border-radius: 3px;
-  color: #ffffff;
+  color: black;
   font-size: 20px;
-  background: #3498db;
+  background: #4BBE33;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 }
 
 .navbutton:hover,.blurb-button:hover {
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background: #6DBE5C;
+  /*background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
   background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
   background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
   background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);*/
   text-decoration: none;
 }
 
@@ -36,15 +36,17 @@ h1 {
 	font-weight: 200;
 	font-size: 48pt;
 	text-align:center;
+	color:#3D015C
 }
+
 
 h1:after{
 	content: "";
     display: block;
-    height: 1px;
+    height: 3px;
     width: 90%;
     margin: auto;
-    background: #f00;
+    background: #3D015C;
 }
 
 .num {
@@ -52,7 +54,8 @@ h1:after{
 }
 
 body {
-  background-color: #d9005b;
+  background-color: #FAFAFA;
+  background-image: url("../images/bg.png");
   color: white;
   font-size: 16pt;
   font-family: 'Source Sans Pro', sans-serif;
@@ -63,7 +66,7 @@ body {
   display:table-layout;
   width: 100%;
   padding: 5px;
-  background-color: black;
+  background-color: #3D015C;
 }
 
 #logo {
@@ -87,22 +90,26 @@ body {
   width: 60%;
   max-width: 1000px;
   margin: auto;
-  background-color: #a3295c;
-  background-color: green;
+  background-color: white;
+  color:black;
+  border: 1px;
+  border-color: #DDD;
+  border-style: none solid solid solid;
 }
 
 
 #blurb {
-	background-color: orange;
+	background-color: #0D4B00;
+	background-image: url("../images/blurb-bg.png");
 	table-layout: fixed;
 	min-height: 140pt;
 	font-size:16pt;
-	
+	color:white;
 }
 
 /* each part of the blurb gets a little box */
 #blurb-copy,#mini-blurb,.blurb-button {
-	background-color: #ec6aa1;
+	background-color: rgba(33, 86, 22, 0.7);
 	border-radius: 5px;
 	padding: 3px;
 	margin: 5px;
@@ -110,11 +117,11 @@ body {
 
 .blurb-button{
 	display:block;
-	background: #3498db;
+	background: #4BBE33;
 	text-align:center;
 	text-decoration: none;
 	font-size: 32px;
-	color:white;
+	color:black;
 	text-decoration: none;
 	font-weight:bold;
 }
@@ -122,12 +129,18 @@ body {
 
 #blurb-copy {
 	min-height: 120pt;
+	display:block;
 }
 
 #blurb-left,#blurb-right {
 	display: table-cell;
 	vertical-align: top;
 	width: 40%;
+}
+
+.maincopy {
+	display:block;
+	margin: 10pt;
 }
 
 #containingBlock {
