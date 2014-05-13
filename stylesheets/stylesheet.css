@@ -64,9 +64,11 @@ body {
 
 .header {
   display:table-layout;
-  width: 100%;
   padding: 5px;
   background-color: #3D015C;
+  border: 3px;
+  border-style: none none solid none;
+  border-color: #28003C;
 }
 
 #logo {
@@ -86,6 +88,14 @@ body {
 	line-height: 48pt;
 }
 
+.dragon {
+	height: 200px;
+}
+
+.dragon:hover{
+	opacity: 0;
+}
+
 .main {
   width: 60%;
   max-width: 1000px;
@@ -97,9 +107,32 @@ body {
   border-style: none solid solid solid;
 }
 
-
-#blurb {
+.bgcolor {
+	display: block;
+	position: absolute;
 	background-color: #0D4B00;
+	background-image: url("../images/blurb-bg.png");
+	opacity: 0.9;
+	width: 100%;
+	min-height: 140pt;
+}
+
+.blurb {
+	background-color: #0D4B00;
+	position: relative;
+	background-image: url("../images/blurb-bg.png");
+	width: 100%;
+	table-layout: fixed;
+	
+	font-size:16pt;
+	color:white;
+}
+.blurbdummy {
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+	background-color: #0D4B00;
+	position: relative;
 	background-image: url("../images/blurb-bg.png");
 	table-layout: fixed;
 	min-height: 140pt;
@@ -108,7 +141,7 @@ body {
 }
 
 /* each part of the blurb gets a little box */
-#blurb-copy,#mini-blurb,.blurb-button {
+.blurbcopy,#mini-blurb,.blurbbutton {
 	background-color: rgba(33, 86, 22, 0.7);
 	border-radius: 5px;
 	padding: 3px;
@@ -127,12 +160,12 @@ body {
 }
 
 
-#blurb-copy {
+.blurbcopy {
 	min-height: 120pt;
 	display:block;
 }
 
-#blurb-left,#blurb-right {
+.blurbleft,.blurbright {
 	display: table-cell;
 	vertical-align: top;
 	width: 40%;
