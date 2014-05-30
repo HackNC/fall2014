@@ -86,9 +86,14 @@ h1:after{
 }
 
 .dates {
+	margin-left: 225px;
 	font-size: 1.5em;
 	font-weight: bold;
 	white-space: nowrap;
+}
+
+.place {
+	margin-left: 75px;
 }
 
 .slogan {
