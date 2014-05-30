@@ -116,11 +116,23 @@ h1:after{
 }
 
 .social {
-	display:table-cell;
+	position: absolute;
+	right: 0px;
+	top: 0px
 	text-align: right;
+	vertical-align: middle;
 	padding: 10px;
-	vertical-align: bottom;
-	line-height: 48pt;
+}
+
+.media-button {
+	width: 64px;
+	height: 64px;
+	margin-left: 10px;
+	opacity: 0.6;
+}
+
+.media-button:hover {
+	opacity: 1;
 }
 
 .dragon {
