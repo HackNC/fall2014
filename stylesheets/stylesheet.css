@@ -190,7 +190,7 @@ h1:after{
 }
 
 /* each part of the blurb gets a little box */
-.blurbcopy,.mini-blurb,.blurbbutton {
+.blurbcopy,.mini-blurb,.blurb-button {
 	background-color: rgba(33, 86, 22, 0.7);
 	border-radius: 5px;
 	padding: 3px;
@@ -327,8 +327,16 @@ footer {
 		content: " · ";
 		white-space: normal;
 	}
+	.blurbright {
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+	}
 	.faq-box {
 		width: 95%;
+	}
+	.blurbleft {
+		display:none;
 	}
 }
 @media (max-width : 630px) {
