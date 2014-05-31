@@ -183,6 +183,8 @@ h1:after{
 	background-color: #0D4B00;
 	position: relative;
 	background-image: url("../images/blurb-bg.png");
+	background-attachment: fixed;
+	background-position: left top;  
 	width: 100%;
 	table-layout: fixed;
 	font-size:1.2em;
