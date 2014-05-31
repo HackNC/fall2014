@@ -17,7 +17,7 @@ body {
 
 h1 {
 	font-weight: 200;
-	font-size: 48pt;
+	font-size: 3em;
 	text-align:center;
 	color:#3D015C
 }
@@ -154,9 +154,9 @@ h1:after{
 }
 
 .for-reals-this-time{
-	 border: 1px;
-  border-color: #DDD;
-  border-style: none solid solid solid;
+	border: 1px;
+	border-color: #DDD;
+	border-style: none solid solid solid;
 }
 .blurb-container {
 	display:block;
@@ -184,7 +184,7 @@ h1:after{
 	background-image: url("../images/blurb-bg.png");
 	width: 100%;
 	table-layout: fixed;
-	font-size:16pt;
+	font-size:1.2em;
 	color:white;
 }
 
@@ -248,7 +248,7 @@ h1:after{
 footer {
 	text-align: center;
 	color: #222222;
-	font-size: 10pt;
+	font-size: 0.8em;
 	margin: 10px;
 }
 
@@ -293,5 +293,8 @@ footer {
 @media (max-width : 630px) {
 	.social {
 		display: none;
+	}
+	.main {
+	  width: 100%;
 	}
 }
