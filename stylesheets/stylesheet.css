@@ -28,6 +28,7 @@ h1:after{
     height: 3px;
     width: 90%;
     margin: auto;
+	margin-bottom: 0.2em;
     background: #3D015C;
 }
 
@@ -245,6 +246,33 @@ h1:after{
   height: 100%;
 }
 
+.faq-container {
+	text-align: center;
+	
+}
+
+.faq-box {
+	display: inline-block;
+	width: 26%;
+	margin: 0% 2% 2em 2%;
+	vertical-align: top;
+}
+
+.q {
+	display: inline-block;
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 0.8em;
+}
+
+
+.a {
+	display: inline-block;
+	text-align: justify;
+	font-size: 0.9em;
+}
+
 footer {
 	text-align: center;
 	color: #222222;
@@ -256,6 +284,12 @@ footer {
 	.slogan {
 		width: 100%;
 		border-radius: 0px;
+	}
+	.faq-box {
+		width: 44%;
+	}
+	.a {
+		text-align: left;
 	}
 }
 
@@ -269,6 +303,10 @@ footer {
 	}
 	.main {
 	  width: 90%;
+	}
+	.a {
+		font-size: 1em;
+		text-align: justify;
 	}
 }
 
@@ -288,6 +326,9 @@ footer {
 	.place:before {
 		content: " · ";
 		white-space: normal;
+	}
+	.faq-box {
+		width: 95%;
 	}
 }
 @media (max-width : 630px) {
