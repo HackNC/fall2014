@@ -269,7 +269,7 @@ h1:after{
 
 .a {
 	display: inline-block;
-	text-align: justify;
+	text-align: left;
 	font-size: 0.9em;
 }
 
@@ -288,9 +288,6 @@ footer {
 	.faq-box {
 		width: 44%;
 	}
-	.a {
-		text-align: left;
-	}
 }
 
 @media (max-width : 1024px) {
@@ -306,7 +303,6 @@ footer {
 	}
 	.a {
 		font-size: 1em;
-		text-align: justify;
 	}
 }
 
