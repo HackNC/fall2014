@@ -139,10 +139,9 @@ body {
 }
 
 .maincopy {
-	display: inline-block;
-	margin: 10px;
-	width: 100%;
-	
+	display: block;
+	margin: 10pt;
+
 }
 
 #containingBlock {
