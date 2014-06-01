@@ -4,8 +4,8 @@
 }
 
 body {
-  background-color: #FAFAFA;
-  background-image: url("../images/bg.png");
+  background-color: #28003C;
+ /* background-image: url("../images/bg.png"); */
   background-attachment: fixed;
   background-position: left top;  
   color: white;
@@ -139,7 +139,7 @@ h1:after{
 
 
 .main {
-  width: 82%;
+  width: 85%;
   max-width: 1000px;
   margin: auto;
   background-color: white;
