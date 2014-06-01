@@ -16,7 +16,6 @@ body {
 
 p  {
 	text-indent:50px;
-	position: left;
 }
 
 h1 {
@@ -224,8 +223,9 @@ h1:after{
 }
 
 .maincopy {
-	display:block;
-	margin: 10pt;
+	display: inline-block;
+	width: 50%;
+	margin: 10px
 }
 
 .full-width-block {
