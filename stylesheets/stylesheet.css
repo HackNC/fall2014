@@ -224,6 +224,7 @@ h1:after{
 .maincopy {
 	display:block;
 	margin: 10pt;
+	position: left;
 }
 
 .full-width-block {
