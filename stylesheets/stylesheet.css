@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #28003C;
+  background-color: #FAFAFA;
   background-image: url("../images/bg.png");
   background-attachment: fixed;
   background-position: left top;  
@@ -137,16 +137,9 @@ h1:after{
 	opacity: 1;
 }
 
-.dragon {
-	height: 200px;
-}
-
-.dragon:hover{
-	opacity: 0;
-}
 
 .main {
-  width: 80%;
+  width: 82%;
   max-width: 1000px;
   margin: auto;
   background-color: white;
