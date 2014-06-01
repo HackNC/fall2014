@@ -115,7 +115,7 @@ h1:after{
 	font-size: 2.5em;
 	font-weight: bold;
 	color: #28003C;
-	background-color: #FAFAFA;
+	background-color: white;
 	border-radius: 10px 10px 0px 0px;
 }
 
@@ -142,7 +142,7 @@ h1:after{
 
 
 .main {
-  width: 85%;
+  width: 78%;
   max-width: 1000px;
   margin: auto;
   background-color: white;
