@@ -14,7 +14,9 @@ body {
   overflow-x: hidden;
 }
 
-p  {text-indent:50px;
+p  {
+	text-indent:50px;
+	position: left;
 }
 
 h1 {
@@ -224,7 +226,6 @@ h1:after{
 .maincopy {
 	display:block;
 	margin: 10pt;
-	position: left;
 }
 
 .full-width-block {
