@@ -67,8 +67,6 @@ h1:after{
   background-color: #3D015C;
   border: 1px;
   position:relative;
-  border-style: none none solid none;
-  border-color: #28003C;
   background-image: url('../images/purpletint.png'), url("http://placekitten.com/g/1280/505");
   background-size: cover, 100%;
   background-repeat: no-repeat, no-repeat;
