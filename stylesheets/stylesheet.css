@@ -4,7 +4,7 @@
 }
 
 body {
-	background-color: rgba(61, 1, 92, 0.67); /*#FAFAFA;*/
+	background-color: rgba(61, 1, 92, 0.90); /*#FAFAFA;*/
 	background-attachment: fixed;
 	background-position: left top;  
 	color: white;
@@ -133,7 +133,7 @@ animation-delay: 0.4s;
 .slogan {
 	display: inline-block;
 	text-align: center;
-	width: 78%;
+	width: 90%;
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
@@ -170,15 +170,11 @@ animation-delay: 0.4s;
 
 
 .main {
-	width: 78%;
-	max-width: 1000px;
+	width: 90%;
 	margin: auto;
 	background-color: white;
 	color:black;
-	border-radius: 0px 0px 10px 10px;
-	border: 1px;
-	border-color: #DDD;
-	border-style: none solid solid solid;
+	border: 0px;
 }
 .blurb-container {
 	display:block;
@@ -304,10 +300,7 @@ footer {
 }
 
 @media (max-width : 1280px) {
-	.slogan {
-		width: 100%;
-		border-radius: 0px;
-	}
+	
 	.faq-box {
 		width: 44%;
 	}
@@ -315,10 +308,9 @@ footer {
 
 @media (max-width : 1024px) {
 	.slogan {
+		width: 90%;
 		font-size: 2em;
 	}
-	
-
 	.main {
 		width: 90%;
 	}
@@ -357,6 +349,9 @@ footer {
 	}
 }
 @media (max-width : 630px) {
+	.slogan {
+		width: 100%;
+	}
 	.social {
 		width: 100px;
 		bottom: 70px;
