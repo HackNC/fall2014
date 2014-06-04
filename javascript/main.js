@@ -10,15 +10,17 @@ function setBg() {
 	
 	// select image based on drawable area's size
 	var flickrLink;
-	if (width <= 240){
-		flickrLink = "https://farm9.staticflickr.com/8230/8431583246_92a1a2aed3_m.jpg";
-	} else if (width <= 320) {
-		flickrLink = "https://farm9.staticflickr.com/8230/8431583246_92a1a2aed3_n.jpg";
-	} else if (width <= 500) {
-		flickrLink = "https://farm9.staticflickr.com/8230/8431583246_92a1a2aed3.jpg";
-	} else if (width <= 640) {
-		flickrLink = "https://farm9.staticflickr.com/8230/8431583246_92a1a2aed3_z.jpg";
-	} else if (width <= 800) {
+	// ignore these lines.  The height of these images is smaller than the header height.
+	// if (width <= 240){
+	// 	flickrLink = "https://farm9.staticflickr.com/8230/8431583246_92a1a2aed3_m.jpg";
+	// } else if (width <= 320) {
+	// 	flickrLink = "https://farm9.staticflickr.com/8230/8431583246_92a1a2aed3_n.jpg";
+	// } else if (width <= 500) {
+	// 	flickrLink = "https://farm9.staticflickr.com/8230/8431583246_92a1a2aed3.jpg";
+	// } else if (width <= 640) {
+	// 	flickrLink = "https://farm9.staticflickr.com/8230/8431583246_92a1a2aed3_z.jpg";
+	// } else
+	if (width <= 800) {
 		flickrLink = "https://farm9.staticflickr.com/8230/8431583246_92a1a2aed3_c.jpg";
 	} else if (width <= 1024) {
 		flickrLink = "https://farm9.staticflickr.com/8230/8431583246_92a1a2aed3_b.jpg";
