@@ -9,6 +9,7 @@ body {
 	background-position: left top;  
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16pt;
 	overflow-x: hidden;
 }
 
@@ -323,15 +324,9 @@ footer {
 	.main {
 		width: 90%;
 	}
-	h1 {
-                font-size: 1.5em;
-        }
-        p {
-                font-size: 1.3em;
-        }
-        .q, .a{
-                font-size: 1.2em;
-        }
+    body {
+    	font-size: 16pt;
+    }
 }
 
 @media (max-width : 800px) {
@@ -370,15 +365,9 @@ footer {
 	.blurbleft {
 		display:none;
 	}
-	h1 {
-                font-size: 1.5em;
-        }
-        p {
-                font-size: 1.3em;
-        }
-        .q, .a{
-                font-size: 1.2em;
-        }
+	body {
+    	font-size: 14pt;
+    }
 }
 @media (max-width : 640px) {
 	.headerBG {
@@ -398,15 +387,9 @@ footer {
 	.main {
 		width: 100%;
 	}
-        h1 {
-                font-size: 1.2em;
-        }
-        p {
-                font-size: 1.1em;
-        }
-        .q, .a{
-                font-size: 1em;
-        }
+    body {
+    	font-size: 12pt;
+    }
 
 @media (max-width : 320px) {
 	.headerBG {
@@ -416,4 +399,7 @@ footer {
 		background-repeat: no-repeat, no-repeat;
 		background-position: left top, left top;
 	}
+	body {
+    	font-size: 12pt;
+    }
 }
