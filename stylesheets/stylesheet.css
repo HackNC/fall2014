@@ -63,11 +63,8 @@ h1:after{
 header {
 	height: 500px;
 	border: 1px;
-	background-image: url('../images/purpletint.png');
+	
 	position:relative;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: left top;
 }
 
 .headerBG {
