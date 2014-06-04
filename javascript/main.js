@@ -36,4 +36,6 @@ function setBg() {
 	}
 	
 	document.getElementById("header").style.backgroundImage = "url('./images/purpletint.png'), url("+flickrLink+")";	
+	document.getElementById("header").style.backgroundSize = "initial, cover";
+	document.getElementById("header").style.backgroundRepeat = "repeat, no-repeat";
 }
