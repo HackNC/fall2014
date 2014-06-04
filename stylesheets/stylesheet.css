@@ -70,7 +70,6 @@ header {
 .headerBG {
 	height: 500px;
 	background-image: url('../images/purpletint.png'), url('../images/BannerWide.png');
-	position:relative;
 	background-size: cover, cover;
 	background-repeat: no-repeat, no-repeat;
 	background-position: left top, left top;
@@ -297,13 +296,26 @@ footer {
 }
 
 @media (max-width : 1280px) {
-	
+	.headerBG {
+		height: 500px;
+		background-image: url('../images/purpletint.png'), url('../images/Banner1280.png');
+		background-size: cover, cover;
+		background-repeat: no-repeat, no-repeat;
+		background-position: left top, left top;
+	}
 	.faq-box {
 		width: 44%;
 	}
 }
 
 @media (max-width : 1024px) {
+	.headerBG {
+		height: 500px;
+		background-image: url('../images/purpletint.png'), url('../images/Banner1024.png');
+		background-size: cover, cover;
+		background-repeat: no-repeat, no-repeat;
+		background-position: left top, left top;
+	}
 	.slogan {
 		width: 90%;
 		font-size: 2em;
@@ -316,7 +328,14 @@ footer {
 	}
 }
 
-@media (max-width : 860px) {
+@media (max-width : 800px) {
+	.headerBG {
+		height: 500px;
+		background-image: url('../images/purpletint.png'), url('../images/Banner800.png');
+		background-size: cover, cover;
+		background-repeat: no-repeat, no-repeat;
+		background-position: left top, left top;
+	}
 	.slogan {
 		font-size: 1.5em;
 	}
@@ -345,7 +364,14 @@ footer {
 		display:none;
 	}
 }
-@media (max-width : 630px) {
+@media (max-width : 640px) {
+	.headerBG {
+		height: 500px;
+		background-image: url('../images/purpletint.png'), url('../images/Banner640.png');
+		background-size: cover, cover;
+		background-repeat: no-repeat, no-repeat;
+		background-position: left top, left top;
+	}
 	.slogan {
 		width: 100%;
 	}
@@ -355,5 +381,14 @@ footer {
 	}
 	.main {
 		width: 100%;
+	}
+
+@media (max-width : 320px) {
+	.headerBG {
+		height: 500px;
+		background-image: url('../images/purpletint.png'), url('../images/Banner320.png');
+		background-size: cover, cover;
+		background-repeat: no-repeat, no-repeat;
+		background-position: left top, left top;
 	}
 }
