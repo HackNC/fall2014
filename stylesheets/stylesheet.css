@@ -336,9 +336,7 @@ footer {
 		background-repeat: no-repeat, no-repeat;
 		background-position: left top, left top;
 	}
-        h1 {
-                font-size: 1.2em;
-        }
+
 	.slogan {
 		font-size: 1.5em;
 	}
@@ -385,6 +383,15 @@ footer {
 	.main {
 		width: 100%;
 	}
+        h1 {
+                font-size: 1.2em;
+        }
+        p {
+                font-size: 1.1em;
+        }
+        .q, .a{
+                font-size: 1.1em;
+        }
 
 @media (max-width : 320px) {
 	.headerBG {
