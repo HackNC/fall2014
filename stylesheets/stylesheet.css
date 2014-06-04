@@ -66,11 +66,10 @@ h1:after{
   padding: 5px;
   background-color: #3D015C;
   border: 1px;
-  background-image: url('../images/purpletint.png'), url('https://farm9.staticflickr.com/8230/8431583246_000c0fadc6_k.jpg');
+  background-image: url('../images/purpletint.png'), url('../images/BannerWide.png');
   position:relative;
   background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
-  /*background-attachment: fixed, fixed;*/
   background-position: left top, left top;
 }
 
