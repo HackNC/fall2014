@@ -99,9 +99,9 @@ header {
     animation-duration:1s;
 }
 .fade-in.one {
--webkit-animation-delay: 0.4s;
--moz-animation-delay: 0.4s;
-animation-delay: 0.4s;
+-webkit-animation-delay: 0.75s;
+-moz-animation-delay: 0.75s;
+animation-delay: 0.75s;
 }
 
 .logo-stuff {
@@ -151,7 +151,7 @@ animation-delay: 0.4s;
 .social {
 	position: absolute;
 	right: 0px;
-	bottom: 50px;
+	bottom: 60px;
 	text-align: right;
 	vertical-align: middle;
 	padding: 10px;
