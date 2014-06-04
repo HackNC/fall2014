@@ -62,9 +62,16 @@ h1:after{
 
 header {
 	height: 500px;
-	padding: 5px;
-	background-color: #3D015C;
 	border: 1px;
+	background-image: url('../images/purpletint.png');
+	position:relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.headerBG {
+	height: 500px;
 	background-image: url('../images/purpletint.png'), url('../images/BannerWide.png');
 	position:relative;
 	background-size: cover, cover;
@@ -92,9 +99,9 @@ header {
     animation-duration:1s;
 }
 .fade-in.one {
--webkit-animation-delay: 0.2s;
--moz-animation-delay: 0.2s;
-animation-delay: 0.2s;
+-webkit-animation-delay: 0.4s;
+-moz-animation-delay: 0.4s;
+animation-delay: 0.4s;
 }
 
 .logo-stuff {
@@ -144,7 +151,7 @@ animation-delay: 0.2s;
 .social {
 	position: absolute;
 	right: 0px;
-	top: 0px
+	bottom: 50px;
 	text-align: right;
 	vertical-align: middle;
 	padding: 10px;
@@ -311,9 +318,7 @@ footer {
 		font-size: 2em;
 	}
 	
-	.social {
-		bottom:50px;
-	}
+
 	.main {
 		width: 90%;
 	}
@@ -353,7 +358,8 @@ footer {
 }
 @media (max-width : 630px) {
 	.social {
-		display: none;
+		width: 100px;
+		bottom: 70px;
 	}
 	.main {
 		width: 100%;
