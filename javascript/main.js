@@ -9,7 +9,7 @@ function setBg() {
 	width = window.innerWidth;
 	
 	// select image based on drawable area's size
-	var flickrLink;
+	//var flickrLink;
 	// ignore these lines.  The height of these images is smaller than the header height.
 	// if (width <= 240){
 	// 	flickrLink = "https://farm9.staticflickr.com/8230/8431583246_92a1a2aed3_m.jpg";

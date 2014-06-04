@@ -1,17 +1,16 @@
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  background-color: #FAFAFA;
-  background-image: url('../images/purpletint.png'); 
-  background-attachment: fixed;
-  background-position: left top;  
-  color: white;
-  font-size: 16pt;
-  font-family: 'Source Sans Pro', sans-serif;
-  overflow-x: hidden;
+	background-color: rgba(61, 1, 92, 0.67); /*#FAFAFA;*/
+	background-attachment: fixed;
+	background-position: left top;  
+	color: white;
+	font-size: 16pt;
+	font-family: 'Source Sans Pro', sans-serif;
+	overflow-x: hidden;
 }
 
 p  {
@@ -27,12 +26,12 @@ h1 {
 
 h1:after{
 	content: "";
-    display: block;
-    height: 3px;
-    width: 90%;
-    margin: auto;
+	display: block;
+	height: 3px;
+	width: 90%;
+	margin: auto;
 	margin-bottom: 0.2em;
-    background: #3D015C;
+	background: #3D015C;
 }
 
 .num {
@@ -41,36 +40,61 @@ h1:after{
 
 /* buttons are so very temporary and copypasta */
 .navbutton {
-  -webkit-border-radius: 3;
-  -moz-border-radius: 3;
-  border-radius: 3px;
-  color: black;
-  font-size: 20px;
-  background: #4BBE33;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
+	-webkit-border-radius: 3;
+	-moz-border-radius: 3;
+	border-radius: 3px;
+	color: black;
+	font-size: 20px;
+	background: #4BBE33;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
 }
 
 .navbutton:hover,.blurb-button:hover {
-  background: #6DBE5C;
-  /*background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);*/
-  text-decoration: none;
+	background: #6DBE5C;
+ 	/*background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);*/
+  	text-decoration: none;
 }
 
 header {
-  height: 500px;
-  padding: 5px;
-  background-color: #3D015C;
-  border: 1px;
-  background-image: url('../images/purpletint.png'), url('../images/BannerWide.png');
-  position:relative;
-  background-size: cover, cover;
-  background-repeat: no-repeat, no-repeat;
-  background-position: left top, left top;
+	height: 500px;
+	padding: 5px;
+	background-color: #3D015C;
+	border: 1px;
+	background-image: url('../images/purpletint.png'), url('../images/BannerWide.png');
+	position:relative;
+	background-size: cover, cover;
+	background-repeat: no-repeat, no-repeat;
+	background-position: left top, left top;
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+ 
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+.fade-in.one {
+-webkit-animation-delay: 0.2s;
+-moz-animation-delay: 0.2s;
+animation-delay: 0.2s;
 }
 
 .logo-stuff {
@@ -139,16 +163,12 @@ header {
 
 
 .main {
-  width: 78%;
-  max-width: 1000px;
-  margin: auto;
-  background-color: white;
-  color:black;
-  border-radius: 0px 0px 10px 10px;
-
-}
-
-.for-reals-this-time{
+	width: 78%;
+	max-width: 1000px;
+	margin: auto;
+	background-color: white;
+	color:black;
+	border-radius: 0px 0px 10px 10px;
 	border: 1px;
 	border-color: #DDD;
 	border-style: none solid solid solid;
@@ -203,8 +223,8 @@ header {
 	text-decoration: none;
 	font-weight:bold;
 	-webkit-border-radius: 3;
-    -moz-border-radius: 3;
-    border-radius: 3px;
+	-moz-border-radius: 3;
+	border-radius: 3px;
 }
 
 
@@ -225,21 +245,21 @@ header {
 }
 
 .full-width-block {
-  width:100%;
+	width:100%;
 }
 .videoWrapper {
-  position: relative;
-  padding-bottom: 53.3%;
-  padding-top: 25px;
-  height: 0;
+	position: relative;
+	padding-bottom: 53.3%;
+	padding-top: 25px;
+	height: 0;
 }
 
 .videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .faq-container {
@@ -295,7 +315,7 @@ footer {
 		bottom:50px;
 	}
 	.main {
-	  width: 90%;
+		width: 90%;
 	}
 	.a {
 		font-size: 1em;
@@ -336,6 +356,6 @@ footer {
 		display: none;
 	}
 	.main {
-	  width: 100%;
+		width: 100%;
 	}
 }
