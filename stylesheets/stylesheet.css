@@ -336,6 +336,9 @@ footer {
 		background-repeat: no-repeat, no-repeat;
 		background-position: left top, left top;
 	}
+        h1 {
+                font-size: 1.2em;
+        }
 	.slogan {
 		font-size: 1.5em;
 	}
