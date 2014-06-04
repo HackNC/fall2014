@@ -306,6 +306,7 @@ footer {
 	.faq-box {
 		width: 44%;
 	}
+	
 }
 
 @media (max-width : 1024px) {
@@ -323,9 +324,15 @@ footer {
 	.main {
 		width: 90%;
 	}
-	.a {
-		font-size: 1em;
-	}
+	h1 {
+                font-size: 1.5em;
+        }
+        p {
+                font-size: 1.3em;
+        }
+        .q, .a{
+                font-size: 1.2em;
+        }
 }
 
 @media (max-width : 800px) {
@@ -390,7 +397,7 @@ footer {
                 font-size: 1.1em;
         }
         .q, .a{
-                font-size: 1.1em;
+                font-size: 1em;
         }
 
 @media (max-width : 320px) {
