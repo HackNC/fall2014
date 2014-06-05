@@ -162,9 +162,9 @@ p  {
 }
 
 .maincopy {
-	display: inline-block;
+	margin: 30px;
 	width: 90%;
-	verical-align: center;
+
 }
 
 .faq-container {
