@@ -146,6 +146,7 @@ p  {
 
 
 .main {
+	top: 550;
 	width: 90%;
 	margin: auto;
 	background-color: white;
