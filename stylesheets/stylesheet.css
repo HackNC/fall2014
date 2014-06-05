@@ -156,11 +156,10 @@ p  {
 }
 
 .reg-button {
-	width: 17%;
+	width: 20%;
 	margin-left: 5px;
-	margin-top: 5%;
+	margin-top: 30px;
 	float: left;
-	margin: 10px;
 	display:block;
 	background: rgba(61, 1, 92, 0.90);
 	text-align:center;
