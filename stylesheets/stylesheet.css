@@ -108,8 +108,7 @@ p  {
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 30px;
-	margin-top: 30px;
+	padding:30px;
 	left: 0;
 	right: 0;
 	bottom: 0;
