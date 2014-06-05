@@ -170,6 +170,7 @@ animation-delay: 0.75s;
 	margin: auto;
 	background-color: white;
 	border: 0px;
+	color: black;
 }
 .blurb-container {
 	display:block;
