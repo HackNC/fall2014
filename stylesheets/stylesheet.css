@@ -34,32 +34,6 @@ h1:after{
 	background: #3D015C;
 }
 
-.num {
-	font-weight:bold;
-}
-
-/* buttons are so very temporary and copypasta */
-.navbutton {
-	-webkit-border-radius: 3;
-	-moz-border-radius: 3;
-	border-radius: 3px;
-	color: black;
-	font-size: 20px;
-	background: #4BBE33;
-	padding: 10px 20px 10px 20px;
-	text-decoration: none;
-}
-
-.navbutton:hover,.blurb-button:hover {
-	background: #6DBE5C;
- 	/*background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);*/
-  	text-decoration: none;
-}
-
 header {
 	height: 500px;
 	border: 1px;
