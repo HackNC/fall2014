@@ -103,7 +103,6 @@ p  {
 
 .slogan {
 	display: inline-block;
-	text-align: center;
 	width: 90%;
 	position: absolute;
 	margin-left: auto;
@@ -113,9 +112,17 @@ p  {
 	bottom: 0;
 	font-size: 2em;
 	font-weight: bold;
-	color: #28003C;
 	background-color: white;
 	border-radius: 10px 10px 0px 0px;
+	
+}
+
+.slogan-text{
+	font-size: 2em;
+	font-weight: bold;
+	color: #28003C;
+	text-align: center;
+	margin: 30px;
 }
 
 .social {
