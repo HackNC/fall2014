@@ -164,7 +164,7 @@ p  {
 .maincopy {
 	display: inline-block;
 	width: 90%;
-	text-align: center;
+	verical-align: center;
 }
 
 .faq-container {
