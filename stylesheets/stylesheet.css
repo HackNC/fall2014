@@ -212,13 +212,13 @@ animation-delay: 0.75s;
 	margin: 5px;
 }
 
-.blurb-button {
+.reg-button {
 	display:block;
-	background: #4BBE33;
+	background: rgba(61, 1, 92, 0.90);
 	text-align:center;
 	text-decoration: none;
 	font-size: 32px;
-	color:black;
+	color:white;
 	text-decoration: none;
 	font-weight:bold;
 	-webkit-border-radius: 3;
