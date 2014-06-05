@@ -242,7 +242,7 @@ animation-delay: 0.75s;
 
 .maincopy {
 	display: inline-block;
-	margin: px;
+	width: 90%;
 }
 
 .full-width-block {
