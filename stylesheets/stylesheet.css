@@ -102,7 +102,6 @@ p  {
 }
 
 .slogan {
-	top: 450px;
 	display: inline-block;
 	width: 90%;
 	position: absolute;
@@ -116,16 +115,11 @@ p  {
 	
 }
 
-.slogan-button-box{
-	margin-top: 30px;
-	margin-bottom: 30px;
-	margin-left:5px;
-	margin-right:5px;
-}
-
 .slogan-text{
+	text-align: center;
 	font-size: 2em;
 	font-weight: bold;
+	padding: 0px;
 	color: #28003C;
 }
 
@@ -151,7 +145,6 @@ p  {
 
 
 .main {
-	top: 650px;
 	width: 90%;
 	margin: auto;
 	background-color: white;
