@@ -169,7 +169,6 @@ animation-delay: 0.75s;
 	width: 90%;
 	margin: auto;
 	background-color: white;
-	color:black;
 	border: 0px;
 }
 .blurb-container {
@@ -240,7 +239,7 @@ animation-delay: 0.75s;
 
 .maincopy {
 	display: inline-block;
-	margin: 10px
+	margin: 10%;
 }
 
 .full-width-block {
