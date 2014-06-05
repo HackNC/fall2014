@@ -102,6 +102,7 @@ p  {
 }
 
 .slogan {
+	top: 350px;
 	display: inline-block;
 	width: 90%;
 	position: absolute;
