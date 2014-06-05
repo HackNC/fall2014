@@ -154,6 +154,11 @@ p  {
 	color: black;
 }
 
+.reg-box{
+	margin: 10%;
+	backgrund: green;
+}
+
 .reg-button {
 	display:block;
 	background: rgba(61, 1, 92, 0.90);
