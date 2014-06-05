@@ -172,6 +172,12 @@ animation-delay: 0.75s;
 	border: 0px;
 	color: black;
 }
+
+.aboutus{
+	width: 50%;	
+	margin: auto;
+	background-color: gray;
+
 .blurb-container {
 	display:block;
 	width: 100%;
@@ -240,7 +246,7 @@ animation-delay: 0.75s;
 
 .maincopy {
 	display: inline-block;
-	margin: 10%;
+	margin: px;
 }
 
 .full-width-block {
