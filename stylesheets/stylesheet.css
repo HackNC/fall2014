@@ -141,10 +141,10 @@ p  {
 }
 
 .maincopy {
-	margin-top: 1%;
-	margin-bottom: 1%;
-	margin-left: 1%;
-	margin-right: 1%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-left: 3%;
+	margin-right: 3%;
 }
 
 .media-button {
@@ -372,7 +372,7 @@ p  {
 
 }
 .ss-form-entry {
-	margin-bottom:1.5em;
+	margin-bottom: 0em;
 }
 .ss-form-entry input {
 	vertical-align:middle;
@@ -387,7 +387,7 @@ p  {
 }
 .ss-q-title {
 	display:block;
-	font-weight:bold;
+	font-size: 0.8em;
 } h2.ss-q-title {
 	margin-top:.83em;
 	margin-bottom:.83em;
@@ -403,7 +403,8 @@ p  {
 	color:#666;
 }
 .ss-q-short {
-
+	max-width: 20em;
+	width: 95%;
 }
 .ss-submit-message{
 	font:normal 13px arial,sans-serif;
