@@ -54,9 +54,7 @@ p  {
 }
 
 .dates {
-	margin-left: 225px;
-	font-size: 1.5em;
-	font-weight: bold;
+	margin-left: 5.5em;
 	white-space: nowrap;
 }
 
@@ -119,17 +117,20 @@ p  {
 
 .logo {
 	display: block;
-	width: auto;
+	width: 95%;
+	max-width: 800px;
 	height: auto;
-	max-height: 300px;
 	margin: auto;
 }
 
-.logo-stuff {
+.logo-container {
 	text-align: center;
 	position: absolute;
-	top: 55px;
+	top: 2em;
 	width: 100%;
+	font-size: 1.5em;
+	font-weight: bold;
+	white-space: normal;
 }
 
 .main {
@@ -160,7 +161,8 @@ p  {
 
 
 .place {
-	margin-left: 75px;
+	margin-left: 2em;
+	white-space: nowrap;
 }
 
 .q {
@@ -284,19 +286,6 @@ p  {
 		background-repeat: no-repeat, no-repeat;
 		background-position: left top, left top;
 	}
-	.logo {
-		width:100%;
-	}
-	.dates {
-		margin-left: 0px;
-	}
-	.place {
-		margin-left: 0px;
-	}
-	.place:before {
-		content: " · ";
-		white-space: normal;
-	}
 	.faq-box {
 		width: 95%;
 	}
@@ -311,6 +300,9 @@ p  {
 	 body {
     	font-size: 12pt;
     }
+    .dates {
+		margin-left: 0em;
+	}
 	.headerBG {
 		height: 500px;
 		background-image: url('../images/purpletint.png'), url('../images/Banner640.png');
@@ -324,6 +316,13 @@ p  {
 	}
 	.main {
 		width: 100%;
+	}
+	.place {
+		margin-left: 0em;
+	}
+	.place:before {
+		content: " · ";
+		white-space: normal;
 	}
 	.right {
 		float: none;
