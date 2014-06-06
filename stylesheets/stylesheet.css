@@ -4,7 +4,7 @@
 }
 
 body {
-	background-color: rgba(61, 1, 92, 0.90); /*#FAFAFA;*/
+	background-color: rgba(70, 24, 94, 1); /*#FAFAFA;*/
 	background-attachment: fixed;
 	background-position: left top;  
 	color: white;
@@ -105,11 +105,27 @@ p  {
 .headerBG {
 	height: 100vh;
 	min-height: 450px;
-	background-image: url('../images/purpletint.png'), url('../images/BannerWide.png');
+	background-image: url('../images/BannerWide.png');
 	background-size: cover, cover;
 	background-repeat: no-repeat, no-repeat;
 	background-position: left top, left top;
 }
+.headerBG:before {  
+    content: "";  
+    display: block;  
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+   	background: -webkit-linear-gradient(rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 1)); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 1)); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 0.40), rgba(70, 24, 94, 1)); /* For Firefox 3.6 to 15 */
+    -moz-transition: background .3s linear;  
+    -webkit-transition: background .3s linear;  
+    -o-transition: background .3s linear;  
+    transition: background .3s linear;  
+}  
 
 .left {
 	float: left;
@@ -262,10 +278,7 @@ a:active {
 
 @media (max-width : 1280px) {
 	.headerBG {
-		background-image: url('../images/purpletint.png'), url('../images/Banner1280.png');
-		background-size: cover, cover;
-		background-repeat: no-repeat, no-repeat;
-		background-position: left top, left top;
+		background-image: url('../images/Banner1280.png');
 	}
 	.faq-box {
 		width: 44%;
@@ -278,7 +291,7 @@ a:active {
     	font-size: 16pt;
     }
 	.headerBG {
-		background-image: url('../images/purpletint.png'), url('../images/Banner1024.png');
+		background-image: url('../images/Banner1024.png');
 	}
 	.main {
 		width: 90%;
@@ -290,7 +303,7 @@ a:active {
 
 @media (max-width : 800px) {
 	.headerBG {
-		background-image: url('../images/purpletint.png'), url('../images/Banner800.png');
+		background-image: url('../images/Banner800.png');
 	}
 	.faq-box {
 		width: 95%;
@@ -310,7 +323,7 @@ a:active {
 		margin-left: 0em;
 	}
 	.headerBG {
-		background-image: url('../images/purpletint.png'), url('../images/Banner640.png');
+		background-image: url('../images/Banner640.png');
 	}
 	.left {
 		float: none;
@@ -341,12 +354,12 @@ a:active {
 }  
 @media (max-width: 480px) {
 	.headerBG {
-		background-image: url('../images/purpletint.png'), url('../images/Banner320.png');
+		background-image: url('../images/Banner320.png');
 	}
 }
 @media (max-width : 320px) {
 	.headerBG {
-		background-image: url('../images/purpletint.png'), url('../images/Banner320.png');
+		background-image: url('../images/Banner320.png');
 	}
 	body {
     	font-size: 12pt;
