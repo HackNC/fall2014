@@ -79,9 +79,9 @@ p  {
 }	
 
 .fade-in.one {
-	-webkit-animation-delay: 0.75s;
-	-moz-animation-delay: 0.75s;
-	animation-delay: 0.75s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	animation-delay: 1s;
 }
 
 .faq-box {
@@ -128,7 +128,7 @@ p  {
 	position: absolute;
 	top: 2em;
 	width: 100%;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	font-weight: bold;
 	white-space: normal;
 }
@@ -161,10 +161,23 @@ p  {
 
 
 .place {
-	margin-left: 2em;
+	margin-left: 2.5em;
 	white-space: nowrap;
 }
+a:link {
+	color: inherit;
+	text-decoration: none;
+}
+a:visited {
+	color: inherit;
+}
+a:hover {
+	opacity:0.9;
+	text-decoration: underline;
+}
+a:active {
 
+}
 .q {
 	display: inline-block;
 	width: 100%;
