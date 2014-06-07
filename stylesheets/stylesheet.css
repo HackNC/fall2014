@@ -46,6 +46,13 @@ h1:after{
 	background: #3D015C;
 }
 
+h2 {
+	font-weight: 400;
+	font-size: 1.3em;
+	text-align: left;
+	color: #3D015C;
+}
+
 p  {
 	text-indent:50px;
 }
@@ -118,7 +125,9 @@ p  {
 	animation-duration:1s;
 }	
 
-.faq-box {
+.faq{
+
+}.box {
 	display: inline-block;
 	width: 26%;
 	margin: 0% 2% 2em 2%;
@@ -139,9 +148,10 @@ p  {
 	z-index: -1;
 	min-height: 500px;
 	background-image: url('../images/BannerWide.png');
-	background-size: cover, cover;
-	background-repeat: no-repeat, no-repeat;
-	background-position: left top, left top;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: left top;
 }
 .headerBG:before {  
     content: "";  
@@ -225,11 +235,11 @@ p  {
     transition: background .3s linear;  
 }
 
-
 .place {
 	margin-left: 2.5em;
 	white-space: nowrap;
 }
+
 a:link {
 	color: inherit;
 	text-decoration: none;
@@ -289,7 +299,13 @@ a:active {
 	vertical-align: middle;
 	padding: 10px;
 }
-
+.sponsor.box {
+	text-align: center;
+	vertical-align: middle;
+}
+.sponsor.box img{
+	width: 15em;
+}
 :target {
 	background-color: rgba(141, 22, 197, 0.07);
     -webkit-transition: background-color 1000ms ease-in-out;
@@ -299,29 +315,11 @@ a:active {
     transition: background-color 1000ms ease-in-out;
 }
 
-
-
-.videoWrapper {
-	position: relative;
-	padding-bottom: 53.3%;
-	padding-top: 25px;
-	height: 0;
-}
-
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-
 @media (max-width : 1280px) {
 	.headerBG {
 		background-image: url('../images/Banner1280.png');
 	}
-	.faq-box {
+	.box {
 		width: 44%;
 	}
 	
@@ -346,9 +344,6 @@ a:active {
 	.headerBG {
 		background-image: url('../images/Banner800.png');
 	}
-	.faq-box {
-		width: 95%;
-	}
 	.blurbleft {
 		display:none;
 	}
@@ -360,6 +355,9 @@ a:active {
 	 body {
     	font-size: 12pt;
     }
+    .box {
+		width: 95%;
+	}
     .dates {
 		margin-left: 0em;
 	}

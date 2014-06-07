@@ -7,8 +7,6 @@
 		<link rel="icon" href="./images/favicon.ico" type="image/x-icon"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,700' rel='stylesheet' type='text/css'>
-		<script src="./javascript/jquery-1.11.1.min.js"></script>
-		<script src="javascript/main.js"></script>
 		<title>HackNC 2014</title>
 	</head>
 	<body>
@@ -35,7 +33,7 @@
 		</header>
 		<section class="main">
 			<div class="right" id="SignUp">
-				<h1>Sign up</h1>
+				<h1 title="Sign up for HackNC. Powered by Google Forms.">Sign up</h1>
 				<form action="https://docs.google.com/forms/d/10IBpBDlN1j8_Q8HXiK8XV9YJks1LTV_RUBdO7QLoIPo/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
 					<ol role="list" class="ss-question-list">
 						<div class="ss-form-question errorbox-good" role="listitem">
@@ -114,39 +112,72 @@
 					</p>
 				</div>
 			</div>
-			<div class="fullwidth" id="Sponsor">
-				<h1>Our Sponsors</h1>
-				<button class="fullwidth">Sponsor</button>
+			<div class="fullwidth maincopy" id="Sponsor">
+				<h1>Sponsors</h1>
+				<h2>Fall 2014</h2>
+				<p>Interested in sponsoring this event? Contact us!</p>
+				<button>Sponsor</button>
+				<h2>Previous sponsors</h2>
+				<div class="sponsor box">
+					<a href="https://bitpay.com/">
+						<img src="./images/oldSponsors/bitpay.png"/>
+					</a>
+				</div>
+				<div class="sponsor box">
+					<a href="http://www.emc.com/">
+						<img src="./images/oldSponsors/emc.png"/>
+					</a>
+				</div>
+				<div class="sponsor box">
+					<a href="http://www.google.com/about/">
+						<img src="./images/oldSponsors/google.png"/>
+					</a>
+				</div>
+				<div class="sponsor box">
+					<a href="http://www.redventures.com/">
+						<img src="./images/oldSponsors/redventures.png"/>
+					</a>
+				</div>
+				<div class="sponsor box">
+					<a href="https://getpebble.com/">
+						<img src="./images/oldSponsors/pebble.png"/>
+					</a>
+				</div>
+				<div class="sponsor box">
+					<a href="http://www.carolinacreates.unc.edu/">
+						<img src="./images/oldSponsors/carolinacreates.png"/>
+					</a>
+				</div>
 			</div>
 			<div class="fullwidth" id="FAQ">
 				<h1>FAQs</h1>
 				<span class="faq-container">
 
-					<div class="faq-box">
+					<div class="faq box">
 						<span class="q">Who can attend?</span>
 						<span class="a">High school, undergraduate, and graduate students are welcome to join. But others will gladly
 							be welcomed to come check out the cool projects.</span>
 					</div>
-					<div class="faq-box">
+					<div class="faq box">
 						<span class="q">What's going to happen?</span>
 						<span class="a">A 24 hour period of hacking during which you will become a better programmer, meet new people, 
 							and make cool stuff. You'll have the chance to show off and win prizes!</span>
 					</div>
-					<div class="faq-box">
+					<div class="faq box">
 						<span class="q">Do I sign up as an individual or a team?</span>
 						<span class="a">Sign up as an individual! You can create your team whenever and with whoever you like.</span>
 					</div>
-					<div class="faq-box">
+					<div class="faq box">
 						<span class="q">What can I hack?</span>
 						<span class="a">HackNC is both a software and hardware hackathon. Code for web, mobile, desktop, and hack 
 							away at hardware to your heart's content.  </span>
 					</div>
-					<div class="faq-box">
+					<div class="faq box">
 						<span class="q">Can we build off existing code?</span>
 						<span class="a">The purpose of the event is to see what you can do in the time you're given, but there is no
 							strict law against existing code.</span>
 					</div>
-					<div class="faq-box">
+					<div class="faq box">
 						<span class="q">Will there be food?</span>
 						<span class="a">Hackathon essentaily means programming, caffeinated students, and endless amounts of food.</span>
 					</div>
@@ -157,5 +188,9 @@
 			<em>Copyright &copy; 2014 HackNC Team </em> <br>
 			<a href="https://github.com/HackNC/Fall2014">Check us out on GitHub</a>
 		</footer>
+
+		<script src="./javascript/jquery-1.11.1.min.js"></script>
+		<script src="javascript/main.js"></script>
+		
 	</body>
 </html>
