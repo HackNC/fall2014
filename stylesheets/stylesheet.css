@@ -67,16 +67,16 @@ p  {
 .fade-in {
 	opacity:0;  /* make things invisible upon start */
 	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-    	-moz-animation:fadeIn ease-in 1;
-	 animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
  
-    	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    	-moz-animation-fill-mode:forwards;
-    	animation-fill-mode:forwards;
- 
-    	-webkit-animation-duration:1s;
-    	-moz-animation-duration:1s;
-    	animation-duration:1s;
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
 }	
 
 .fade-in.one {
@@ -104,6 +104,7 @@ p  {
 
 .headerBG {
 	height: 100vh;
+	z-index: -1;
 	min-height: 450px;
 	background-image: url('../images/BannerWide.png');
 	background-size: cover, cover;
@@ -175,6 +176,18 @@ p  {
 
 .media-button:hover {
 	opacity: 1;
+}
+
+.nav {
+	position: absolute;
+	float: left;
+	width: 100%;
+	z-index: 10;
+	background-color: rgba(70, 24, 94, 0.7);
+	-moz-transition: background .3s linear;  
+    -webkit-transition: background .3s linear;  
+    -o-transition: background .3s linear;  
+    transition: background .3s linear;  
 }
 
 
@@ -259,6 +272,17 @@ a:active {
 	vertical-align: middle;
 	padding: 10px;
 }
+
+:target {
+	background-color: rgba(141, 22, 197, 0.07);
+    -webkit-transition: background-color 1000ms ease-in-out;
+    -moz-transition: background-color 1000ms ease-in-out;
+    -o-transition: background-color 1000ms ease-in-out;
+    -ms-transition: background-color 1000ms ease-in-out;
+    transition: background-color 1000ms ease-in-out;
+}
+
+
 
 .videoWrapper {
 	position: relative;
