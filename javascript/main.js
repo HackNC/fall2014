@@ -4,8 +4,14 @@ function setHeaderSize() {
 	$(".headerBG::before").css("height", $(window).height());
 }
 
+function initHeaderSize() {
+	$(".header").animate({height: $(window).height()}, 2000);
+	$(".headerBG").animate({height: $(window).height()}, 2000);
+	$(".headerBG::before").animate({height: $(window).height()}, 2000);
+}
+
 window.onload=function() {
-	setHeaderSize();
+	initHeaderSize();
 	if (navigator.userAgent.indexOf("Chrome") != -1) {
 		console.log("%c\n _    _               _      _   _   _____ \n| |  | |             | |    | \\ | | / ____|\n| |__| |  __ _   ___ | | __ |  \\| || |     \n|  __  | / _` | / __|| |/ / | . ` || |     \n| |  | || (_| || (__ |   <  | |\\  || |____ \n|_|  |_| \\__,_| \\___||_|\\_\\ |_| \\_| \\_____|\n                                           \n         WELCOME TO HACKER COUNTRY         ", "background-color:black; color:green;font-size:1.5em;");
 	} else {

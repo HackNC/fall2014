@@ -25,7 +25,6 @@ footer {
 
 header {
 	height: auto;
-	
 	min-height: 450px;
 	border: 1px;
 	position:relative;
@@ -84,9 +83,9 @@ p  {
 }	
 
 .fade-in.one {
-	-webkit-animation-delay: 1s;
-	-moz-animation-delay: 1s;
-	animation-delay: 1s;
+	-webkit-animation-delay: 1.75s;
+	-moz-animation-delay: 1.75s;
+	animation-delay: 1.75s;
 }
 
 .fade-out {
@@ -166,7 +165,7 @@ p  {
 .logo-container {
 	text-align: center;
 	position: absolute;
-	top: 2em;
+	top: 20%;
 	width: 100%;
 	font-size: 1.2em;
 	font-weight: bold;
