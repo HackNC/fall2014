@@ -5,9 +5,10 @@ function setHeaderSize() {
 }
 
 function initHeaderSize() {
-	$(".header").animate({height: $(window).height()}, 2000);
-	$(".headerBG").animate({height: $(window).height()}, 2000);
-	$(".headerBG::before").animate({height: $(window).height()}, 2000);
+	$duration = 1400;
+	$(".header").animate({height: $(window).height()}, $duration);
+	$(".headerBG").animate({height: $(window).height()}, $duration);
+	$(".headerBG::before").animate({height: $(window).height()}, $duration);
 }
 
 window.onload=function() {
