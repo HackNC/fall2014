@@ -1,11 +1,23 @@
-var width = 1280;
-document.addEventListener("DOMContentLoaded", function(event) {
+function setHeaderSize() {
+	$(".header").css("height", $(window).height());
+	$(".headerBG").css("height", $(window).height());
+	$(".headerBG::before").css("height", $(window).height());
+}
+
+window.onload=function() {
+	setHeaderSize();
 	if (navigator.userAgent.indexOf("Chrome") != -1) {
 		console.log("%c\n _    _               _      _   _   _____ \n| |  | |             | |    | \\ | | / ____|\n| |__| |  __ _   ___ | | __ |  \\| || |     \n|  __  | / _` | / __|| |/ / | . ` || |     \n| |  | || (_| || (__ |   <  | |\\  || |____ \n|_|  |_| \\__,_| \\___||_|\\_\\ |_| \\_| \\_____|\n                                           \n         WELCOME TO HACKER COUNTRY         ", "background-color:black; color:green;font-size:1.5em;");
 	} else {
 		console.log("\n _    _               _      _   _   _____ \n| |  | |             | |    | \\ | | / ____|\n| |__| |  __ _   ___ | | __ |  \\| || |     \n|  __  | / _` | / __|| |/ / | . ` || |     \n| |  | || (_| || (__ |   <  | |\\  || |____ \n|_|  |_| \\__,_| \\___||_|\\_\\ |_| \\_| \\_____|\n                                           \n         WELCOME TO HACKER COUNTRY         ");
 	}
-});
+}
+
+window.addEventListener("resize", function(event) {
+	setHeaderSize();
+})
+
+
 
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
