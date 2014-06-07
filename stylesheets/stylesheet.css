@@ -178,12 +178,12 @@ p  {
 	opacity: 1;
 }
 
-.nav {
+.navbar {
 	position: absolute;
 	float: left;
 	width: 100%;
 	z-index: 10;
-	background-color: rgba(70, 24, 94, 0.7);
+	background-color: rgba(70, 24, 94, 0.6);
 	-moz-transition: background .3s linear;  
     -webkit-transition: background .3s linear;  
     -o-transition: background .3s linear;  
