@@ -149,7 +149,6 @@ p  {
 	min-height: 500px;
 	background-image: url('../images/BannerWide.png');
 	background-size: cover;
-	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: left top;
 }
