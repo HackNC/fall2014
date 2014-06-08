@@ -97,11 +97,11 @@ p  {
 }	
 
 .fade-in.one {
-	-webkit-animation-delay: 1.75s;
-	-moz-animation-delay: 1.75s;
-	-ms-animation-delay: 1.75s;
-	-o-animation-delay: 1.75s;
-	animation-delay: 1.75s;
+	-webkit-animation-delay: 1.4s;
+	-moz-animation-delay: 1.4s;
+	-ms-animation-delay: 1.4s;
+	-o-animation-delay: 1.4s;
+	animation-delay: 1.4s;
 }
 
 .fade-out {
@@ -141,7 +141,7 @@ p  {
 
 .fullwidth {
 	clear: both;
-	width: 100%;
+	width: initial;
 }
 
 .headerBG {
