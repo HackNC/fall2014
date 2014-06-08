@@ -221,7 +221,7 @@ p  {
 	opacity: 1;
 }
 
-.navbar {
+.nav.bar {
 	position: fixed;
 	float: left;
 	width: 100%;
@@ -232,6 +232,17 @@ p  {
     -ms-transition: background .3s linear;  
     -o-transition: background .3s linear;  
     transition: background .3s linear;  
+}
+
+.nav.element-left {
+	float: left;
+}
+.nav.element-right {
+	float: right;
+}
+.nav.element-standby {
+	height: 24px;
+	vertical-align: top;
 }
 
 .place {
@@ -369,6 +380,10 @@ a:active {
 	}
 	.main {
 		width: 100%;
+	}
+	.nav.element-right {
+		visibility: hidden;
+		display: none;
 	}
 	.place {
 		margin-left: 0em;
