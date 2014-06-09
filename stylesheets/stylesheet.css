@@ -327,6 +327,14 @@ a:active {
 .sponsor.box img{
 	width: 15em;
 }
+
+.standby {
+	display: none;
+	position: absolute;
+	top: 49%;
+	left: 49%;
+}
+
 :target {
 	background-color: rgba(141, 22, 197, 0.07);
     -webkit-transition: background-color 1000ms ease-in-out;

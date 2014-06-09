@@ -33,10 +33,14 @@ var poweredOn = true;
 $(function() {
 	$('.power').click(function() {
 		if (poweredOn) {
-			$('.everything').fadeOut();
+			$('.everything').fadeOut(400, function() {
+				$('.standby').fadeIn()
+			});
 			poweredOn = false;
 		} else {
-			$('.everything').fadeIn();
+			$('.standby').fadeOut(200, function() {
+				$('.everything').fadeIn();
+			});
 			poweredOn = true;
 		}
 	})
