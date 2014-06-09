@@ -8,7 +8,7 @@ body {
 	background-attachment: fixed;
 	background-position: left top;  
 	color: white;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Ek Mukta', sans-serif;
 	font-size: 16pt;
 	overflow-x: hidden;
 }
@@ -134,7 +134,7 @@ p  {
 	vertical-align: top;
 }
 
-.faq-container {
+.container {
 	text-align: center;
 	color: black;
 }
