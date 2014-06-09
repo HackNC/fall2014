@@ -23,7 +23,7 @@ $(function() {
 			        // subtract navbar height;
 			        scrollTop: ($target.offset().top-$('.navbar').height())
 			    }, 500);
-				$target.addClass("fade-in");
+				$target.fadeOut(100).fadeIn(500);
 				return false;
 			}
 		}
