@@ -243,7 +243,18 @@ p  {
 .nav.element-standby {
 	height: 24px;
 	vertical-align: top;
+	margin-left: 0.25em;
+	margin-right: 0.25em;
 }
+.navbutton:not(:first-child):before {
+	content: "";
+	margin-left: 0.25em;
+}
+.navbutton:not(:last-child):after {
+	content: "";
+	margin-right: 0.25em;
+}
+
 
 .place {
 	margin-left: 2.5em;
