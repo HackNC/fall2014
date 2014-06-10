@@ -8,7 +8,7 @@ body {
 	background-attachment: fixed;
 	background-position: left top;  
 	color: white;
-	font-family: 'Ek Mukta', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 16pt;
 	overflow-x: hidden;
 }
@@ -61,6 +61,11 @@ p  {
 	display: inline-block;
 	text-align: left;
 	font-size: 0.9em;
+}
+
+.container {
+	text-align: center;
+	color: black;
 }
 
 .dates {
@@ -132,11 +137,6 @@ p  {
 	width: 26%;
 	margin: 0% 2% 2em 2%;
 	vertical-align: top;
-}
-
-.container {
-	text-align: center;
-	color: black;
 }
 
 .fullwidth {
