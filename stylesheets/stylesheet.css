@@ -150,7 +150,7 @@ p  {
 .headerBG {
 	z-index: -1;
 	min-height: 500px;
-	background-image: url('../images/bannerWide.png');
+	background-image: url('../images/BannerWide.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: left top;
