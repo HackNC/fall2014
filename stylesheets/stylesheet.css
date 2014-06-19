@@ -34,7 +34,7 @@ header {
 	width: 100%;
 	z-index: -1;
 	-webkit-transform: translateZ(0);
-	background-image: url('../images/BannerWide.png');
+	background-image: url('../images/Banner1920.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: left top;
@@ -366,6 +366,12 @@ a:active {
     -o-transition: background-color 1000ms ease-in-out;
     -ms-transition: background-color 1000ms ease-in-out;
     transition: background-color 1000ms ease-in-out;
+}
+
+@media (max-width : 1600px) {
+	.headerBG {
+		background-image: url('../images/Banner1600.png');
+	}
 }
 
 @media (max-width : 1280px) {
