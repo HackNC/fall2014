@@ -21,7 +21,7 @@ $(function() {
 			if ($target.length) {
 				$('html,body').animate({
 			        // subtract navbar height;
-			        scrollTop: ($target.offset().top-$('.navbar').height())
+			        scrollTop: ($target.offset().top-$('.nav table').height())
 			    }, 500);
 				$target.fadeOut(100).fadeIn(500);
 				return false;
