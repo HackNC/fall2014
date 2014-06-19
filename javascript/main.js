@@ -32,7 +32,7 @@ $(function() {
 var poweredOn = true;
 var animatingNow = false;
 $(function() {
-	$('a#power').click(function() {
+	$('.power').click(function() {
 		if (!animatingNow) {
 			animatingNow = true;
 			if (poweredOn) {
