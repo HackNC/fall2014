@@ -32,7 +32,7 @@ $(function() {
 var poweredOn = true;
 var animatingNow = false;
 $(function() {
-	$('.power').click(function() {
+	$('a#power').click(function() {
 		if (!animatingNow) {
 			animatingNow = true;
 			if (poweredOn) {
@@ -52,9 +52,9 @@ $(function() {
 	})
 })
 function setHeaderSize() {
-	$(".header").css("height", $(window).height());
-	$(".headerBG").css("height", $(window).height());
-	$(".headerBG::before").css("height", $(window).height());
+	$("header").css("height", $(window).height());
+	$("header .background").css("height", $(window).height());
+	$("header .background::before").css("height", $(window).height());
 }
 function startTime() {
 	var today=new Date();

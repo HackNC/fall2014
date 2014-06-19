@@ -12,52 +12,82 @@
 	</head>
 	<body>
 		<div class="everything">
-			<div class="navbar">
-				<span class="nav element-left">
-					&nbsp;&nbsp;
-					<span class="navbutton">
-						<img src="./images/favicon.ico" alt=""/>
-					</span>
-					<span class="navbutton">
-						<b>HackNC</b>
-					</span>
-					<span class="navbutton">
-						<a href="#SignUp">Sign Up</a>
-					</span>
-					<span class="navbutton">
-						<a href="#WhatIs" class="navbutton">About</a>
-					</span>
-					<span class="navbutton">
-						<a href="#Sponsor" class="navbutton">Sponsor</a>
-					</span>
-					<span class="navbutton">
-						<a href="#FAQ" class="navbutton">FAQ</a>
-					</span>
-					<span class="navbutton" id="Spring2014">
-						<a href="./Spring2014/index.html">Spring 2014</a>
-					</span>
-				</span>
-				<span class="nav element-right">
-					<span class="navbutton" id="clock">
-					</span>
-					<span class="navbutton">
-						<a class="power">
-							<img src="./images/standby.png" alt="on/off" class="nav element-standby"/>
-						</a>
-					</span>
-				</span>
+			<div class="nav">
+				<table>
+					<tbody>
+						<tr>
+							<td class="element-left">
+								&nbsp;&nbsp;
+								<span class="button">
+									<img src="./images/favicon.ico" alt=""/ class="icon">
+								</span>
+								<span class="button">
+									<b>HackNC</b>
+								</span>
+								<span class="button">
+									<a href="#SignUp">Sign Up</a>
+								</span>
+								<span class="button">
+									<a href="#WhatIs" class="navbutton">About</a>
+								</span>
+								<span class="button">
+									<a href="#Sponsor" class="navbutton">Sponsor</a>
+								</span>
+								<span class="button">
+									<a href="#FAQ" class="navbutton">FAQ</a>
+								</span>
+								<span class="button" id="Spring2014">
+									<a href="./Spring2014/index.html">Spring 2014</a>
+								</span>
+							</td>
+							<td class="element-right">
+								<span class="button" id="clock">
+								</span>
+								<span class="button">
+									<a id="power">
+										<img src="./images/standby.png" alt="on/off" class="icon"/>
+									</a>
+								</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<header>
-				<div class="headerBG fade-in one"></div>
-				<div class="logo-container">
-					<span class="dates"><a href="http://en.wikipedia.org/wiki/October_25" target="_blank">October 25-26</a><span class="place"><a href="https://www.google.com/maps/place/Sitterson+Hall/@35.9100095,-79.0533016,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2e6270ae415:0xc63ad7541cb9e8a1" target="_blank">UNC - Chapel Hill</a></span></span>
-					<img class="logo" src="images/bighk.png" alt="HackNC logo" title="HackNC logo"><br>
+				<!--	background image 	!-->
+				<div class="background fade-in one">
 				</div>
-				<div class="social">
-					<a href="http://facebook.com/HackNC14"><img src="./images/fbcircle.png" class="media-button"alt="HackNC Facebook Page"></a>
-					<a href="http://twitter.com/HackNC14"><img src="./images/twittercircle.png" class="media-button"alt="HackNC Twitter Page"></a>
+				<!-- 	logo	!-->
+				<div class="container">
+					<div class="logo">
+						<span class="text">
+							<span class="dates">
+								<a href="http://en.wikipedia.org/wiki/October_25" target="_blank">
+									October 25-26
+								</a>
+							</span>
+							<span class="place">
+								<a href="https://www.google.com/maps/place/Sitterson+Hall/@35.9100095,-79.0533016,17z/data=!3m1!4b1!4m2!3m1!1s0x89acc2e6270ae415:0xc63ad7541cb9e8a1" target="_blank">
+									UNC - Chapel Hill
+								</a>
+							</span>
+						</span>
+						<img class="image" src="images/bighk.png" alt="HackNC logo" title="HackNC logo"><br>
+					</div>
 				</div>
-				<span class="slogan slogan-text">
+				<!--	social media buttons 	!-->
+				<div class="container">
+					<div class="social">
+						<a href="http://facebook.com/HackNC14">
+							<img src="./images/fbcircle.png" class="image" alt="Facebook" title="Find us on Facebook!">
+						</a>
+						<a href="http://twitter.com/HackNC14">
+							<img src="./images/twittercircle.png" class="image" alt="Twitter" title="Tweet at us too.">
+						</a>
+					</div>
+				</div>
+				<!--	slogan 	!-->
+				<span class="slogan">
 					WELCOME TO HACKER COUNTRY
 				</span>
 			</header>
@@ -252,7 +282,9 @@
 			</footer>
 		</div>
 		<div class="standby">
-			<a class="power"><img src="./images/standby.png" alt="on/off" ></a>
+			<a id="power">
+				<img src="./images/standby.png" alt="on/off" />
+			</a>
 		</div>
 		<script src="./javascript/jquery-1.11.1.min.js"></script>
 		<script src="javascript/main.js"></script>
