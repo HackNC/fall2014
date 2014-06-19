@@ -27,15 +27,19 @@ header {
 	
 	position:relative;
 }
-header .background {
-	z-index: -1;
+.background {
+	float: left;
+	position: fixed;
 	min-height: 500px;
+	width: 100%;
+	z-index: -1;
+	-webkit-transform: translateZ(0);
 	background-image: url('../images/BannerWide.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: left top;
 }
-header .background:before {  
+.background:before {  
     content: "";  
     display: block;  
     position: absolute;  
