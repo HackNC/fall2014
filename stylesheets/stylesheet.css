@@ -355,8 +355,9 @@ a:active {
 .standby {
 	display: none;
 	position: absolute;
-	top: 49%;
-	left: 49%;
+	text-align: center;
+	width: 100%;
+	top: 50%;
 }
 
 :target {
