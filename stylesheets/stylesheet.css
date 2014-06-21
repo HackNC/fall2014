@@ -350,9 +350,10 @@ a:active {
 .sponsor.box {
 	text-align: center;
 	vertical-align: middle;
+	max-width: 15em;
 }
 .sponsor.box img{
-	width: 15em;
+	width: 100%;
 }
 
 .standby {
@@ -406,7 +407,7 @@ a:active {
 	}
 }
 @media (max-width : 640px) {
-	 body {
+	body {
     	font-size: 12pt;
     }
     .box {
@@ -434,6 +435,7 @@ a:active {
 	}
 	.main {
 		width: 100%;
+		margin: 0px;
 	}
 	.nav .element-right {
 		visibility: hidden;
@@ -446,7 +448,7 @@ a:active {
 	}
 	.slogan {
 		width: 100%;
-	}	
+	}
 }  
 @media (max-width: 480px) {
 	
