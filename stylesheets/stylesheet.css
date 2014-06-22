@@ -4,7 +4,7 @@
 }
 
 body {
-	background-color: rgba(86, 160, 211, 1); /*#FAFAFA;*/
+	background-color: rgba(19, 77, 104, 1); /*#FAFAFA;*/
 	background-position: left top;  
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -46,10 +46,10 @@ header {
     bottom: 0;  
     left: 0;  
     right: 0;  
-   	background: -webkit-linear-gradient(rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 1)); /* For Safari 5.1 to 6.0 */
-  	background: -o-linear-gradient(rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 1)); /* For Opera 11.1 to 12.0 */
-  	background: -moz-linear-gradient(rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 1)); /* For Firefox 3.6 to 15 */
-  	background: -ms-linear-gradient(rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 0.30), rgba(86, 160, 211, 1)); /* For Internet Explorer ??? */
+   	background: -webkit-linear-gradient(rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 1)); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 1)); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 1)); /* For Firefox 3.6 to 15 */
+  	background: -ms-linear-gradient(rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 1)); /* For Internet Explorer ??? */
     -moz-transition: background .3s linear;  
     -webkit-transition: background .3s linear;  
     -o-transition: background .3s linear;  
@@ -61,7 +61,7 @@ h1 {
 	font-weight: 200;
 	font-size: 1.9em;
 	text-align:center;
-	color: rgba(86, 160, 211, 1);
+	color: rgba(19, 77, 104, 1);
 }
 
 h1:after{
@@ -71,14 +71,14 @@ h1:after{
 	width: 90%;
 	margin: auto;
 	margin-bottom: 0.2em;
-	background: rgba(86, 160, 211, 1);
+	background: rgba(19, 77, 104, 1);
 }
 
 h2 {
 	font-weight: 400;
 	font-size: 1.3em;
 	text-align: left;
-	color: rgba(86, 160, 211, 1);
+	color: rgba(19, 77, 104, 1);
 }
 
 p  {
@@ -344,7 +344,7 @@ a:active {
 	font-size: 2.1em;
 	font-weight: bold;
 	padding: 0px;
-	color: rgba(86, 160, 211, 1);
+	color: rgba(19, 77, 104, 1);
 }
 
 .sponsor.box {
