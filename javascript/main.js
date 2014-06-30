@@ -49,7 +49,7 @@ $(function() {
 					$('.everything').fadeIn();
 					poweredOn = true;
 					animatingNow = false;
-				});	
+				});
 			}
 		}
 	})
