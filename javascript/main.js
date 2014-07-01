@@ -65,7 +65,7 @@ function setHeaderSize() {
 	$("header").css("height", height);
 	$(".background").css("height", height);
 	$(".background::before").css("height", height);
-	$(".logo-container").css("height", height-40)
+	$(".logo-container").css("height", height-70)
 	$("footer").css("margin-top", height);
 }
 
