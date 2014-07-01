@@ -5,7 +5,6 @@
 
 body {
 	background-color: rgba(19, 77, 104, 1); /*#FAFAFA;*/
-	background-position: left top;
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 16pt;
@@ -111,6 +110,7 @@ p  {
 	color: white;
 	font-weight: bold;
 	padding-top: 30px;
+	padding-bottom: 60px;
 	height: 100%;
 	width: 100%;
 	-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
@@ -229,7 +229,9 @@ p  {
 	width: initial;
 }
 
-
+.logo-container {
+	min-height: 460px;
+}
 
 .main {
 	width: 90%;

@@ -61,10 +61,12 @@ function selectRandomBackground() {
 }
 
 function setHeaderSize() {
-	$("header").css("height", $(window).height());
-	$(".background").css("height", $(window).height());
-	$(".background::before").css("height", $(window).height());
-	$("footer").css("margin-top", $(window).height());
+	var height = $(window).height();
+	$("header").css("height", height);
+	$(".background").css("height", height);
+	$(".background::before").css("height", height);
+	$(".logo-container").css("height", height-40)
+	$("footer").css("margin-top", height);
 }
 
 function setBackground(image) {
