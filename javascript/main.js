@@ -7,6 +7,41 @@ window.addEventListener("resize", function(event) {
 });
 startTime();
 
+
+//display notification center when icon is clicked
+var visibleNav = false;
+$('#notecenter').click( function() {
+	if (visibleNav) {
+		$('.notelist').animate({ right: -250 },'slow');
+	}
+	else {
+		$('.notelist').animate({ right: 0 },'slow');
+	}
+	visibleNav = !visibleNav;
+});
+
+
+// menubar 
+var menuOpen;
+$('body').click( function(event) {
+	var target = $(event.target);
+	if(menuOpen) {
+		if (target.is(".menu") && target.attr('id') != menuOpen.attr('id')) {
+			menuOpen.children("ul").toggle();
+			menuOpen = target;
+			target.children("ul").toggle();
+		} else {
+			menuOpen.children("ul").toggle();
+			menuOpen = null;
+		}
+	} else {
+		if (target.is(".menu")) {
+			target.children("ul").toggle();
+			menuOpen = target;
+		}
+	}
+});
+
 ////////////////// easter egg //////////////////
 if (navigator.userAgent.indexOf("Chrome") != -1) {
 	console.log("%c\n _    _               _      _   _   _____ \n| |  | |             | |    | \\ | | / ____|\n| |__| |  __ _   ___ | | __ |  \\| || |     \n|  __  | / _` | / __|| |/ / | . ` || |     \n| |  | || (_| || (__ |   <  | |\\  || |____ \n|_|  |_| \\__,_| \\___||_|\\_\\ |_| \\_| \\_____|\n                                           \n         WELCOME TO HACKER COUNTRY         ", "background-color:black; color:green;font-size:1.5em;");
@@ -67,7 +102,7 @@ function setHeaderSize() {
 	$(".background::before").css("height", height);
 	$(".logo-container").css("height", height-70);
 	$('.notelist').css("top", $('table').height());
-	$('.element-left span > ul').css("top", $('table').height());
+	$('.nav ul').css("top", $('table').height());
 	$("footer").css("margin-top", height);
 }
 
@@ -195,15 +230,3 @@ function fixMinutes(i) {
     if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
-
-//displays notification center when icon is clicked on
-var visibleNav = false;
-$('#notecenter').click( function() {
-	if (visibleNav) {
-		$('.notelist').animate({ right: -250 },'slow');
-	}
-	else {
-		$('.notelist').animate({ right: 0 },'slow');
-	}
-	visibleNav = !visibleNav;
-});

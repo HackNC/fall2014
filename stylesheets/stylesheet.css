@@ -279,6 +279,16 @@ p  {
 	user-select: none;
 }
 
+.nav a:hover {
+	text-decoration: none;
+	opacity: 1;
+}
+
+.nav span {
+	padding: .25em;
+	height:auto;
+}
+
 .nav table{
 	position:fixed;
 	float: left;
@@ -290,9 +300,6 @@ p  {
 	font-family: inherit;
 	font-size: inherit;
 	color: inherit;
-/*	-webkit-box-shadow: 0px 0px 10px 0px black;
- 	-moz-box-shadow: 0px 0px 10px 0px black;
-  	box-shadow: 0px 0px 10px 0px black;*/
   	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -311,68 +318,41 @@ p  {
 	width: 100%;
 }
 
-.nav .button {
-	padding: .25em;
-	height:auto;
-}
-
 .nav td.element-left {
 	padding: 1px;
 	height: auto;
 	vertical-align: middle;
 }
+
 .nav td.element-right {
 	padding: 1px;
 	height: auto;
 	vertical-align: middle;
 	text-align: right;
 }
+
 .nav .icon {
 	max-height: 1em;
 	position: relative;
-	top: 2px;
 }
 
-.nav .ham-icon {
-	max-height: 0.8em;
-	position: relative;
-	top: 0px;
-}
-
-.nav .notelist {
-	top: 27px;
-	position: fixed;
-	right: -250px;
-	z-index: 2;
-	-webkit-touch-callout: inherit;
-	-webkit-user-select: inherit;
-	-khtml-user-select: inherit;
-	-moz-user-select: inherit;
-	-ms-user-select: inherit;
-	user-select: inherit;
-}
-
-.element-left .button {
+.nav .menu {
 	position: relative;
 }
-
-.element-left .button+.button+.button:hover {
+.nav .menu:active {
 	background: #E04946;
 	color: #fff;
 	opacity: 0.9;
 }
 
-.nav a:hover {
-	text-decoration: none;
-	opacity: 1;
-}
-
-.element-left .button > ul {
+.nav .menu > ul {
+	color: black;
 	position: absolute;
-	top: 28px;
+	list-style: none;
+	top: 30px;
 	width: 250px;
-	visibility: hidden;
-	z-index: 0;
+	display: none;
+	z-index: 1;
 	background: rgba(227,227,227,0.80);
 	-webkit-box-shadow: 0px 0px 10px 0px black;
 	-moz-box-shadow: 0px 0px 10px 0px black;
@@ -380,33 +360,15 @@ p  {
 	border-radius: 0px 0px 5px 5px;
 }
 
-.element-left ul li {
-	display: block;
-	color: #000;
+.nav .menu ul li { 
 	padding: 5px;
-	font-family: inherit;
-	font-size: inherit;
-	-webkit-touch-callout: inherit;
-	-webkit-user-select: inherit;
-	-khtml-user-select: inherit;
-	-moz-user-select: inherit;
-	-ms-user-select: inherit;
-	user-select: inherit;
 }
 
-.element-left ul li:last-child {
-	border-radius: 0px 0px 5px 5px;
-}
-
-.element-left ul li:hover {
-	background: #E04946;
-	color: #fff;
-	opacity: 0.9;
-}
-
-.element-left .button:hover ul {
-	display: block;
-	visibility: visible;
+.nav .notelist {
+	top: 27px;
+	position: fixed;
+	right: -250px;
+	z-index: 2;
 }
 
 a:link {
