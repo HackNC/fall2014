@@ -65,7 +65,9 @@ function setHeaderSize() {
 	$("header").css("height", height);
 	$(".background").css("height", height);
 	$(".background::before").css("height", height);
-	$(".logo-container").css("height", height-70)
+	$(".logo-container").css("height", height-70);
+	$('.notelist').css("top", $('table').height());
+	$('.element-left span > ul').css("top", $('table').height());
 	$("footer").css("margin-top", height);
 }
 
@@ -193,3 +195,15 @@ function fixMinutes(i) {
     if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
+
+//displays notification center when icon is clicked on
+var visibleNav = false;
+$('#notecenter').click( function() {
+	if (visibleNav) {
+		$('.notelist').animate({ right: -250 },'slow');
+	}
+	else {
+		$('.notelist').animate({ right: 0 },'slow');
+	}
+	visibleNav = !visibleNav;
+});

@@ -61,7 +61,8 @@ h1 {
 	font-weight: 200;
 	font-size: 1.9em;
 	text-align:center;
-	color: rgba(19, 77, 104, 1);
+/*	color: rgba(19, 77, 104, 1);*/
+	color: #E04946;
 }
 
 h1:after{
@@ -122,7 +123,7 @@ p  {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	
+
 }
 .container .logo .center {
 }
@@ -259,23 +260,39 @@ p  {
 	margin-right: 3%;
 }
 
+.nav {
+	background: -webkit-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
+	background: -o-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
+	background: -moz-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
+	background: -ms-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-size: 0.8em;
+	color: black;
+	-webkit-box-shadow: 0px 0px 10px 0px black;
+	-moz-box-shadow: 0px 0px 10px 0px black;
+	box-shadow: 0px 0px 10px 0px black;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 .nav table{
 	position:fixed;
 	float: left;
 	height: auto;
 	width: 100%;
-	z-index: 1;
-	-webkit-transform: translateZ(0);
-	background: -webkit-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
-	background: -o-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
-  	background: -moz-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
-  	background: -ms-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-	font-size: 0.8em;
-	color: black;
-	-webkit-box-shadow: 0px 0px 10px 0px black;
+	z-index: 3;
+	-webkit-transform: translateZ(3);
+	background: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+/*	-webkit-box-shadow: 0px 0px 10px 0px black;
  	-moz-box-shadow: 0px 0px 10px 0px black;
-  	box-shadow: 0px 0px 10px 0px black;
+  	box-shadow: 0px 0px 10px 0px black;*/
   	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -314,6 +331,82 @@ p  {
 	max-height: 1em;
 	position: relative;
 	top: 2px;
+}
+
+.nav .ham-icon {
+	max-height: 0.8em;
+	position: relative;
+	top: 0px;
+}
+
+.nav .notelist {
+	top: 27px;
+	position: fixed;
+	right: -250px;
+	z-index: 2;
+	-webkit-touch-callout: inherit;
+	-webkit-user-select: inherit;
+	-khtml-user-select: inherit;
+	-moz-user-select: inherit;
+	-ms-user-select: inherit;
+	user-select: inherit;
+}
+
+.element-left .button {
+	position: relative;
+}
+
+.element-left .button+.button+.button:hover {
+	background: #E04946;
+	color: #fff;
+	opacity: 0.9;
+}
+
+.nav a:hover {
+	text-decoration: none;
+	opacity: 1;
+}
+
+.element-left .button > ul {
+	position: absolute;
+	top: 28px;
+	width: 250px;
+	visibility: hidden;
+	z-index: 0;
+	background: rgba(227,227,227,0.80);
+	-webkit-box-shadow: 0px 0px 10px 0px black;
+	-moz-box-shadow: 0px 0px 10px 0px black;
+	box-shadow: 0px 0px 10px 0px black;
+	border-radius: 0px 0px 5px 5px;
+}
+
+.element-left ul li {
+	display: block;
+	color: #000;
+	padding: 5px;
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-touch-callout: inherit;
+	-webkit-user-select: inherit;
+	-khtml-user-select: inherit;
+	-moz-user-select: inherit;
+	-ms-user-select: inherit;
+	user-select: inherit;
+}
+
+.element-left ul li:last-child {
+	border-radius: 0px 0px 5px 5px;
+}
+
+.element-left ul li:hover {
+	background: #E04946;
+	color: #fff;
+	opacity: 0.9;
+}
+
+.element-left .button:hover ul {
+	display: block;
+	visibility: visible;
 }
 
 a:link {
@@ -460,7 +553,7 @@ a:active {
 @media (max-width : 320px) {
 	body {
     	font-size: 12pt;
-    }	
+    }
 }
 
 /* Google form CSS */
