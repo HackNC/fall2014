@@ -15,6 +15,9 @@
 		<div class="everything">
 		<!--	Navbar	!-->
 			<div class="nav">
+				<div class="notelist">
+					<a class="twitter-timeline" href="https://twitter.com/HackNC14" data-widget-id="485547073505218560">Tweets by @HackNC14</a>
+				</div>
 				<table>
 					<tbody>
 						<tr>
@@ -24,22 +27,55 @@
 									<img src="./favicon.ico" alt="" class="icon"/>
 								</span>
 								<span class="button">
-									<a href="#home"><b>HackNC</b></a>
+									<a href="#home" class="navbutton"><b>HackNC</b></a>
 								</span>
 								<span class="button">
-									<a href="#SignUp">File</a>
+									<a href="#" class="navbutton">File</a>
 								</span>
 								<span class="button">
-									<a href="#WhatIs" class="navbutton">Edit</a>
+									<a href="#" class="navbutton">Edit</a>
+									<ul>
+										<li>
+											<a href="./Spring2014/index.html">Undo</a>
+										</li>
+									</ul>
 								</span>
 								<span class="button">
-									<a href="#Sponsor" class="navbutton">View</a>
+									<a href="#" class="navbutton">View</a>
+									<ul>
+										<li><a href="#home">HackNC</a></li>
+										<li><a href="#SignUp">Registration</a></li>
+										<li><a href="#WhatIs">About</a></li>
+										<li><a href="#Sponsor">Sponsors</a></li>
+										<li><a href="#FAQ">FAQ</a></li>
+									</ul>
 								</span>
 								<span class="button">
-									<a href="#FAQ" class="navbutton">Bookmarks</a>
+									<a href="#" class="navbutton">Go</a>
+									<ul>
+										<li><a href="https://bitpay.com/">Bitpay</a></li>
+										<li><a href="http://www.emc.com/">EMC</a></li>
+										<li><a href="http://www.google.com/about/">Google</a></li>
+										<li><a href="http://www.redventures.com/">Red Ventures</a></li>
+										<li><a href="https://getpebble.com/">Pebble</a></li>
+										<li><a href="http://www.carolinacreates.unc.edu/">Carolina Creates</a></li>
+										<li><a href="http://www.kitware.com/">Kitware</a></li>
+										<li><a href="https://www.metlife.com/">Met Life</a></li>
+										<li><a href="https://www.modolabs.com/">Modo Labs</a></li>
+										<li><a href="http://infusion.com/">Infusion</a></li>
+										<li><a href="http://sendgrid.com/">SendGrid</a></li>
+										<li><a href="http://innovate.unc.edu/">Innovate at Carolina</a></li>
+									</ul>
 								</span>
 								<span class="button" id="Spring2014">
-									<a href="./Spring2014/index.html">Help</a>
+									<a href="#" class="navbutton">Help</a>
+									<ul>
+										<li><a href="https://twitter.com/HackNC14">Twitter @HackNC14</a></li>
+										<li><a href="https://www.facebook.com/hacknc14">Facebook hacknc14</a></li>
+										<li>Email hacknc@cs.unc.edu</li>
+										<li><a href="http://www.justyo.co">Yo HACKNC</a></li>
+										<li><a href=https://itunes.apple.com/us/app/yo-hodor/id892110291?mt=8>Yo, Hodor HACKNC</a></li>
+									</ul>
 								</span>
 							</td>
 							<td class="element-right">
@@ -51,6 +87,10 @@
 									<a class="power">
 										<img src="./images/standby.png" alt="on/off" class="icon"/>
 									</a>
+								</span>
+								<span class="button" id="notecenter">
+									<img src="images/hamburgericon.png" alt="notification center" class="ham-icon"/>
+									&nbsp;
 								</span>
 							</td>
 						</tr>
@@ -302,6 +342,7 @@
 		</div>
 		<script src="./javascript/jquery-1.11.1.min.js"></script>
 		<script src="javascript/main.js"></script>
-
+		<!--given Twitter Script-->
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</body>
 </html>
