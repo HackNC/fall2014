@@ -326,6 +326,7 @@ p  {
 }
 
 .nav .icon {
+	top: 1px;
 	max-height: 1em;
 	position: relative;
 }
@@ -341,8 +342,8 @@ p  {
 	list-style: none;
 }
 .nav ul.topnav li {
-	padding-top: 2px;
-	padding-bottom: 2px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 	padding-left: 5px;
 	padding-right: 5px;
 	float: left;
