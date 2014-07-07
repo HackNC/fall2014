@@ -22,29 +22,35 @@ $('#notecenter').click( function() {
 
 
 // menubar 
-var menuOpen;
-$('body').click( function(event) {
-	var target = $(event.target);
-	if(menuOpen) {
-		if (target.is(".menu") && target.attr('id') != menuOpen.attr('id')) {
-			if (target.parent().is("menu")) {
-				menuOpen.children("ul").toggle();
-				menuOpen = null;
-			} else {
-				menuOpen.children("ul").toggle();
-				menuOpen = target;
-				target.children("ul").toggle();
-			}
+var lastClicked;
+$("ul.topnav li").click(function() { //When trigger is clicked...
+	var menu = $(this).find("ul.subnav");
+	if (lastClicked) {
+		if (lastClicked == menu) {
+			menu.fadeOut(100);
+			lastClicked = null;
+			alert("menu");
 		} else {
-			menuOpen.children("ul").toggle();
-			menuOpen = null;
+			menu.fadeIn(100);
+			lastClicked.fadeOut(100);
+			lastClicked = menu;
 		}
 	} else {
-		if (target.is(".menu")) {
-			target.children("ul").toggle();
-			menuOpen = target;
-		}
+		menu.fadeIn(100);
+		lastClicked = menu;
 	}
+	$(this).hover(function() {
+
+		}, function() {
+		}
+	);	
+	//Following events are applied to the subnav itself (moving subnav up and down)
+	// $(this).find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click
+
+	// $(this).hover(function() {
+	// }, function(){	
+	// 	$(this).find("ul.subnav").slideUp('fast'); //When the mouse hovers out of the subnav, move it back up
+	// });
 });
 
 ////////////////// easter egg //////////////////
