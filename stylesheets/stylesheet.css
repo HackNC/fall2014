@@ -284,11 +284,6 @@ p  {
 	opacity: 1;
 }
 
-.nav span {
-	padding: .25em;
-	height:auto;
-}
-
 .nav table{
 	position:fixed;
 	float: left;
@@ -336,7 +331,61 @@ p  {
 	position: relative;
 }
 
-.nav .menu {
+
+ul.topnav {
+	list-style: none;
+	margin: 0;
+	float: left;
+}
+ul.topnav li {
+	padding: 5px;
+	float: left;
+	margin: 0;
+	position: relative; /*--Declare X and Y axis base for sub navigation--*/
+}
+ul.topnav li a{
+	display: block;
+	text-decoration: none;
+	float: left;
+}
+
+ul.topnav li span { /*--Drop down trigger styles--*/
+	width: 17px;
+	height: 35px;
+	float: left;
+}
+
+ul.topnav li ul.subnav {
+	list-style: none;
+	position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
+	left: 0; top: 35px;
+	margin: 0; padding: 0;
+	display: none;
+	float: left;
+	width: 170px;
+	border: 1px solid #111;
+}
+ul.topnav li ul.subnav li{
+	margin: 0; padding: 0;
+	border-top: 1px solid #252525; /*--Create bevel effect--*/
+	border-bottom: 1px solid #444; /*--Create bevel effect--*/
+	clear: both;
+	width: 170px;
+}
+html ul.topnav li ul.subnav li a {
+	float: left;
+	width: 145px;
+	background: #333 url(dropdown_linkbg.gif) no-repeat 10px center;
+	padding-left: 20px;
+}
+html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
+	background: #222 url(dropdown_linkbg.gif) no-repeat 10px center; 
+}
+
+
+
+
+/*.nav .menu {
 	position: relative;
 }
 .nav .menu:active {
@@ -348,7 +397,6 @@ p  {
 .nav .menu > ul {
 	color: black;
 	position: absolute;
-	list-style: none;
 	top: 30px;
 	width: 250px;
 	display: none;
@@ -363,7 +411,16 @@ p  {
 .nav .menu ul li { 
 	padding: 5px;
 }
+.nav ul {
+	list-style-type: none;
+}
 
+.nav .toolbar > li {
+	display: inline;
+	padding: .25em;
+	height:auto;
+}
+*/
 .nav .notelist {
 	top: 27px;
 	position: fixed;

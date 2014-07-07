@@ -27,9 +27,14 @@ $('body').click( function(event) {
 	var target = $(event.target);
 	if(menuOpen) {
 		if (target.is(".menu") && target.attr('id') != menuOpen.attr('id')) {
-			menuOpen.children("ul").toggle();
-			menuOpen = target;
-			target.children("ul").toggle();
+			if (target.parent().is("menu")) {
+				menuOpen.children("ul").toggle();
+				menuOpen = null;
+			} else {
+				menuOpen.children("ul").toggle();
+				menuOpen = target;
+				target.children("ul").toggle();
+			}
 		} else {
 			menuOpen.children("ul").toggle();
 			menuOpen = null;
@@ -67,6 +72,8 @@ $(function() {
 	});
 });
 
+
+// power button
 var poweredOn = true;
 var animatingNow = false;
 $(function() {
