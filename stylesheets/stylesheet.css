@@ -295,6 +295,7 @@ p  {
 	font-family: inherit;
 	font-size: inherit;
 	color: inherit;
+	border-spacing: 0;
   	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -340,8 +341,8 @@ p  {
 	list-style: none;
 }
 .nav ul.topnav li {
-	padding-top: 1px;
-	padding-bottom: 1px;
+	padding-top: 2px;
+	padding-bottom: 2px;
 	padding-left: 5px;
 	padding-right: 5px;
 	float: left;
