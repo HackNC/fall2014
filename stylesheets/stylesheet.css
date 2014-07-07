@@ -525,6 +525,12 @@ a:active {
 		visibility: hidden;
 		display: none;
 	}
+	.nav ul.topnav li {
+		position: static; /* makes submenus stay on the screen */
+	}
+	.nav ul.topnav li ul.subnav {
+		left: 25%;
+	}
 	.main .right {
 		float: none;
 		width: 90%;
@@ -533,17 +539,15 @@ a:active {
 	.slogan {
 		width: 100%;
 	}
+
 }
 @media (max-width: 480px) {
-
+	
 }
 @media (max-width : 320px) {
 	body {
     	font-size: 12pt;
     }
-	.nav ul.topnav li {
-		position: inline; /* makes submenus stay on the screen */
-	}
 }
 
 /* Google form CSS */
