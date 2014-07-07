@@ -24,20 +24,24 @@ $('#notecenter').click( function() {
 // menubar 
 var lastClicked;
 $("ul.topnav li").click(function() { //When trigger is clicked...
+	var button = $(this);
 	var menu = $(this).find("ul.subnav");
 	if (lastClicked) {
-		if (lastClicked == menu) {
+		if (lastClicked.hasClass("open") && button.hasClass("open")) {
 			menu.fadeOut(100);
+			button.removeClass("open");
 			lastClicked = null;
-			alert("menu");
 		} else {
 			menu.fadeIn(100);
+			button.addClass("open");
 			lastClicked.fadeOut(100);
-			lastClicked = menu;
+			lastClicked.removeClass("open");
+			lastClicked = button;
 		}
 	} else {
 		menu.fadeIn(100);
-		lastClicked = menu;
+		button.addClass("open");
+		lastClicked = button;
 	}
 	$(this).hover(function() {
 

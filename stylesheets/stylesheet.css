@@ -346,6 +346,9 @@ ul.topnav li {
 	margin: 0;
 	position: relative; /*--Declare X and Y axis base for sub navigation--*/
 }
+ul.topnav li.open {
+	background: #E04946;
+}
 ul.topnav li a{
 	display: block;
 	text-decoration: none;
