@@ -336,32 +336,33 @@ p  {
 	float: right;
 }
 
-ul.topnav {
+.nav ul.topnav {
 	list-style: none;
-	margin: 0;
 }
-ul.topnav li {
-	padding: 5px;
+.nav ul.topnav li {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
 	float: left;
-	margin: 0;
 	position: relative; /*--Declare X and Y axis base for sub navigation--*/
 }
-ul.topnav li.open {
+.nav ul.topnav li.open {
 	background: #E04946;
 }
-ul.topnav li a{
+.nav ul.topnav li a{
 	display: block;
 	text-decoration: none;
 	float: left;
 }
 
-ul.topnav li span { /*--Drop down trigger styles--*/
+.nav ul.topnav li span { /*--Drop down trigger styles--*/
 	width: 17px;
 	height: 35px;
 	float: left;
 }
 
-ul.topnav li ul.subnav {
+.nav ul.topnav li ul.subnav {
 	background: rgba(200, 200, 200, 0.80);
 	list-style: none;
 	position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
@@ -372,58 +373,22 @@ ul.topnav li ul.subnav {
 	width: 170px;
 	border: 1px solid #111;
 }
-ul.topnav li ul.subnav li{
+.nav ul.topnav li ul.subnav li{
 	margin: 0; padding: 0;
 	clear: both;
 	width: 170px;
 }
 
-ul.topnav li ul.subnav li:hover {
+.nav ul.topnav li ul.subnav li:hover {
 	background: #E04946;
 }
 
-ul.topnav li ul.subnav li a {
+.nav ul.topnav li ul.subnav li a {
 	float: left;
 	width: 145px;
 	padding-left: 20px;
 }
 
-/*.nav .menu {
-	position: relative;
-}
-.nav .menu:active {
-	background: #E04946;
-	color: #fff;
-	opacity: 0.9;
-}
-
-.nav .menu > ul {
-	color: black;
-	position: absolute;
-	top: 30px;
-	width: 250px;
-	display: none;
-	z-index: 1;
-	background: rgba(227,227,227,0.80);
-	-webkit-box-shadow: 0px 0px 10px 0px black;
-	-moz-box-shadow: 0px 0px 10px 0px black;
-	box-shadow: 0px 0px 10px 0px black;
-	border-radius: 0px 0px 5px 5px;
-}
-
-.nav .menu ul li { 
-	padding: 5px;
-}
-.nav ul {
-	list-style-type: none;
-}
-
-.nav .toolbar > li {
-	display: inline;
-	padding: .25em;
-	height:auto;
-}
-*/
 .nav .notelist {
 	top: 27px;
 	position: fixed;
@@ -576,6 +541,9 @@ a:active {
 	body {
     	font-size: 12pt;
     }
+	.nav ul.topnav li {
+		position: inline; /* makes submenus stay on the screen */
+	}
 }
 
 /* Google form CSS */
