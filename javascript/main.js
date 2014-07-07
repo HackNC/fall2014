@@ -34,7 +34,7 @@ $("ul.topnav li").click(function() { //When trigger is clicked...
 		} else {
 			menu.fadeIn(100);
 			button.addClass("open");
-			lastClicked.fadeOut(100);
+			lastClicked.find("ul.subnav").fadeOut(100);
 			lastClicked.removeClass("open");
 			lastClicked = button;
 		}
