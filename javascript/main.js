@@ -43,18 +43,13 @@ $("ul.topnav li").click(function() { //When trigger is clicked...
 		button.addClass("open");
 		lastClicked = button;
 	}
-	$(this).hover(function() {
-
-		}, function() {
-		}
-	);	
-	//Following events are applied to the subnav itself (moving subnav up and down)
-	// $(this).find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click
-
-	// $(this).hover(function() {
-	// }, function(){	
-	// 	$(this).find("ul.subnav").slideUp('fast'); //When the mouse hovers out of the subnav, move it back up
-	// });
+	menu.find('li a').each(function() {
+		$(this).click(function() {
+			menu.fadeOut(100);
+			button.removeClass("open");
+			lastClicked = null;
+		});
+	});
 });
 
 ////////////////// easter egg //////////////////
