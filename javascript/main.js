@@ -50,6 +50,9 @@ $("ul.topnav li").click(function() { //When trigger is clicked...
 			lastClicked = null;
 		});
 	});
+	var yPos = $(window).scrollTop();
+	$(window).scrollTop(yPos);
+	return false; // prevents page from scrolling to the top
 });
 
 ////////////////// easter egg //////////////////
@@ -60,6 +63,7 @@ if (navigator.userAgent.indexOf("Chrome") != -1) {
 }
 
 ////////////////// function definitions //////////////////
+// scrolling on anchor clicks
 $(function() {
 	$('a[href*=#]:not([href=#])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
