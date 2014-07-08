@@ -148,14 +148,15 @@ p  {
 
 .container .social {
 	position: absolute;
+	width: 200px;
+	height: 64px;
 	right: 0px;
 	bottom: 60px;
 	padding: 10px;
 }
 .container .social .image {
-	width: 64px;
-	height: 64px;
-	margin-left: 10px;
+	height: 100%;
+	margin: 10px;
 	opacity: 0.6;
 }
 .container .social .image:hover {
@@ -521,8 +522,8 @@ a:active {
 		width: 90%;
 	}
 	.container .social {
-		width: 100px;
-		bottom: 100px;
+		width: 125px;
+		height: 40px;
 	}
 	.main {
 		width: 100%;
