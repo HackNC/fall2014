@@ -524,6 +524,7 @@ a:active {
 	.container .social {
 		width: 125px;
 		height: 40px;
+		bottom: 100px;
 	}
 	.main {
 		width: 100%;
