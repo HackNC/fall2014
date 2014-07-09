@@ -31,23 +31,27 @@ $("ul.topnav li").click(function() { //When trigger is clicked...
 			menu.fadeOut(100);
 			button.removeClass("open");
 			lastClicked = null;
+			lastHover = null;
 		} else {
 			menu.fadeIn(100);
 			button.addClass("open");
 			lastClicked.find("ul.subnav").fadeOut(100);
 			lastClicked.removeClass("open");
 			lastClicked = button;
+			lastHover = button;
 		}
 	} else {
 		menu.fadeIn(100);
 		button.addClass("open");
 		lastClicked = button;
+		lastHover = button;
 	}
 	menu.find('li a').each(function() {
 		$(this).click(function() {
 			menu.fadeOut(100);
 			button.removeClass("open");
 			lastClicked = null;
+			lastHover = null;
 		});
 	});
 	var yPos = $(window).scrollTop();
@@ -56,19 +60,27 @@ $("ul.topnav li").click(function() { //When trigger is clicked...
 });
 
 
-//after click, should hover over other menu items
-//flashes if subnav is hovered over though...
-
+//after menu item is clicked on, can hover between menu items
+var lastHover;
 $(".element-left ul.topnav > li+li+li").hover(function() { //mouse enter
 	var button = $(this);
 	var menu = $(this).find("ul.subnav");
-	if (lastClicked != button && lastClicked != null) {
-		menu.fadeIn(100);
-		button.addClass("open");
-		lastClicked.find("ul.subnav").fadeOut(100);
-		lastClicked.removeClass("open");
-		lastClicked = button;
+	if (lastHover && !button.hasClass("open")) {
+			menu.fadeIn(100);
+			button.addClass("open");
+			lastHover.find("ul.subnav").fadeOut(100);
+			lastHover.removeClass("open");
+			lastHover = button;
+			lastClicked = lastHover;
 	}
+	menu.find('li a').each(function() {
+		$(this).click(function() {
+			menu.fadeOut(100);
+			button.removeClass("open");
+			lastHover = null;
+		});
+	});
+}, function() { //mouse leave
 });
 
 
