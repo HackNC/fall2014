@@ -59,6 +59,16 @@ $("ul.topnav li").click(function() { //When trigger is clicked...
 	return false; // prevents page from scrolling to the top
 });
 
+//drop-down disappears when the user clicks outside the menubar
+$(".everything").click(function() {
+	if (lastClicked && $(this) != $("ul.topnav li")) {
+		lastClicked.find("ul.subnav").fadeOut(100);
+		lastClicked.removeClass("open");
+		lastClicked = null;
+		lastHover = null;
+	}
+});
+
 
 //after menu item is clicked on, can hover between menu items
 var lastHover;
