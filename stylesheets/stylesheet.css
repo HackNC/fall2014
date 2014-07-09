@@ -261,6 +261,10 @@ p  {
 	margin-right: 3%;
 }
 
+#notecenter, .power {
+	cursor: pointer;
+}
+
 .nav {
 	background: -webkit-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
 	background: -o-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
@@ -363,7 +367,7 @@ p  {
 }
 
 .nav ul.topnav li ul.subnav {
-	background: rgba(200, 200, 200, 0.80);
+	background: rgba(227, 227, 227, 0.80);
 	list-style: none;
 	position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
 	left: 0; top: 35px;
@@ -374,11 +378,10 @@ p  {
 	border: 1px solid #111;
 	border-top: 0px;
 
-	/* drop shadow
+	/* drop shadow */
 	-webkit-box-shadow: 0px 2px 5px 0px black;
 	-moz-box-shadow: 0px 2px 5px 0px black;
 	box-shadow: 0px 2px 5px 0px black;
-	*/
 }
 .nav ul.topnav li ul.subnav li{
 	margin: 0; padding: 0;
@@ -550,7 +553,7 @@ a:active {
 
 }
 @media (max-width: 480px) {
-	
+
 }
 @media (max-width : 320px) {
 	body {

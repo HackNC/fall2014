@@ -21,7 +21,7 @@ $('#notecenter').click( function() {
 });
 
 
-// menubar 
+// menubar
 var lastClicked;
 $("ul.topnav li").click(function() { //When trigger is clicked...
 	var button = $(this);
@@ -54,6 +54,23 @@ $("ul.topnav li").click(function() { //When trigger is clicked...
 	$(window).scrollTop(yPos);
 	return false; // prevents page from scrolling to the top
 });
+
+
+//after click, should hover over other menu items
+//flashes if subnav is hovered over though...
+
+$(".element-left ul.topnav > li+li+li").hover(function() { //mouse enter
+	var button = $(this);
+	var menu = $(this).find("ul.subnav");
+	if (lastClicked != button && lastClicked != null) {
+		menu.fadeIn(100);
+		button.addClass("open");
+		lastClicked.find("ul.subnav").fadeOut(100);
+		lastClicked.removeClass("open");
+		lastClicked = button;
+	}
+});
+
 
 ////////////////// easter egg //////////////////
 if (navigator.userAgent.indexOf("Chrome") != -1) {
