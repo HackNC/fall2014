@@ -26,9 +26,9 @@ var fadeTime = 10;
 
 // Menubar clicks
 var lastOpen;
-$(".element-left ul.topnav > li").click(function() {
-	var button = $(this);
-	var menu = $(this).find("ul.subnav");
+$(".element-left ul.topnav > li > a").click(function() {
+	var button = $(this).parent();
+	var menu = $(this).next("ul.subnav");
 	if (lastOpen) {
 		// if a menu is open
 		if (lastOpen.hasClass("open") && button.hasClass("open")) {
@@ -50,11 +50,10 @@ $(".element-left ul.topnav > li").click(function() {
 		button.addClass("open");
 		lastOpen = button;
 	}
-	return false; // prevents page from scrolling to the top
+	return false;
 });
 
 // Menubar hover.  Hover is enabled after a menu button is clicked.
-var lastHover;
 $(".element-left ul.topnav > li").hover(
 	// on mouse enter
 	function() {
@@ -76,22 +75,25 @@ $(".element-left ul.topnav > li").hover(
 );
 
 // Submenu clicks
-$(".element-left ul.topnav li").each(function() {
+$(".element-left ul.topnav > li").each(function() {
 	var button = $(this);
 	var menu = button.find("ul.subnav");
-	$(this).find('ul.subnav li a').click(function() {
+	$(this).find('ul.subnav > li > a').click(function() {
 		menu.fadeOut(fadeTime);
 		button.removeClass("open");
 		lastOpen = null;
-		console.log($(this));
-		return true;
+		if($(this).hasClass("external")) {
+			return true;
+		} else {
+			return false;
+		}
 	});
 });
 	
 
 // Submenu closes on page click
-$(".everything").click(function() {
-	if (lastOpen && $(this) != $("ul.topnav li")) {
+$(".everything:not(.nav)").click(function() {
+	if (lastOpen) {
 		// if a menu is open and the click is not on a new menu
 		lastOpen.find("ul.subnav").fadeOut(fadeTime);
 		lastOpen.removeClass("open");
