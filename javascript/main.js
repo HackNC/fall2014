@@ -20,79 +20,84 @@ $('#notecenter').click( function() {
 	visibleNav = !visibleNav;
 });
 
+//////////////////// Toolbar javascript ///////////////////
 
-// menubar
-var lastClicked;
-$("ul.topnav li").click(function() { //When trigger is clicked...
+var fadeTime = 10;
+
+// Menubar clicks
+var lastOpen;
+$(".element-left ul.topnav > li").click(function() {
 	var button = $(this);
 	var menu = $(this).find("ul.subnav");
-	if (lastClicked) {
-		if (lastClicked.hasClass("open") && button.hasClass("open")) {
-			menu.fadeOut(100);
+	if (lastOpen) {
+		// if a menu is open
+		if (lastOpen.hasClass("open") && button.hasClass("open")) {
+			// if this is the same menu that was just opened, close it
+			menu.fadeOut(fadeTime);
 			button.removeClass("open");
-			lastClicked = null;
-			lastHover = null;
+			lastOpen = null;
 		} else {
-			menu.fadeIn(100);
+			// if this is a different menu than what is already open, close the old and open this
+			lastOpen.find("ul.subnav").fadeOut(fadeTime);
+			lastOpen.removeClass("open");
+			menu.fadeIn(fadeTime);
 			button.addClass("open");
-			lastClicked.find("ul.subnav").fadeOut(100);
-			lastClicked.removeClass("open");
-			lastClicked = button;
-			lastHover = button;
+			lastOpen = button;
 		}
 	} else {
-		menu.fadeIn(100);
+		// else no menu is open, open the menu that was clicked
+		menu.fadeIn(fadeTime);
 		button.addClass("open");
-		lastClicked = button;
-		lastHover = button;
+		lastOpen = button;
 	}
-	menu.find('li a').each(function() {
-		$(this).click(function() {
-			menu.fadeOut(100);
-			button.removeClass("open");
-			lastClicked = null;
-			lastHover = null;
-		});
-	});
-	var yPos = $(window).scrollTop();
-	$(window).scrollTop(yPos);
 	return false; // prevents page from scrolling to the top
 });
 
-//drop-down disappears when the user clicks outside the menubar
-$(".everything").click(function() {
-	if (lastClicked && $(this) != $("ul.topnav li")) {
-		lastClicked.find("ul.subnav").fadeOut(100);
-		lastClicked.removeClass("open");
-		lastClicked = null;
-		lastHover = null;
-	}
-});
-
-
-//after menu item is clicked on, can hover between menu items
+// Menubar hover.  Hover is enabled after a menu button is clicked.
 var lastHover;
-$(".element-left ul.topnav > li+li+li").hover(function() { //mouse enter
-	var button = $(this);
-	var menu = $(this).find("ul.subnav");
-	if (lastHover && !button.hasClass("open")) {
-			menu.fadeIn(100);
+$(".element-left ul.topnav > li").hover(
+	// on mouse enter
+	function() {
+		var button = $(this);
+		var menu = $(this).find("ul.subnav");
+		if (lastOpen && !button.hasClass("open")) {
+			// if a menu is open but it's not this menu, open this and close the old
+			lastOpen.find("ul.subnav").fadeOut(fadeTime);
+			lastOpen.removeClass("open");
+			menu.fadeIn(fadeTime);
 			button.addClass("open");
-			lastHover.find("ul.subnav").fadeOut(100);
-			lastHover.removeClass("open");
-			lastHover = button;
-			lastClicked = lastHover;
+			lastOpen = button;
+		}
+	}, 
+	// on mouse exit
+	function() {
+		// do nothing
 	}
-	menu.find('li a').each(function() {
-		$(this).click(function() {
-			menu.fadeOut(100);
-			button.removeClass("open");
-			lastHover = null;
-		});
-	});
-}, function() { //mouse leave
-});
+);
 
+// Submenu clicks
+$(".element-left ul.topnav li").each(function() {
+	var button = $(this);
+	var menu = button.find("ul.subnav");
+	$(this).find('ul.subnav li a').click(function() {
+		menu.fadeOut(fadeTime);
+		button.removeClass("open");
+		lastOpen = null;
+		console.log($(this));
+		return true;
+	});
+});
+	
+
+// Submenu closes on page click
+$(".everything").click(function() {
+	if (lastOpen && $(this) != $("ul.topnav li")) {
+		// if a menu is open and the click is not on a new menu
+		lastOpen.find("ul.subnav").fadeOut(fadeTime);
+		lastOpen.removeClass("open");
+		lastOpen = null;
+	}
+});
 
 ////////////////// easter egg //////////////////
 if (navigator.userAgent.indexOf("Chrome") != -1) {

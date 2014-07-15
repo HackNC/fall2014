@@ -351,6 +351,13 @@ p  {
 	float: left;
 	position: relative; /*--Declare X and Y axis base for sub navigation--*/
 }
+
+.nav ul.topnav li:first-child {
+	margin-left: 10px;
+}
+.nav ul.topnav li:last-child {
+	margin-right: 10px;
+}
 .nav ul.topnav li.open {
 	background: #E04946;
 }
