@@ -130,9 +130,10 @@ p  {
 	text-align: center;
 	width: 100%;
 }
-.logo .elements > div > img {
+.logo .elements > .image > img {
 	max-width: 100%;
 	max-height: 100%;
+	min-height: 380px;
 	height: auto;
 	margin: auto;
 }
