@@ -4,7 +4,7 @@
 }
 
 body {
-	background-color: rgba(19, 77, 104, 1); /*#FAFAFA;*/
+	background-color: #005972;
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 16pt;
@@ -45,22 +45,21 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
-   	background: -webkit-linear-gradient(rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 1)); /* For Safari 5.1 to 6.0 */
-  	background: -o-linear-gradient(rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 1)); /* For Opera 11.1 to 12.0 */
-  	background: -moz-linear-gradient(rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 1)); /* For Firefox 3.6 to 15 */
-  	background: -ms-linear-gradient(rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 0.30), rgba(19, 77, 104, 1)); /* For Internet Explorer ??? */
+   	/*background: -webkit-linear-gradient(rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 1)); 
+  	background: -o-linear-gradient(rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 1));
+  	background: -moz-linear-gradient(rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 1));
+  	background: -ms-linear-gradient(rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 1));
     -moz-transition: background .3s linear;
     -webkit-transition: background .3s linear;
     -o-transition: background .3s linear;
     -ms-transition: background .3s linear;
-    transition: background .3s linear;
+    transition: background .3s linear;*/
 }
 
 h1 {
 	font-weight: 200;
 	font-size: 1.9em;
 	text-align:center;
-/*	color: rgba(19, 77, 104, 1);*/
 	color: #E04946;
 }
 
@@ -71,14 +70,14 @@ h1:after{
 	width: 90%;
 	margin: auto;
 	margin-bottom: 0.2em;
-	background: rgba(19, 77, 104, 1);
+	background: #E04946;
 }
 
 h2 {
 	font-weight: 400;
 	font-size: 1.3em;
 	text-align: left;
-	color: rgba(19, 77, 104, 1);
+	color: #E04946;
 }
 
 p  {
@@ -437,7 +436,7 @@ a:active {
 	font-size: 2.1em;
 	font-weight: bold;
 	padding: 0px;
-	color: rgba(19, 77, 104, 1);
+	color: #E04946
 }
 
 .sponsor.box {
@@ -520,7 +519,7 @@ a:active {
 	.container .social {
 		width: 125px;
 		height: 40px;
-		bottom: 100px;
+		bottom: 90px;
 	}
 	.main {
 		width: 100%;
