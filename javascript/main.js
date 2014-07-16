@@ -2,7 +2,7 @@
 var image = selectRandomBackground();
 setHeaderSize();
 setBackground(image);
-window.addEventListener("resize", function(event) {
+window.addEventListener('resize', function(event) {
 	setHeaderSize();
 });
 startTime();
@@ -21,50 +21,49 @@ $('#notecenter').click( function() {
 });
 
 //////////////////// Toolbar javascript ///////////////////
-
 var fadeTime = 10;
 
 // Menubar clicks
 var lastOpen;
-$(".element-left ul.topnav > li > a").click(function() {
+$('.element-left ul.topnav > li > a').click(function() {
 	var button = $(this).parent();
-	var menu = $(this).next("ul.subnav");
+	var menu = $(this).next('ul.subnav');
 	if (lastOpen) {
 		// if a menu is open
-		if (lastOpen.hasClass("open") && button.hasClass("open")) {
+		if (lastOpen.hasClass('open') && button.hasClass('open')) {
 			// if this is the same menu that was just opened, close it
 			menu.fadeOut(fadeTime);
-			button.removeClass("open");
+			button.removeClass('open');
 			lastOpen = null;
 		} else {
 			// if this is a different menu than what is already open, close the old and open this
-			lastOpen.find("ul.subnav").fadeOut(fadeTime);
-			lastOpen.removeClass("open");
+			lastOpen.find('ul.subnav').fadeOut(fadeTime);
+			lastOpen.removeClass('open');
 			menu.fadeIn(fadeTime);
-			button.addClass("open");
+			button.addClass('open');
 			lastOpen = button;
 		}
 	} else {
 		// else no menu is open, open the menu that was clicked
 		menu.fadeIn(fadeTime);
-		button.addClass("open");
+		button.addClass('open');
 		lastOpen = button;
 	}
 	return false;
 });
 
 // Menubar hover.  Hover is enabled after a menu button is clicked.
-$(".element-left ul.topnav > li").hover(
+$('.element-left ul.topnav > li').hover(
 	// on mouse enter
 	function() {
 		var button = $(this);
-		var menu = $(this).find("ul.subnav");
-		if (lastOpen && !button.hasClass("open")) {
+		var menu = $(this).find('ul.subnav');
+		if (lastOpen && !button.hasClass('open')) {
 			// if a menu is open but it's not this menu, open this and close the old
-			lastOpen.find("ul.subnav").fadeOut(fadeTime);
-			lastOpen.removeClass("open");
+			lastOpen.find('ul.subnav').fadeOut(fadeTime);
+			lastOpen.removeClass('open');
 			menu.fadeIn(fadeTime);
-			button.addClass("open");
+			button.addClass('open');
 			lastOpen = button;
 		}
 	}, 
@@ -75,14 +74,14 @@ $(".element-left ul.topnav > li").hover(
 );
 
 // Submenu clicks
-$(".element-left ul.topnav > li").each(function() {
+$('.element-left ul.topnav > li').each(function() {
 	var button = $(this);
-	var menu = button.find("ul.subnav");
+	var menu = button.find('ul.subnav');
 	$(this).find('ul.subnav > li > a').click(function() {
 		menu.fadeOut(fadeTime);
-		button.removeClass("open");
+		button.removeClass('open');
 		lastOpen = null;
-		if($(this).hasClass("external")) {
+		if($(this).hasClass('external')) {
 			return true;
 		} else {
 			return false;
@@ -92,20 +91,20 @@ $(".element-left ul.topnav > li").each(function() {
 	
 
 // Submenu closes on page click
-$(".everything:not(.nav)").click(function() {
+$('.everything:not(.nav)').click(function() {
 	if (lastOpen) {
 		// if a menu is open and the click is not on a new menu
-		lastOpen.find("ul.subnav").fadeOut(fadeTime);
-		lastOpen.removeClass("open");
+		lastOpen.find('ul.subnav').fadeOut(fadeTime);
+		lastOpen.removeClass('open');
 		lastOpen = null;
 	}
 });
 
 ////////////////// easter egg //////////////////
-if (navigator.userAgent.indexOf("Chrome") != -1) {
-	console.log("%c\n _    _               _      _   _   _____ \n| |  | |             | |    | \\ | | / ____|\n| |__| |  __ _   ___ | | __ |  \\| || |     \n|  __  | / _` | / __|| |/ / | . ` || |     \n| |  | || (_| || (__ |   <  | |\\  || |____ \n|_|  |_| \\__,_| \\___||_|\\_\\ |_| \\_| \\_____|\n                                           \n         WELCOME TO HACKER COUNTRY         ", "background-color:black; color:green;font-size:1.5em;");
+if (navigator.userAgent.indexOf('Chrome') != -1) {
+	console.log('%c\n _    _               _      _   _   _____ \n| |  | |             | |    | \\ | | / ____|\n| |__| |  __ _   ___ | | __ |  \\| || |     \n|  __  | / _` | / __|| |/ / | . ` || |     \n| |  | || (_| || (__ |   <  | |\\  || |____ \n|_|  |_| \\__,_| \\___||_|\\_\\ |_| \\_| \\_____|\n                                           \n         WELCOME TO HACKER COUNTRY         ', 'background-color:black; color:green;font-size:1.5em;');
 } else {
-	console.log("\n _    _               _      _   _   _____ \n| |  | |             | |    | \\ | | / ____|\n| |__| |  __ _   ___ | | __ |  \\| || |     \n|  __  | / _` | / __|| |/ / | . ` || |     \n| |  | || (_| || (__ |   <  | |\\  || |____ \n|_|  |_| \\__,_| \\___||_|\\_\\ |_| \\_| \\_____|\n                                           \n         WELCOME TO HACKER COUNTRY         ");
+	console.log('\n _    _               _      _   _   _____ \n| |  | |             | |    | \\ | | / ____|\n| |__| |  __ _   ___ | | __ |  \\| || |     \n|  __  | / _` | / __|| |/ / | . ` || |     \n| |  | || (_| || (__ |   <  | |\\  || |____ \n|_|  |_| \\__,_| \\___||_|\\_\\ |_| \\_| \\_____|\n                                           \n         WELCOME TO HACKER COUNTRY         ');
 }
 
 ////////////////// function definitions //////////////////
@@ -157,15 +156,18 @@ function selectRandomBackground() {
 	return Math.floor(Math.random() * numImages);
 }
 
+// align all kinds of things that depend on the viewport size
 function setHeaderSize() {
 	var height = $(window).height();
-	$("header").css("height", height);
-	$(".background").css("height", height);
-	$(".background::before").css("height", height);
-	$(".logo-container").css("height", height-70);
-	$('.notelist').css("top", $('table').height());
-	$('.nav ul').css("top", $('table').height());
-	$("footer").css("margin-top", height);
+	$('header').css('height', height);
+	$('.background').css('height', height);
+	$('.background::before').css('height', height);
+	$('.logo').css('max-height', height-$('.slogan').height()-$('.nav table').height());
+	$('.logo').css('padding-top', $('.nav table').height());
+	$('.logo').css('padding-bottom', $('.slogan').height());
+	$('.notelist').css('top', $('.nav table').height());
+	$('.nav ul').css('top', $('.nav table').height());
+	$('footer').css('margin-top', height);
 }
 
 function setBackground(image) {
@@ -195,76 +197,76 @@ function startTime() {
 	var amPm = getAmPm(h);
 	switch(day) {
 		case 0:
-			day = "Sunday";
+			day = 'Sunday';
 			break;
 		case 1:
-			day = "Monday";
+			day = 'Monday';
 			break;
 		case 2:
-			day = "Tuesday";
+			day = 'Tuesday';
 			break;
 		case 3:
-			day = "Wednesday";
+			day = 'Wednesday';
 			break;
 		case 4:
-			day = "Thursday";
+			day = 'Thursday';
 			break;
 		case 5:
-			day = "Friday";
+			day = 'Friday';
 			break;
 		case 6:
-			day = "Saturday";
+			day = 'Saturday';
 			break;
 		default:
-			day = "";
+			day = '';
 			break;
 
 	}
 	switch(month) {
 		case 0:
-			month = "January";
+			month = 'January';
 			break;
 		case 1:
-			month = "February";
+			month = 'February';
 			break;
 		case 2:
-			month = "March";
+			month = 'March';
 			break;
 		case 3:
-			month = "April";
+			month = 'April';
 			break;
 		case 4:
-			month = "May";
+			month = 'May';
 			break;
 		case 5:
-			month = "June";
+			month = 'June';
 			break;
 		case 6:
-			month = "July";
+			month = 'July';
 			break;
 		case 7:
-			month = "August";
+			month = 'August';
 			break;
 		case 6:
-			month = "September";
+			month = 'September';
 			break;
 		case 6:
-			month = "October";
+			month = 'October';
 			break;
 		case 6:
-			month = "November";
+			month = 'November';
 			break;
 		case 6:
-			month = "December";
+			month = 'December';
 			break;
 		default:
-			month = "";
+			month = '';
 			break;
 
 	}
 	h = fixHours(h);
 	m = fixMinutes(m);
-	document.getElementById('clock').innerHTML = day + " " + month + " " + date + ", " + h + ":" + m + " " + amPm;
+	document.getElementById('clock').innerHTML = day + ' ' + month + ' ' + date + ', ' + h + ':' + m + ' ' + amPm;
 	var t = setTimeout(function(){
 		startTime()
 	},1000);
@@ -272,9 +274,9 @@ function startTime() {
 
 function getAmPm(h) {
 	if (h >= 12) {
-		return "PM";
+		return 'PM';
 	} else {
-		return "AM";
+		return 'AM';
 	}
 }
 
@@ -289,6 +291,6 @@ function fixHours(h) {
 }
 
 function fixMinutes(i) {
-    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+    if (i<10) {i = '0' + i};  // add zero in front of numbers < 10
     return i;
 }

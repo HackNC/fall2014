@@ -105,47 +105,37 @@ p  {
 	color: black;
 }
 
-.container .logo {
+.logo {
+	display: table;
+	width: 100%;
+	min-height: 415px;
 	font-size: 1.2em;
-	color: white;
 	font-weight: bold;
 	padding-top: 30px;
-	height: 100%;
-	width: 100%;
+	padding-bottom: 50px;
 	-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
     filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='drop-shadow'><feGaussianBlur in='SourceAlpha' stdDeviation='4'/><feOffset dx='12' dy='12' result='offsetblur'/><feFlood flood-color='rgba(0,0,0,0.5)'/><feComposite in2='offsetblur' operator='in'/><feMerge><feMergeNode/><feMergeNode in='SourceGraphic'/></feMerge></filter></svg>#drop-shadow");
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-  	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none;
-
 }
-.container .logo .center {
+.logo > .elements {
+	display: table-cell;
+	vertical-align: middle;
 }
-.container .logo .image {
-	display: block;
+.logo .elements > div {
+	text-align: center;
+	width: 100%;
+}
+.logo .elements > div > img {
 	max-width: 100%;
-	max-height: 90%;
+	max-height: 100%;
 	height: auto;
 	margin: auto;
 }
-.container .logo .left {
-	position: absolute;
-	top: 50%;
-	left: 5%;
-	vertical-align: middle;
-}
-.container .logo .right {
-	position: absolute;
-	top: 50%;
-	right: 5%;
-	vertical-align: middle;
-}
-
 .container .social {
 	position: absolute;
 	width: 200px;
@@ -228,10 +218,6 @@ p  {
 .fullwidth {
 	clear: both;
 	width: initial;
-}
-
-.logo-container {
-	min-height: 460px;
 }
 
 .main {
@@ -491,16 +477,14 @@ a:active {
 	.box {
 		width: 44%;
 	}
-.container .logo .left {
-		position: relative;
-		top: 0;
-		left: 0;
+	/*.logo .left {
+		text-align: center;
 	}
-	.container .logo .right {
+	.logo .right {
 		position: relative;
 		top: 0;
 		right: 0;
-	}
+	}*/
 }
 
 @media (max-width : 1024px) {
