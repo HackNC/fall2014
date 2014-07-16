@@ -164,7 +164,11 @@ function setHeaderSize() {
 	$('.background::before').css('height', height);
 	$('.logo').css('height', height-$('.slogan').height()-$('.nav table').height());
 	$('.logo').css('max-height', height-$('.slogan').height()-$('.nav table').height());
-	$('.logo > .elements > .image > img').css('height', height-$('.slogan').height()-$('.nav table').height()-$('.logo > .elements > .text').height()-3);
+	if (height > 499) {
+		$('.logo > .elements > .image > img').css('max-height', height-$('.slogan').height()-$('.nav table').height()-$('.logo > .elements > .text').height()-3);
+	} else {
+		$('.logo > .elements > .image > img').css('max-height', 499-$('.slogan').height()-$('.nav table').height()-$('.logo > .elements > .text').height()-3);
+	}
 	$('.logo').css('padding-top', $('.nav table').height());
 	$('.logo').css('padding-bottom', $('.slogan').height());
 	$('.notelist').css('top', $('.nav table').height());
