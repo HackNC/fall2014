@@ -162,6 +162,7 @@ function setHeaderSize() {
 	$('header').css('height', height);
 	$('.background').css('height', height);
 	$('.background::before').css('height', height);
+	$('.logo').css('height', height-$('.slogan').height()-$('.nav table').height());
 	$('.logo').css('max-height', height-$('.slogan').height()-$('.nav table').height());
 	$('.logo').css('padding-top', $('.nav table').height());
 	$('.logo').css('padding-bottom', $('.slogan').height());
