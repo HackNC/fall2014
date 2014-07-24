@@ -96,11 +96,32 @@ p  {
 	padding-left: 5px;
 	padding-right: 5px;
 	vertical-align: top;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.box img{
+	width: 100%;
+}
+.box.icon {
+	max-width: 5em;
+}
+.box.sponsor {
+	max-width: 15em;
 }
 
 .container {
 	text-align: center;
 	color: black;
+}
+.container.icon {
+	padding-top: 40px;
+	padding-left: 5px;
+	width: 150px;
+	-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+    filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='drop-shadow'><feGaussianBlur in='SourceAlpha' stdDeviation='4'/><feOffset dx='12' dy='12' result='offsetblur'/><feFlood flood-color='rgba(0,0,0,0.5)'/><feComposite in2='offsetblur' operator='in'/><feMerge><feMergeNode/><feMergeNode in='SourceGraphic'/></feMerge></filter></svg>#drop-shadow");
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 
 .everything {
@@ -137,22 +158,6 @@ p  {
 	max-width: 100%;
 	max-height: inherit;
 }
-.container .social {
-	position: absolute;
-	width: 200px;
-	height: 64px;
-	right: 0px;
-	bottom: 60px;
-	padding: 10px;
-}
-.container .social .image {
-	height: 100%;
-	margin: 10px;
-	opacity: 0.6;
-}
-.container .social .image:hover {
-	opacity: 1;
-}
 
 .faq{
 
@@ -162,6 +167,8 @@ p  {
 	clear: both;
 	width: initial;
 }
+
+
 
 .main {
 	width: 90%;
@@ -386,15 +393,6 @@ a:active {
 	font-weight: bold;
 	padding: 0px;
 	color: #005972;
-}
-
-.sponsor.box {
-	text-align: center;
-	vertical-align: middle;
-	max-width: 15em;
-}
-.sponsor.box img{
-	width: 100%;
 }
 
 .standby {
