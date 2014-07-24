@@ -8,21 +8,26 @@ window.addEventListener('resize', function(event) {
 startTime();
 
 // loading sequence
-$('.everything').hide();
-$('.logo').css('display', 'table');
-$('.logo').addClass('zoomInEntrance');
-$('.logo').delay(1900).queue(function(next){
-	$(this).removeClass('zoomInEntrance');
-	$(this).addClass('zoomInExit')
-	next();
-});
-$('.logo').delay(400).queue(function(next){
-	$(this).hide();
-	next();
-})
-$('.everything').delay(1900).fadeIn(1000);
-$('.background').delay(1800).fadeIn(1000);
-
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	// mobile
+	$('.background').show();
+} else {
+	// everything else
+	$('.everything').hide();
+	$('.logo').css('display', 'table');
+	$('.logo').addClass('zoomInEntrance');
+	$('.logo').delay(1900).queue(function(next){
+		$(this).removeClass('zoomInEntrance');
+		$(this).addClass('zoomInExit')
+		next();
+	});
+	$('.logo').delay(400).queue(function(next){
+		$(this).hide();
+		next();
+	})
+	$('.everything').delay(1900).fadeIn(1000);
+	$('.background').delay(1800).fadeIn(1000);
+}
 
 //display notification center when icon is clicked
 var visibleNav = false;
