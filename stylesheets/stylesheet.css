@@ -555,12 +555,6 @@ a:active {
 	body {
     	font-size: 12pt;
     }
-    .nav ul.topnav li {
-		position: static; /* makes submenus stay on the screen */
-	}
-	.nav ul.topnav li ul.subnav {
-		left: 25%;
-	}
 }
 
 /* Google form CSS */
