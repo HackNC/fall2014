@@ -6,15 +6,17 @@ window.addEventListener('resize', function(event) {
 	setHeaderSize();
 });
 startTime();
+
 // loading sequence
 $('.everything').hide();
+$('.logo').css('display', 'table');
 $('.logo').addClass('zoomInEntrance');
 $('.logo').delay(1900).queue(function(next){
 	$(this).removeClass('zoomInEntrance');
 	$(this).addClass('zoomInExit')
 	next();
 });
-$('.logo').delay(800).queue(function(next){
+$('.logo').delay(400).queue(function(next){
 	$(this).hide();
 	next();
 })
