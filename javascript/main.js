@@ -1,7 +1,8 @@
 ////////////////// run this after the page has been built //////////////////
-var image = selectRandomBackground();
+$('.everything').show();
 setHeaderSize();
-setBackground(image);
+$('.everything').hide();
+setBackground(selectRandomBackground());
 window.addEventListener('resize', function(event) {
 	setHeaderSize();
 });
@@ -11,9 +12,9 @@ startTime();
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 	// mobile
 	$('.background').show();
+	$('.everything').show();
 } else {
 	// everything else
-	$('.everything').hide();
 	$('.logo').css('display', 'table');
 	$('.logo').addClass('zoomInEntrance');
 	$('.logo').delay(1900).queue(function(next){
@@ -30,20 +31,19 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 }
 
 //display notification center when icon is clicked
-var visibleNav = false;
+var isNotificationCenterVisible = false;
 $('#notecenter').click( function() {
-	if (visibleNav) {
+	if (isNotificationCenterVisible) {
 		$('.notelist').animate({ right: -250 },'slow', function() {this.hide();});
 	}
 	else {
 		$('.notelist').show().animate({ right: 0 },'slow');
 
 	}
-	visibleNav = !visibleNav;
+	isNotificationCenterVisible = !isNotificationCenterVisible;
 });
 
 //////////////////// Toolbar javascript ///////////////////
-var fadeTime = 10;
 
 // Menubar clicks
 var lastOpen;
@@ -54,20 +54,20 @@ $('.element-left ul.topnav > li > a').click(function() {
 		// if a menu is open
 		if (lastOpen.hasClass('open') && button.hasClass('open')) {
 			// if this is the same menu that was just opened, close it
-			menu.fadeOut(fadeTime);
+			closeMenu(menu);
 			button.removeClass('open');
 			lastOpen = null;
 		} else {
 			// if this is a different menu than what is already open, close the old and open this
-			lastOpen.find('ul.subnav').fadeOut(fadeTime);
+			closeMenu(lastOpen.find('ul.subnav'));
 			lastOpen.removeClass('open');
-			menu.fadeIn(fadeTime);
+			openMenu(menu);
 			button.addClass('open');
 			lastOpen = button;
 		}
 	} else {
 		// else no menu is open, open the menu that was clicked
-		menu.fadeIn(fadeTime);
+		openMenu(menu);
 		button.addClass('open');
 		lastOpen = button;
 	}
@@ -82,9 +82,9 @@ $('.element-left ul.topnav > li').hover(
 		var menu = $(this).find('ul.subnav');
 		if (lastOpen && !button.hasClass('open')) {
 			// if a menu is open but it's not this menu, open this and close the old
-			lastOpen.find('ul.subnav').fadeOut(fadeTime);
+			closeMenu(lastOpen.find('ul.subnav'));
 			lastOpen.removeClass('open');
-			menu.fadeIn(fadeTime);
+			openMenu(menu);
 			button.addClass('open');
 			lastOpen = button;
 		}
@@ -116,11 +116,26 @@ $('.element-left ul.topnav > li').each(function() {
 $('.everything:not(.nav)').click(function() {
 	if (lastOpen) {
 		// if a menu is open and the click is not on a new menu
-		lastOpen.find('ul.subnav').fadeOut(fadeTime);
+		closeMenu(lastOpen.find('ul.subnav'));
 		lastOpen.removeClass('open');
 		lastOpen = null;
 	}
 });
+
+var fadeTime = 10;
+function openMenu(menu) {
+	menu.fadeIn(fadeTime);
+	menu.css('top', $('.nav table').height());
+	if (menu.offset().left + menu.width() > $(window).width()) {
+		menu.css('left', $(window).width()- (menu.offset().left + menu.width()));
+	}
+	console.log(menu.offset());
+	
+}
+
+function closeMenu(menu) {
+	menu.fadeOut(fadeTime);
+}
 
 ////////////////// easter egg //////////////////
 if (navigator.userAgent.indexOf('Chrome') != -1) {
@@ -187,7 +202,6 @@ function setHeaderSize() {
 	$('.logo').css('height', height);
 	$('.logo').css('max-height', height);
 	$('.notelist').css('top', $('.nav table').height());
-	$('.nav ul').css('top', $('.nav table').height());
 	$('footer').css('margin-top', height);
 }
 

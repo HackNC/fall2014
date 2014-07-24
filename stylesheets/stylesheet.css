@@ -124,6 +124,9 @@ p  {
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 
+.everything {
+	display: none;
+}
 
 .logo {
 	display: none;
@@ -535,12 +538,6 @@ a:active {
 		visibility: hidden;
 		display: none;
 	}
-	.nav ul.topnav li {
-		position: static; /* makes submenus stay on the screen */
-	}
-	.nav ul.topnav li ul.subnav {
-		left: 25%;
-	}
 	.main .right {
 		float: none;
 		width: 90%;
@@ -558,6 +555,12 @@ a:active {
 	body {
     	font-size: 12pt;
     }
+    .nav ul.topnav li {
+		position: static; /* makes submenus stay on the screen */
+	}
+	.nav ul.topnav li ul.subnav {
+		left: 25%;
+	}
 }
 
 /* Google form CSS */
