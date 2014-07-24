@@ -6,9 +6,20 @@ window.addEventListener('resize', function(event) {
 	setHeaderSize();
 });
 startTime();
-$('.logo').delay(1900).fadeOut(500);
-$('.everything').delay(2000).fadeIn(500, function() {setHeaderSize();});
-$('.background').delay(2000).fadeIn(500);
+// loading sequence
+$('.everything').hide();
+$('.logo').addClass('zoomInEntrance');
+$('.logo').delay(1900).queue(function(next){
+	$(this).removeClass('zoomInEntrance');
+	$(this).addClass('zoomInExit')
+	next();
+});
+$('.logo').delay(800).queue(function(next){
+	$(this).hide();
+	next();
+})
+$('.everything').delay(1900).fadeIn(1000);
+$('.background').delay(1800).fadeIn(1000);
 
 
 //display notification center when icon is clicked
@@ -167,7 +178,6 @@ function setHeaderSize() {
 	$('.background').css('height', height);
 	$('.background::before').css('height', height);
 	$('.logo').css('height', height);
-
 	$('.logo').css('max-height', height);
 	$('.notelist').css('top', $('.nav table').height());
 	$('.nav ul').css('top', $('.nav table').height());
