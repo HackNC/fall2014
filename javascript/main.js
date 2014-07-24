@@ -7,7 +7,7 @@ window.addEventListener('resize', function(event) {
 });
 startTime();
 $('.logo').delay(1900).fadeOut(500);
-$('.everything').delay(2000).fadeIn(500);
+$('.everything').delay(2000).fadeIn(500, function() {setHeaderSize();});
 $('.background').delay(2000).fadeIn(500);
 
 
