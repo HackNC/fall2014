@@ -167,6 +167,8 @@ function setHeaderSize() {
 	$('.background').css('height', height);
 	$('.background::before').css('height', height);
 	$('.logo').css('height', height);
+
+	$('.logo').css('max-height', height);
 	$('.notelist').css('top', $('.nav table').height());
 	$('.nav ul').css('top', $('.nav table').height());
 	$('footer').css('margin-top', height);

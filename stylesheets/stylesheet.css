@@ -23,7 +23,6 @@ footer {
 
 header {
 	min-height: 500px;
-
 	position:relative;
 }
 
@@ -31,7 +30,6 @@ header {
 	display: none;
 	float: left;
 	position: fixed;
-	min-height: 500px;
 	width: 100%;
 	z-index: -1;
 	background-size: cover;
@@ -127,16 +125,17 @@ p  {
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
+	max-width: 100%;
+	max-height: inherit;
 }
 .logo .elements > div {
-	display: inline-block;
 	text-align: center;
-	width: 100%;
 }
-.logo .elements > .image > img {
-	display: inline-block;
-	max-width: 100%;
+.logo .elements > img {
+	display: block;
 	margin: auto;
+	max-width: 100%;
+	max-height: inherit;
 }
 .container .social {
 	position: absolute;
