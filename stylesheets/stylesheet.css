@@ -28,6 +28,7 @@ header {
 }
 
 .background {
+	display: none;
 	float: left;
 	position: fixed;
 	min-height: 500px;
@@ -104,14 +105,15 @@ p  {
 	color: black;
 }
 
+.everything {
+	display: none;
+}
+
 .logo {
 	display: table;
 	width: 100%;
-	min-height: 415px;
 	font-size: 1.2em;
 	font-weight: bold;
-	padding-top: 30px;
-	padding-bottom: 50px;
 	-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
     filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='drop-shadow'><feGaussianBlur in='SourceAlpha' stdDeviation='4'/><feOffset dx='12' dy='12' result='offsetblur'/><feFlood flood-color='rgba(0,0,0,0.5)'/><feComposite in2='offsetblur' operator='in'/><feMerge><feMergeNode/><feMergeNode in='SourceGraphic'/></feMerge></filter></svg>#drop-shadow");
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
@@ -123,13 +125,16 @@ p  {
 }
 .logo > .elements {
 	display: table-cell;
+	text-align: center;
 	vertical-align: middle;
 }
 .logo .elements > div {
+	display: inline-block;
 	text-align: center;
 	width: 100%;
 }
 .logo .elements > .image > img {
+	display: inline-block;
 	max-width: 100%;
 	margin: auto;
 }
@@ -148,64 +153,6 @@ p  {
 }
 .container .social .image:hover {
 	opacity: 1;
-}
-
-
-/* make keyframes that tell the start state and the end state of our object */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-ms-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-.fade-in {
-	opacity:0;  /* make things invisible upon start */
-	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-    -moz-animation:fadeIn ease-in 1;
-    -ms-animation:fadeIn ease-in 1;
-    -o-animation:fadeIn ease-in 1;
-	animation:fadeIn ease-in 1;
-
-	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-	-moz-animation-fill-mode:forwards;
-	-ms-animation-fill-mode:forwards;
-	-o-animation-fill-mode:forwards;
-	animation-fill-mode:forwards;
-
-	-webkit-animation-duration:1s;
-	-moz-animation-duration:1s;
-	-ms-animation-duration:1s;
-	-o-animation-duration:1s;
-	animation-duration:1s;
-}
-
-.fade-in.one {
-	-webkit-animation-delay: 1.4s;
-	-moz-animation-delay: 1.4s;
-	-ms-animation-delay: 1.4s;
-	-o-animation-delay: 1.4s;
-	animation-delay: 1.4s;
-}
-
-.fade-out {
-	opacity:1;  /* make things invisible upon start */
-	-webkit-animation:fadeOut ease-out 1;  /* call our keyframe named fadeOut, use animattion ease-out and repeat it only 1 time */
-    -moz-animation:fadeOut ease-out 1;
-    -ms-animation:fadeOut ease-out 1;
-    -o-animation:fadeOut ease-out 1;
-	animation:fadeOut ease-out 1;
-
-	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-	-moz-animation-fill-mode:forwards;
-	-ms-animation-fill-mode:forwards;
-	-o-animation-fill-mode:forwards;
-	animation-fill-mode:forwards;
-
-	-webkit-animation-duration:1s;
-	-moz-animation-duration:1s;
-	-ms-animation-duration:1s;
-	-o-animation-duration:1s;
-	animation-duration:1s;
 }
 
 .faq{
@@ -394,10 +341,13 @@ p  {
 }
 
 .nav .notelist {
-	top: 27px;
+	display: none;
+	min-top: 27px;
 	position: fixed;
 	right: -250px;
 	z-index: 2;
+	width: 250px;
+	height: 300px;
 }
 
 a:link {
@@ -474,14 +424,6 @@ a:active {
 	.box {
 		width: 44%;
 	}
-	/*.logo .left {
-		text-align: center;
-	}
-	.logo .right {
-		position: relative;
-		top: 0;
-		right: 0;
-	}*/
 }
 
 @media (max-width : 1024px) {

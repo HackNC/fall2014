@@ -6,16 +6,20 @@ window.addEventListener('resize', function(event) {
 	setHeaderSize();
 });
 startTime();
+$('.logo').delay(1900).fadeOut(500);
+$('.everything').delay(2000).fadeIn(500);
+$('.background').delay(2000).fadeIn(500);
 
 
 //display notification center when icon is clicked
 var visibleNav = false;
 $('#notecenter').click( function() {
 	if (visibleNav) {
-		$('.notelist').animate({ right: -250 },'slow');
+		$('.notelist').animate({ right: -250 },'slow', function() {this.hide();});
 	}
 	else {
-		$('.notelist').animate({ right: 0 },'slow');
+		$('.notelist').show().animate({ right: 0 },'slow');
+
 	}
 	visibleNav = !visibleNav;
 });
@@ -162,15 +166,7 @@ function setHeaderSize() {
 	$('header').css('height', height);
 	$('.background').css('height', height);
 	$('.background::before').css('height', height);
-	$('.logo').css('height', height-$('.slogan').height()-$('.nav table').height());
-	$('.logo').css('max-height', height-$('.slogan').height()-$('.nav table').height());
-	if (height > 499) {
-		$('.logo > .elements > .image > img').css('max-height', height-$('.slogan').height()-$('.nav table').height()-$('.logo > .elements > .text').height()-3);
-	} else {
-		$('.logo > .elements > .image > img').css('max-height', 499-$('.slogan').height()-$('.nav table').height()-$('.logo > .elements > .text').height()-3);
-	}
-	$('.logo').css('padding-top', $('.nav table').height());
-	$('.logo').css('padding-bottom', $('.slogan').height());
+	$('.logo').css('height', height);
 	$('.notelist').css('top', $('.nav table').height());
 	$('.nav ul').css('top', $('.nav table').height());
 	$('footer').css('margin-top', height);
