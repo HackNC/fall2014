@@ -34,7 +34,7 @@ header {
 	z-index: -1;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center 30%;
+	background-position: center -30%;
 }
 .background:before {
     content: "";
