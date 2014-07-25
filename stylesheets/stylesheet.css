@@ -500,13 +500,21 @@ a:active {
 	}
 }
 @media (max-width : 1600px) {
-	
+	.container.icon {
+		-webkit-column-count: 7; 
+  	  	-moz-column-count: 7;
+    	column-count: 7;
+	}
 }
 
 @media (max-width : 1280px) {
-
 	.box.sponsor {
 		width: 44%;
+	}
+	.container.icon {
+		-webkit-column-count: 6; 
+  	  	-moz-column-count: 6;
+    	column-count: 6;
 	}
 }
 
@@ -519,6 +527,11 @@ a:active {
 	}
 	.slogan {
 		width: 90%;
+	}
+	.container.icon {
+		-webkit-column-count: 5; 
+  	  	-moz-column-count: 5;
+    	column-count: 5;
 	}
 }
 
