@@ -511,6 +511,9 @@ a:active {
 	.box.sponsor {
 		width: 44%;
 	}
+	.box.faq {
+		width: 44%;
+	}
 	.container.icon {
 		-webkit-column-count: 6; 
   	  	-moz-column-count: 6;
@@ -549,6 +552,9 @@ a:active {
     	font-size: 12pt;
     }
     .box.sponsor {
+		width: 93%;
+	}
+	.box.faq {
 		width: 93%;
 	}
 	.main .left {
