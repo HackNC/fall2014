@@ -1,7 +1,5 @@
 ////////////////// run this after the page has been built //////////////////
-$('.everything').show();
 setHeaderSize();
-$('.everything').hide();
 setBackground(selectRandomBackground());
 window.addEventListener('resize', function(event) {
 	setHeaderSize();
