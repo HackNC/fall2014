@@ -103,10 +103,13 @@ p  {
 .box img{
 	width: 100%;
 }
+
 .box.icon {
 	width: 100%;
 	max-width: 5em;
+	color: white;
 }
+
 .box.sponsor {
 	max-width: 15em;
 }
@@ -115,6 +118,7 @@ p  {
 	text-align: center;
 	color: black;
 }
+
 .container.icon {
 	padding-top: 40px;
 	padding-left: 5px;
@@ -488,9 +492,15 @@ a:active {
     -ms-transition: background-color 1000ms ease-in-out;
     transition: background-color 1000ms ease-in-out;
 }
-
+@media (max-width : 1920px) {
+	.container.icon {
+		-webkit-column-count: 8; 
+  	  	-moz-column-count: 8;
+    	column-count: 8;
+	}
+}
 @media (max-width : 1600px) {
-
+	
 }
 
 @media (max-width : 1280px) {
@@ -532,10 +542,10 @@ a:active {
 		float: none;
 		width: 90%;
 	}
-	.container .social {
-		width: 125px;
-		height: 40px;
-		bottom: 90px;
+	.container.icon {
+		-webkit-column-count: 4; 
+  	  	-moz-column-count: 4;
+    	column-count: 4;
 	}
 	.main {
 		width: 100%;
@@ -555,7 +565,11 @@ a:active {
 
 }
 @media (max-width: 480px) {
-
+	.container.icon {
+		-webkit-column-count: 3; 
+  	  	-moz-column-count: 3;
+    	column-count: 3;
+	}
 }
 @media (max-width : 320px) {
 	body {
