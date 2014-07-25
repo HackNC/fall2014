@@ -31,6 +31,8 @@ header {
 	float: left;
 	position: fixed;
 	width: 100%;
+	top: 0;
+	bottom: 0;
 	z-index: -1;
 	background-size: cover;
 	background-repeat: no-repeat;

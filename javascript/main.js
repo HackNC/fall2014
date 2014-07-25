@@ -43,8 +43,6 @@ function setHeaderSize() {
 	$('.container.icon').css('height', height-$('.slogan').height()-$('.navbar').height());
 	$('.container.icon').css('padding-top', $('.navbar').height());
 	$('.container.icon').css('padding-bottom', $('.slogan').height());
-	$('.background').css('height', height);
-	$('.background::before').css('height', height);
 	$('footer').css('margin-top', height);
 }
 
