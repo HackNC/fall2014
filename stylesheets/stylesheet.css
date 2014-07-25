@@ -104,6 +104,7 @@ p  {
 	width: 100%;
 }
 .box.icon {
+	width: 100%;
 	max-width: 5em;
 }
 .box.sponsor {
@@ -117,7 +118,19 @@ p  {
 .container.icon {
 	padding-top: 40px;
 	padding-left: 5px;
-	width: 150px;
+	padding-right: 5px;
+	padding-bottom: 40px;
+	height: 400px;
+	width: 100%;
+	-webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+	-webkit-column-count: 5; 
+    -moz-column-count: 5;
+    column-count: 5;
+    -webkit-column-fill: auto;
+    -mox-column-fill: auto;
+    column-fill: auto;
 	-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
     filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='drop-shadow'><feGaussianBlur in='SourceAlpha' stdDeviation='4'/><feOffset dx='12' dy='12' result='offsetblur'/><feFlood flood-color='rgba(0,0,0,0.5)'/><feComposite in2='offsetblur' operator='in'/><feMerge><feMergeNode/><feMergeNode in='SourceGraphic'/></feMerge></filter></svg>#drop-shadow");
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
@@ -482,7 +495,7 @@ a:active {
 
 @media (max-width : 1280px) {
 
-	.box {
+	.box.sponsor {
 		width: 44%;
 	}
 }
@@ -512,7 +525,7 @@ a:active {
 	body {
     	font-size: 12pt;
     }
-    .box {
+    .box.sponsor {
 		width: 93%;
 	}
 	.main .left {

@@ -42,6 +42,7 @@ function selectRandomBackground() {
 function setHeaderSize() {
 	var height = $(window).height();
 	$('header').css('height', height);
+	$('.container.icon').css('height', height-$('.slogan').height()-$('.navbar').height());
 	$('.background').css('height', height);
 	$('.background::before').css('height', height);
 	$('footer').css('margin-top', height);
