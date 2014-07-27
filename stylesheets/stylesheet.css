@@ -79,7 +79,7 @@ p  {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	width: 100%;
-	max-width: 5em;
+	max-width: 4em;
 	color: white;
 }
 
@@ -97,6 +97,7 @@ p  {
 	padding-bottom: 84px;
 	min-height: 394px;
 	width: 100%;
+	font-size: 0.7em;
 	-webkit-column-gap: 10px;
     -moz-column-gap: 10px;
     column-gap: 10px;
@@ -465,23 +466,23 @@ a:active {
 }
 @media (max-width : 1920px) {
 	.container.icon {
+		-webkit-column-count: 12; 
+  	  	-moz-column-count: 12;
+    	column-count: 12;
+	}
+}
+@media (max-width : 1600px) {
+	.container.icon {
 		-webkit-column-count: 11; 
   	  	-moz-column-count: 11;
     	column-count: 11;
 	}
 }
-@media (max-width : 1600px) {
-	.container.icon {
-		-webkit-column-count: 10; 
-  	  	-moz-column-count: 10;
-    	column-count: 10;
-	}
-}
 @media (max-width : 1440px) {
 	.container.icon {
-		-webkit-column-count: 9;
-		-moz-column-count: 9;
-		column-count: 9;
+		-webkit-column-count: 10;
+		-moz-column-count: 10;
+		column-count: 10;
 	}
 }
 
@@ -493,9 +494,9 @@ a:active {
 		width: 44%;
 	}
 	.container.icon {
-		-webkit-column-count: 8; 
-  	  	-moz-column-count: 8;
-    	column-count: 8;
+		-webkit-column-count: 9; 
+  	  	-moz-column-count: 9;
+    	column-count: 9;
 	}
 }
 
@@ -510,17 +511,17 @@ a:active {
 		width: 90%;
 	}
 	.container.icon {
-		-webkit-column-count: 7; 
-  	  	-moz-column-count: 7;
-    	column-count: 7;
+		-webkit-column-count: 8; 
+  	  	-moz-column-count: 8;
+    	column-count: 8;
 	}
 }
 
 @media (max-width : 900px) {
 	.container.icon {
-		-webkit-column-count: 6; 
-  	  	-moz-column-count: 6;
-    	column-count: 6;
+		-webkit-column-count: 7; 
+  	  	-moz-column-count: 7;
+    	column-count: 7;
 	}
 }
 
@@ -533,9 +534,9 @@ a:active {
 		display: none;
 	}
 	.container.icon {
-		-webkit-column-count: 5; 
-  	  	-moz-column-count: 5;
-    	column-count: 5;
+		-webkit-column-count: 6; 
+  	  	-moz-column-count: 6;
+    	column-count: 6;
 	}
 }
 @media (max-width : 640px) {
@@ -553,9 +554,9 @@ a:active {
 		width: 90%;
 	}
 	.container.icon {
-		-webkit-column-count: 4; 
-  	  	-moz-column-count: 4;
-    	column-count: 4;
+		-webkit-column-count: 5; 
+  	  	-moz-column-count: 5;
+    	column-count: 5;
 	}
 	.main {
 		width: 100%;
@@ -576,15 +577,20 @@ a:active {
 }
 @media (max-width: 480px) {
 	.container.icon {
-		-webkit-column-count: 3; 
-  	  	-moz-column-count: 3;
-    	column-count: 3;
+		-webkit-column-count: 4; 
+  	  	-moz-column-count: 4;
+    	column-count: 4;
 	}
 }
 @media (max-width : 320px) {
 	body {
     	font-size: 12pt;
     }
+    .container.icon {
+		-webkit-column-count: 3; 
+  	  	-moz-column-count: 3;
+    	column-count: 3;
+	}
 }
 
 /* Google form CSS */
