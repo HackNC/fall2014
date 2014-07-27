@@ -31,34 +31,15 @@ $(function() {
 	});
 });
 
-function selectRandomBackground() {
-	var numImages = 10;
-	return Math.floor(Math.random() * numImages);
-}
-
 // align all kinds of things that depend on the viewport size
 function setHeaderSize() {
 	var height = $(window).height();
 	$('header').css('height', height);
-	$('.container.icon').css('height', height-$('.slogan').height()-$('.navbar').height());
-	$('.container.icon').css('padding-top', $('.navbar').height());
+	console.log("height " + height);
+	console.log("slogan height " + $('.slogan').height());
+	console.log("navbar height " + $('.nav > table').height());
+	$('.container.icon').css('height', height-$('.slogan').height()-$('.nav > table').height());
+	$('.container.icon').css('padding-top', $('.nav > table').height());
 	$('.container.icon').css('padding-bottom', $('.slogan').height());
 	$('footer').css('margin-top', height);
-}
-
-function setBackground(image) {
-	var size = '320';
-	var width = $(window).width();
-	if (width <= 640) {
-		size = '640';
-	} else if (width <= 800) {
-		size = '800';
-	} else if (width <= 1024) {
-		size = '1024';
-	} else if (width <= 1600) {
-		size = '1600';
-	} else {
-		size = '2048';
-	}
-	$('.background').css({'background-image': 'url(./images/' + image + '_' + size + '.jpg)'});
 }

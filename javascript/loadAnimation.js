@@ -21,8 +21,12 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		$(this).hide();
 		next();
 	})
-	$('.everything').delay(1900).fadeIn(1000);
-	$('.background').delay(1900).fadeIn(1000);
+	$('.everything').delay(1900).show().queue(function(next) {
+		setHeaderSize(); // defined in header.js
+		$(this).fadeIn(1000);
+		$('.background').fadeIn(1000);
+		next();
+	});
 }
 
 function setLogoSize() {

@@ -26,37 +26,6 @@ header {
 	position:relative;
 }
 
-.background {
-	display: none;
-	float: left;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	bottom: 0;
-	z-index: -1;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center -30%;
-}
-.background:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-   	/*background: -webkit-linear-gradient(rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 1)); 
-  	background: -o-linear-gradient(rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 1));
-  	background: -moz-linear-gradient(rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 1));
-  	background: -ms-linear-gradient(rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 0.2), rgba(79, 163, 103, 1));
-    -moz-transition: background .3s linear;
-    -webkit-transition: background .3s linear;
-    -o-transition: background .3s linear;
-    -ms-transition: background .3s linear;
-    transition: background .3s linear;*/
-}
-
 h1 {
 	font-weight: 200;
 	font-size: 1.9em;
@@ -122,9 +91,9 @@ p  {
 }
 
 .container.icon {
-	padding-top: 40px;
-	padding-bottom: 40px;
-	height: 400px;
+	padding-top: 22px;
+	padding-bottom: 84px;
+	min-height: 394px;
 	width: 100%;
 	-webkit-column-gap: 10px;
     -moz-column-gap: 10px;
