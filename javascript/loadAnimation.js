@@ -21,8 +21,10 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		$(this).hide();
 		next();
 	})
-	$('.everything').delay(1900).show().queue(function(next) {
+	$('.everything').delay(1900).queue(function(next) {
+		$(this).show();
 		setHeaderSize(); // defined in header.js
+		$(this).hide();
 		$(this).fadeIn(1000);
 		$('.background').fadeIn(1000);
 		next();
