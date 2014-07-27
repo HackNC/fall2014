@@ -1,11 +1,20 @@
 // loading sequence
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 	// mobile
-	$('.background').show();
-	$('.everything').show();
+	$('.everything').hide();
+	setLogoSize();
+	$('.logo').css({'display': 'table', 'opacity': 0});
+	$('.logo').animate({'opacity': 1}, 500).delay(1000).fadeOut(500);
+	$(this).delay(1800).queue(function(next){
+		$('.background').fadeIn(500);
+		$('.everything').fadeIn(500);
+		setHeaderSize();
+		next();
+	});	
 } else {
 	// everything else
 	$('.everything').hide();
+	$('.background').hide();
 	setLogoSize();
 	window.addEventListener('resize', function(event) {
 		setLogoSize();
