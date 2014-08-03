@@ -1,5 +1,4 @@
 .background {
-	display: none;
 	float: left;
 	position: fixed;
 	width: 100%;
@@ -9,4 +8,5 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	background-image: url('../images/backgrounds/0_1600.jpg');
 }

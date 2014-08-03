@@ -14,10 +14,10 @@ function setBackground(image) {
 	} else {
 		size = '2048';
 	}
-	$('.background').css({'background-image': 'url(./images/' + image + '_' + size + '.jpg)'});
+	$('.background').css({'background-image': 'url(./images/backgrounds/' + image + '_' + size + '.jpg)'});
 }
 
 function selectRandomBackground() {
-	var numImages = 10;
-	return Math.floor(Math.random() * numImages);
+	var numImages = 11;
+	return Math.floor(Math.random() * (numImages + 1));
 }
