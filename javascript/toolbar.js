@@ -134,39 +134,11 @@ function closeMenu(menu) {
 
 function startTime() {
 	var today=new Date();
-	var day=today.getDay();
 	var month=today.getMonth();
 	var date=today.getDate();
 	var h=today.getHours();
 	var m=today.getMinutes();
 	var amPm = getAmPm(h);
-	switch(day) {
-		case 0:
-			day = 'Sunday';
-			break;
-		case 1:
-			day = 'Monday';
-			break;
-		case 2:
-			day = 'Tuesday';
-			break;
-		case 3:
-			day = 'Wednesday';
-			break;
-		case 4:
-			day = 'Thursday';
-			break;
-		case 5:
-			day = 'Friday';
-			break;
-		case 6:
-			day = 'Saturday';
-			break;
-		default:
-			day = '';
-			break;
-
-	}
 	switch(month) {
 		case 0:
 			month = 'January';
@@ -211,7 +183,7 @@ function startTime() {
 	}
 	h = fixHours(h);
 	m = fixMinutes(m);
-	document.getElementById('clock').innerHTML = day + ' ' + month + ' ' + date + ', ' + h + ':' + m + ' ' + amPm;
+	document.getElementById('clock').innerHTML = month + ' ' + date + ', ' + h + ':' + m + ' ' + amPm;
 	var t = setTimeout(function(){
 		startTime()
 	},1000);

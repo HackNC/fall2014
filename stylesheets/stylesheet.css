@@ -181,7 +181,7 @@ p  {
 	background: -moz-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
 	background: -ms-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-	font-size: 0.8em;
+	font-size: 12pt;
 	color: black;
 	cursor: default;
 }
@@ -260,10 +260,10 @@ p  {
 	position: relative; /*--Declare X and Y axis base for sub navigation--*/
 }
 
-.nav ul.topnav li:first-child {
+.nav .element-left > ul.topnav > li:first-child {
 	margin-left: 10px;
 }
-.nav ul.topnav li:last-child {
+.nav .element-right > ul.topnav > li:last-child {
 	margin-right: 10px;
 }
 .nav ul.topnav li.open {
@@ -282,7 +282,7 @@ p  {
 }
 
 .nav ul.topnav li ul.subnav {
-	background: rgba(215, 215, 215, 0.80);
+	background: rgba(215, 215, 215, 0.70);
 	list-style: none;
 	position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
 	left: 0; top: 35px;
@@ -571,6 +571,9 @@ a:active {
 		-webkit-column-count: 4; 
   	  	-moz-column-count: 4;
     	column-count: 4;
+	}
+	.nav .element-left > ul > li:last-child {
+		display: none;
 	}
 }
 @media (max-width : 320px) {
