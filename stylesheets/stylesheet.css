@@ -81,7 +81,9 @@ p  {
 	padding-bottom: 5px;
 	width: 100%;
 	max-width: 4em;
+	min-width: 60px;
 	color: white;
+	font-size: 0.8em;
 }
 .box.sponsor {
 	max-width: 15em;
@@ -97,7 +99,6 @@ p  {
 	padding-bottom: 84px;
 	min-height: 394px;
 	width: 100%;
-	font-size: 0.7em;
 	-webkit-column-gap: 10px;
     -moz-column-gap: 10px;
     column-gap: 10px;
@@ -573,9 +574,6 @@ a:active {
 	}
 }
 @media (max-width : 320px) {
-	body {
-    	font-size: 12pt;
-    }
     .container.icon {
 		-webkit-column-count: 3; 
   	  	-moz-column-count: 3;
