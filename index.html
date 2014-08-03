@@ -46,7 +46,7 @@
 		<script src="./javascript/loadAnimation.js"></script>
 		<!--	toolbar	-->
 			<div class="nav">
-				<table>
+				<table class="shadow">
 					<tbody>
 						<tr>
 							<td class="element-left">
@@ -207,8 +207,7 @@
 					</a>
 				</div>
 			</div>
-			<script src="./javascript/toolbar.js">
-			</script>
+			<script src="./javascript/toolbar.js"></script>
 			<header>
 				<!--	icons	-->
 				<div class="container icon shadow">
@@ -462,20 +461,19 @@
 				<img src="./images/toolbar/standby.png" alt="on/off" />
 			</a>
 		</div>
-		<script src="./javascript/main.js">
-		</script>
+		<script src="./javascript/main.js"></script>
 		<!--	Twitter script	-->
 		<script>
-		!function(d, s, id){
-			var js,
-					fjs = d.getElementsByTagName(s)[0],
-					p = /^http:/.test(d.location) ? 'http' : 'https';
-			if (!d.getElementById(id)) {
-				js = d.createElement(s);
-				js.id = id;
-				js.src = p + "://platform.twitter.com/widgets.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			}}(document, "script", "twitter-wjs");
+			!function(d, s, id){
+				var js,
+						fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+				if (!d.getElementById(id)) {
+					js = d.createElement(s);
+					js.id = id;
+					js.src = p + "://platform.twitter.com/widgets.js";
+					fjs.parentNode.insertBefore(js, fjs);
+				}}(document, "script", "twitter-wjs");
 		</script>
 	</body>
 </html>
