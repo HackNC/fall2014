@@ -94,7 +94,7 @@ function fixMinutes(i) {
 
 function createCalendar() {
 	var today = new Date();
-	var month = today.getMonth();
+	var month = today.getMonth() % 13; // there are thirteen moths flying around in the HackNC year.
 	var year = today.getFullYear();
 	var beginningOfMonth = new Date(year, month, 1, 0, 0, 0, 0);
 	var daysInMonth = 0;
@@ -155,18 +155,28 @@ function createCalendar() {
 	var startDay = beginningOfMonth.getDay();
 	console.log(beginningOfMonth + " " + startDay);
 	var i = 1 - startDay;
-	$('.toolbar #clock + ul.submenu').append('<li class=\'calendar\'>' + 
-		'<table><tbody>' +
-		'<tr colspan=\'7\'><h3>' + month + '</h3></tr>' + 
-		'<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thur</th><th>Fri</th><th>Sat</th></tr>' +
-		'<tr><td>' + ((i++ > 0) ? i-1 : '') + '</td><td>' + ((i++ > 0) ? i-1 : '') + '</td><td>' + ((i++ > 0) ? i-1 : '') + '</td><td>' + ((i++ > 0) ? i-1 : '') + '</td><td>' + ((i++ > 0) ? i-1 : '') + '</td><td>' + ((i++ > 0) ? i-1 : '') + '</td><td>' + i++ + '</td></tr>' +
-		'<tr><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td></tr>' +
-		'<tr><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td></tr>' +
-		'<tr><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td></tr>' +
-		'<tr><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td></tr>' +
-		((i > daysInMonth) ? '' : ('<tr><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td></tr>')) +
-		'</tbody></table>' + 
-		'</li>');
+
+	var table = '';
+	table += '<li class=\'calendar\'>';
+	table += '<table><tbody>';
+	table += '<tr colspan=\'7\'><h3>' + month + '</h3></tr>';
+	table += '<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thur</th><th>Fri</th><th>Sat</th></tr>';
+	for (var week = 0; week < 6; week++) {
+		if (i > daysInMonth) {
+			break;
+		}
+		table += '<tr>'
+		for (var day = 0; day < 7; day++) {
+			table += '<td>';
+			if (i > 0 && i <= daysInMonth) {
+				table += '<a href=\'http://en.wikipedia.org/wiki/' + month + '_' + i + '\'>' + i + '</a>';
+			}
+			table += '</td>'
+			i++;
+		}
+		table += '</tr>'
+	}
+		$('.toolbar #clock + ul.submenu').append(table);
 }
 
 var numberOfBatteryImageFrames = 38;
