@@ -44,15 +44,15 @@ function tickTime(previousTime, currentTime) { // called every second
 			var amPm = getAmPm(currentTime.getHours());
 			if (previousTime.getDate() == currentTime.getDate()) {
 				var oldTime = $('.toolbar #clock').html().split(', ');
-				$('.toolbar #clock').html(oldTime[0] + hours + ':' + minutes + ' ' + amPM);
+				$('.toolbar #clock').html(oldTime[0] + ', ' + hours + ':' + minutes + ' ' + amPm);
 			} else {
 				var date = currentTime.getDate();
 				if (previousTime.getMonth() == currentTime.getMonth()) {
 					var oldTime = $('.toolbar #clock').html().split(' ');
-					$('.toolbar #clock').html(oldTime[0] + ' ' + date + hours + ':' + minutes + ' ' + amPM);
+					$('.toolbar #clock').html(oldTime[0] + ' ' + date + ', ' + hours + ':' + minutes + ' ' + amPm);
 				} else {
 					var month = fixMonth(currentTime.getMonth());
-					$('.toolbar #clock').html(month + ' ' + date + hours + ':' + minutes + ' ' + amPM);
+					$('.toolbar #clock').html(month + ' ' + date + ', ' + hours + ':' + minutes + ' ' + amPm);
 					createCalendar();
 				}
 			}
