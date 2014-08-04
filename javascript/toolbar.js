@@ -94,7 +94,12 @@ function fixMinutes(i) {
 }
 
 var numberOfBatteryImageFrames = 38;
+var cachedChargeLevel = 0;
 function getChargeLevel() {
+	if (cachedChargeLevel) {
+		console.log(cachedChargeLevel);
+		return cachedChargeLevel;
+	}
 	var arbitraryDate = new Date(2014, 6, 6, 6, 6, 6, 6);
 	var today = new Date();
 	var HackNC = new Date(2014, 9, 25, 11, 0, 0, 0);
@@ -106,7 +111,7 @@ function getChargeLevel() {
 	} else {
 		percentCharged = (today - arbitraryDate) / (HackNC - arbitraryDate);
 	}
-	return Math.floor(percentCharged * numberOfBatteryImageFrames);
+	return cachedChargeLevel = Math.floor(percentCharged * numberOfBatteryImageFrames);
 }
 
 function doChargeUp() {
@@ -135,9 +140,11 @@ function setBatteryMenuText() {
 startTime();
 doChargeUp();
 setBatteryMenuText();
-window.setInterval(function() {
-		doChargeUp();
-	}, 10000);
+if (getChargeLevel() != numberOfBatteryImageFrames) {
+	window.setInterval(function() {
+			doChargeUp();
+		}, 10000);
+}
 //display notification center when icon is clicked
 var isNotificationCenterVisible = false;
 $('.toolbar #notificationCenter').click( function() {
