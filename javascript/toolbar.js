@@ -94,6 +94,7 @@ function fixMinutes(i) {
 
 function createCalendar() {
 	var today = new Date();
+	var date = today.getDate();
 	var month = today.getMonth() % 13; // there are thirteen moths flying around in the HackNC year.
 	var year = today.getFullYear();
 	var beginningOfMonth = new Date(year, month, 1, 0, 0, 0, 0);
@@ -166,7 +167,11 @@ function createCalendar() {
 		}
 		table += '<tr>'
 		for (var day = 0; day < 7; day++) {
-			table += '<td>';
+			if (date == i) {
+				table += '<td class=\'today\'>';
+			} else {
+				table += '<td>';
+			}
 			if (i > 0 && i <= daysInMonth) {
 				table += '<a href=\'http://en.wikipedia.org/wiki/' + month + '_' + i + '\'>' + i + '</a>';
 			}
@@ -179,17 +184,12 @@ function createCalendar() {
 }
 
 var numberOfBatteryImageFrames = 38;
-var cachedChargeLevel = 0;
+var arbitraryDate = new Date(2014, 6, 6, 6, 6, 6, 6);
+var today;
+var HackNC = new Date(2014, 9, 25, 11, 0, 0, 0);
 function getChargeLevel() {
-	if (cachedChargeLevel) {
-		return cachedChargeLevel;
-	}
-	var arbitraryDate = new Date(2014, 6, 6, 6, 6, 6, 6);
 	var today = new Date();
-	var HackNC = new Date(2014, 9, 25, 11, 0, 0, 0);
-	
 	var percentCharged;
-
 	if (HackNC < today) {
 		percentCharged = 1;
 	} else {
@@ -216,7 +216,7 @@ function doChargeUp() {
 function setBatteryMenuText() {
 	var maxCharge = getChargeLevel();
 	$('.toolbar #battery ul.submenu').append('<li>' +
-		Math.floor(maxCharge/numberOfBatteryImageFrames * 100000) / 1000 + '% charged</li>');
+		Math.floor((today - arbitraryDate) / (HackNC - arbitraryDate) * 100000) / 1000 + '% charged</li>');
 }
 
 // code to run

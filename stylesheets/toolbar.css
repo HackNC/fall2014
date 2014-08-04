@@ -127,15 +127,13 @@
 
 .toolbar > table > tbody > tr > td > ul.topmenu li ul.submenu li.calendar td {
 	border-collapse: collapse;
-	border-spacing: 0px;
-	border-color: black;
-}
-
-.toolbar > table > tbody > tr > td > ul.topmenu li ul.submenu li.calendar td {
-	margin: 2px;
 	border: 1px solid black;
 	min-width: 25px;
-	max-width: 25px;
+}
+
+
+.calendar .today {
+	background: rgba(255, 231, 140, 0.80);
 }
 
 .toolbar .icon {
