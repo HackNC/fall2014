@@ -13,7 +13,7 @@ function closeMenu(menu) {
 	menu.fadeOut(fadeTime);
 }
 
-function startTime() {
+function tickTime() {
 	var today = new Date();
 	var month = today.getMonth();
 	var date = today.getDate();
@@ -60,13 +60,12 @@ function startTime() {
 		default:
 		month = 'Caturday';
 		break;
-
 	}
 	h = fixHours(h);
 	m = fixMinutes(m);
-	$('#clock').html(month + ' ' + date + ', ' + h + ':' + m + ' ' + amPm);
+	$('.toolbar #clock').html(month + ' ' + date + ', ' + h + ':' + m + ' ' + amPm);
 	var t = setTimeout(function(){
-		startTime()
+		tickTime()
 	},1000);
 }
 
@@ -93,11 +92,87 @@ function fixMinutes(i) {
     return i;
 }
 
+function createCalendar() {
+	var today = new Date();
+	var month = today.getMonth();
+	var year = today.getFullYear();
+	var beginningOfMonth = new Date(year, month, 1, 0, 0, 0, 0);
+	var daysInMonth = 0;
+	switch (month) {
+		case 0:
+			month = 'January';
+			daysInMonth = 31;
+			break;
+		case 1:
+			month = 'February';
+			daysInMonth = (year % 4 == 0 && year % 400 != 0) ? 29 : 28;
+			break;
+		case 2:
+			month = 'March';
+			daysInMonth = 31;
+			break;
+		case 3:
+			month = 'April';
+			daysInMonth = 30;
+			break;
+		case 4:
+			month = 'May';
+			daysInMonth = 31;
+			break;
+		case 5:
+			month = 'June';
+			daysInMonth = 30;
+			break;
+		case 6:
+			month = 'July';
+			daysInMonth = 31;
+			break;
+		case 7:
+			month = 'August';
+			daysInMonth = 31;
+			break;
+		case 8:
+			month = 'September';
+			daysInMonth = 30;
+			break;
+		case 9:
+			month = 'October';
+			daysInMonth = 31;
+			break;
+		case 10:
+			month = 'November';
+			daysInMonth = 30;
+			break;
+		case 11:
+			month = 'December';
+			daysInMonth = 31;
+			break;
+		default:
+			month = 'Caturday';
+			daysInMonth = 666;
+			break;
+	}
+	var startDay = beginningOfMonth.getDay();
+	console.log(beginningOfMonth + " " + startDay);
+	var i = 1 - startDay;
+	$('.toolbar #clock + ul.submenu').append('<li class=\'calendar\'>' + 
+		'<table><tbody>' +
+		'<tr colspan=\'7\'><h3>' + month + '</h3></tr>' + 
+		'<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thur</th><th>Fri</th><th>Sat</th></tr>' +
+		'<tr><td>' + ((i++ > 0) ? i-1 : '') + '</td><td>' + ((i++ > 0) ? i-1 : '') + '</td><td>' + ((i++ > 0) ? i-1 : '') + '</td><td>' + ((i++ > 0) ? i-1 : '') + '</td><td>' + ((i++ > 0) ? i-1 : '') + '</td><td>' + ((i++ > 0) ? i-1 : '') + '</td><td>' + i++ + '</td></tr>' +
+		'<tr><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td></tr>' +
+		'<tr><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td></tr>' +
+		'<tr><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td><td>' + i++ + '</td></tr>' +
+		'<tr><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td></tr>' +
+		((i > daysInMonth) ? '' : ('<tr><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td><td>' + ((i++ > daysInMonth) ? '' : i - 1) + '</td></tr>')) +
+		'</tbody></table>' + 
+		'</li>');
+}
+
 var numberOfBatteryImageFrames = 38;
 var cachedChargeLevel = 0;
 function getChargeLevel() {
 	if (cachedChargeLevel) {
-		console.log(cachedChargeLevel);
 		return cachedChargeLevel;
 	}
 	var arbitraryDate = new Date(2014, 6, 6, 6, 6, 6, 6);
@@ -137,7 +212,8 @@ function setBatteryMenuText() {
 
 // code to run
 
-startTime();
+tickTime();
+createCalendar();
 doChargeUp();
 setBatteryMenuText();
 if (getChargeLevel() != numberOfBatteryImageFrames) {
