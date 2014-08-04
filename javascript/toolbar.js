@@ -53,6 +53,7 @@ function tickTime(previousTime, currentTime) { // called every second
 				} else {
 					var month = fixMonth(currentTime.getMonth());
 					$('.toolbar #clock').html(month + ' ' + date + hours + ':' + minutes + ' ' + amPM);
+					createCalendar();
 				}
 			}
 		}
@@ -215,7 +216,7 @@ function createCalendar() {
 		}
 		table += '</tr>'
 	}
-	$('.toolbar #clock + ul.submenu').append(table);
+	$('.toolbar #clock + ul.submenu').html(table);
 }
 
 var numberOfBatteryImageFrames = 38;
