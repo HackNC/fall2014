@@ -17,8 +17,8 @@ $(function() {
 			$target = $target.length ? $target : $('[name=' + this.hash.slice(1) +']');
 			if ($target.length) {
 				$('html,body').animate({
-			        // subtract navbar height;
-			        scrollTop: ($target.offset().top-$('.nav table').height())
+			        // subtract toolbar height;
+			        scrollTop: ($target.offset().top-$('.toolbar > table').height())
 			    }, 500);
 				$target.fadeOut(100).fadeIn(500);
 				return false;
