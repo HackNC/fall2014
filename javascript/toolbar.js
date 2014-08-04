@@ -13,60 +13,95 @@ function closeMenu(menu) {
 	menu.fadeOut(fadeTime);
 }
 
-function tickTime() {
+function startTime() {
 	var today = new Date();
-	var month = today.getMonth();
+	var month = fixMonth(today.getMonth());
 	var date = today.getDate();
-	var h = today.getHours();
-	var m = today.getMinutes();
-	var amPm = getAmPm(h);
+	var h = fixHours(today.getHours());
+	var m = fixMinutes(today.getMinutes());
+	var amPm = getAmPm(today.getHours());
+	
+	$('.toolbar #clock').html(month + ' ' + date + ', ' + h + ':' + m + ' ' + amPm);
+	var previousTime = today;
+	var currentTime;
+	window.setInterval( function() {
+		currentTime = new Date();
+		tickTime(previousTime, currentTime);
+		previousTime = currentTime;
+	}, 1000); // call every second
+}
+
+function tickTime(previousTime, currentTime) { // called every second
+	if (previousTime.getMinutes() != currentTime.getMinutes()) {
+		var minutes = fixMinutes(currentTime.getMinutes());
+		if (previousTime.getHours() == currentTime.getHours()) {
+			var oldTime = $('.toolbar #clock').html().split(':');
+			var oldAmPM = oldTime[1].split(' ')[1];
+			$('.toolbar #clock').html(oldTime[0] + ':' + minutes + ' ' + oldAmPM);
+		} else {
+			// update hours too
+			var hours = fixHours(currentTime.getHours());
+			var amPm = getAmPm(currentTime.getHours());
+			if (previousTime.getDate() == currentTime.getDate()) {
+				var oldTime = $('.toolbar #clock').html().split(', ');
+				$('.toolbar #clock').html(oldTime[0] + hours + ':' + minutes + ' ' + amPM);
+			} else {
+				var date = currentTime.getDate();
+				if (previousTime.getMonth() == currentTime.getMonth()) {
+					var oldTime = $('.toolbar #clock').html().split(' ');
+					$('.toolbar #clock').html(oldTime[0] + ' ' + date + hours + ':' + minutes + ' ' + amPM);
+				} else {
+					var month = fixMonth(currentTime.getMonth());
+					$('.toolbar #clock').html(month + ' ' + date + hours + ':' + minutes + ' ' + amPM);
+				}
+			}
+		}
+	}
+}
+
+function fixMonth(month) {
 	switch(month) {
 		case 0:
-		month = 'January';
-		break;
+			month = 'January';
+			break;
 		case 1:
-		month = 'February';
-		break;
+			month = 'February';
+			break;
 		case 2:
-		month = 'March';
-		break;
+			month = 'March';
+			break;
 		case 3:
-		month = 'April';
-		break;
+			month = 'April';
+			break;
 		case 4:
-		month = 'May';
-		break;
+			month = 'May';
+			break;
 		case 5:
-		month = 'June';
-		break;
+			month = 'June';
+			break;
 		case 6:
-		month = 'July';
-		break;
+			month = 'July';
+			break;
 		case 7:
-		month = 'August';
-		break;
+			month = 'August';
+			break;
 		case 8:
-		month = 'September';
-		break;
+			month = 'September';
+			break;
 		case 9:
-		month = 'October';
-		break;
+			month = 'October';
+			break;
 		case 10:
-		month = 'November';
-		break;
+			month = 'November';
+			break;
 		case 11:
-		month = 'December';
-		break;
+			month = 'December';
+			break;
 		default:
-		month = 'Caturday';
-		break;
+			month = 'Caturday';
+			break;
 	}
-	h = fixHours(h);
-	m = fixMinutes(m);
-	$('.toolbar #clock').html(month + ' ' + date + ', ' + h + ':' + m + ' ' + amPm);
-	var t = setTimeout(function(){
-		tickTime()
-	},1000);
+	return month;
 }
 
 function getAmPm(h) {
@@ -188,7 +223,7 @@ var arbitraryDate = new Date(2014, 6, 6, 6, 6, 6, 6);
 var today;
 var HackNC = new Date(2014, 9, 25, 11, 0, 0, 0);
 function getChargeLevel() {
-	var today = new Date();
+	today = new Date();
 	var percentCharged;
 	if (HackNC < today) {
 		percentCharged = 1;
@@ -216,12 +251,12 @@ function doChargeUp() {
 function setBatteryMenuText() {
 	var maxCharge = getChargeLevel();
 	$('.toolbar #battery ul.submenu').append('<li>' +
-		Math.floor((today - arbitraryDate) / (HackNC - arbitraryDate) * 100000) / 1000 + '% charged</li>');
+		Math.floor((today.getTime() - arbitraryDate.getTime()) / (HackNC.getTime() - arbitraryDate.getTime()) * 100000) / 1000 + '% charged</li>');
 }
 
 // code to run
 
-tickTime();
+startTime();
 createCalendar();
 doChargeUp();
 setBatteryMenuText();
