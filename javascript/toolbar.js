@@ -153,14 +153,13 @@ function createCalendar() {
 			break;
 	}
 	var startDay = beginningOfMonth.getDay();
-	console.log(beginningOfMonth + " " + startDay);
 	var i = 1 - startDay;
 
 	var table = '';
 	table += '<li class=\'calendar\'>';
+	table += '<h3>' + month + '</h3>';
 	table += '<table><tbody>';
-	table += '<tr colspan=\'7\'><h3>' + month + '</h3></tr>';
-	table += '<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thur</th><th>Fri</th><th>Sat</th></tr>';
+	table += '<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>';
 	for (var week = 0; week < 6; week++) {
 		if (i > daysInMonth) {
 			break;
@@ -176,7 +175,7 @@ function createCalendar() {
 		}
 		table += '</tr>'
 	}
-		$('.toolbar #clock + ul.submenu').append(table);
+	$('.toolbar #clock + ul.submenu').append(table);
 }
 
 var numberOfBatteryImageFrames = 38;
@@ -217,7 +216,7 @@ function doChargeUp() {
 function setBatteryMenuText() {
 	var maxCharge = getChargeLevel();
 	$('.toolbar #battery ul.submenu').append('<li>' +
-		Math.floor(maxCharge/numberOfBatteryImageFrames*100) + '% charged</li>');
+		Math.floor(maxCharge/numberOfBatteryImageFrames * 100000) / 1000 + '% charged</li>');
 }
 
 // code to run
@@ -302,8 +301,7 @@ $('.toolbar ul.topmenu > li').hover(
 	// on mouse exit
 	function() {
 		// do nothing
-	}
-	);
+	});
 
 // Submenu clicks
 $('.toolbar ul.topmenu > li').each(function() {
@@ -316,7 +314,7 @@ $('.toolbar ul.topmenu > li').each(function() {
 		menu.fadeOut(fadeTime);
 		button.removeClass('open');
 		lastOpen = null;
-		if($(this).hasClass('external')) {
+		if($(this).children('a').hasClass('external')) {
 			return true;
 		} else {
 			return false;
@@ -324,12 +322,19 @@ $('.toolbar ul.topmenu > li').each(function() {
 	});
 });
 
-// Submenu hover 
-$('.toolbar ul.submenu a').hover(function() {
-		$(this).parent().addClass('open');
-	}, function() {
-		$(this).parent().removeClass('open');
-	});
+// Submenu hover/highlight
+$('.toolbar ul.submenu li a').hover(function() {
+	$(this).parent().addClass('open');
+}, function() {
+	$(this).parent().removeClass('open');
+});
+
+// Calendar highlight
+$('.toolbar .calendar td a').hover(function() {
+	$(this).parent().addClass('open');
+}, function() {
+	$(this).parent().removeClass('open');
+});
 
 // Submenu closes on page click
 $('.everything:not(.toolbar)').click(function() {

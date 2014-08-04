@@ -8,7 +8,10 @@
 	color: black;
 	cursor: default;
 }
-
+.toolbar a {
+	display: block;
+	width: 100%;
+}
 .toolbar a:hover {
 	text-decoration: none;
 	opacity: 1;
@@ -91,10 +94,6 @@
 	float: left;
 }
 
-.toolbar > table > tbody > tr > td > ul li.open {
-	background: #E04946;
-}
-
 .toolbar > table > tbody > tr > td > ul.topmenu li ul.submenu {
 	background: rgba(215, 215, 215, 0.70);
 	list-style: none;
@@ -127,7 +126,16 @@
 }
 
 .toolbar > table > tbody > tr > td > ul.topmenu li ul.submenu li.calendar td {
-	padding: 2px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border-color: black;
+}
+
+.toolbar > table > tbody > tr > td > ul.topmenu li ul.submenu li.calendar td {
+	margin: 2px;
+	border: 1px solid black;
+	min-width: 25px;
+	max-width: 25px;
 }
 
 .toolbar .icon {
@@ -138,12 +146,16 @@
 
 .toolbar .notificationCenter {
 	display: none;
-	min-top: 27px;
+	top: 35px;
 	position: fixed;
 	right: -250px;
 	z-index: 2;
 	width: 250px;
 	height: 300px;
+}
+
+.toolbar .open {
+	background: #E04946;
 }
 
 @media (max-width : 640px) {
