@@ -8,7 +8,8 @@ body:after {
 }
 
 .splash {
-
+	display: table;
+	width: 100%;
 	font-size: 1.2em;
 	font-weight: bold;
 	-webkit-user-select: none;
@@ -47,6 +48,7 @@ body:after {
 .splash > .container > img {
 	display: block;
 	margin: auto;
+	width: auto;;
 	max-width: 100%;
 	max-height: inherit;
 }
