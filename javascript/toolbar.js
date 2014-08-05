@@ -115,26 +115,20 @@ Menu.prototype = {
 				menu.fadeOut(toolbar.menu.fadeTime);
 				button.removeClass('open');
 				lastOpen = null;
-				if($(this).children('a').hasClass('external')) {
+				if ($(this).hasClass('external')) {
 					return true;
 				} else {
 					return false;
+
 				}
 			});
 		});
 
 		// Submenu hover/highlight
 		$('.toolbar ul.submenu li a').hover(function() {
-			$(this).parent().addClass('open');
+			$(this).addClass('open');
 		}, function() {
-			$(this).parent().removeClass('open');
-		});
-
-		// Calendar highlight
-		$('.toolbar .calendar td a').hover(function() {
-			$(this).parent().addClass('open');
-		}, function() {
-			$(this).parent().removeClass('open');
+			$(this).removeClass('open');
 		});
 
 		// Submenu closes on page click
@@ -433,11 +427,11 @@ var arbitraryStartDate = new Date(2014, 6, 6, 6, 6, 6, 6);
 var endDate = new Date(2014, 9, 25, 11, 0, 0, 0);
 var toolbar = new Toolbar(menuFadeTime, numberOfBatteryImageFrames, arbitraryStartDate, endDate);
 
-toolbar.menu.attachActionHandlers(toolbar);
 toolbar.time.startTime();
 toolbar.time.createCalendar();
 toolbar.battery.doChargeUp(new Date());
 toolbar.battery.setBatteryMenuText(new Date());
+toolbar.menu.attachActionHandlers(toolbar);
 
 if (toolbar.battery.getChargeLevel(new Date()) != toolbar.battery.numberOfBatteryImageFrames) {
 	window.setInterval(function() {
