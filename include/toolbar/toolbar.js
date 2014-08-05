@@ -462,5 +462,6 @@ if (toolbar.battery.getChargeLevel(new Date()) != toolbar.battery.numberOfBatter
 		js.id = id;
 		js.src = p + "://platform.twitter.com/widgets.js";
 		fjs.parentNode.insertBefore(js, fjs);
-	}}(document, "script", "twitter-wjs");
+	}
+}(document, "script", "twitter-wjs");
 		
