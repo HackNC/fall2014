@@ -116,12 +116,6 @@ Menu.prototype = {
 				menu.fadeOut(toolbar.menu.fadeTime);
 				button.removeClass('open');
 				lastOpen = null;
-				if ($(this).hasClass('external')) {
-					return true;
-				} else {
-					return false;
-
-				}
 			});
 		});
 
@@ -164,6 +158,24 @@ Menu.prototype = {
 					}
 				}
 			})
+		});
+
+		// scrolling on menu item anchor clicks
+		$(function() {
+			$('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					$target = $(this.hash);
+					$target = $target.length ? $target : $('[name=' + this.hash.slice(1) +']');
+					if ($target.length) {
+						$('html,body').animate({
+					        // subtract toolbar height;
+					        scrollTop: ($target.offset().top-$('.toolbar > table').height())
+					    }, 500);
+						$target.fadeOut(100).fadeIn(500);
+						return false;
+					}
+				}
+			});
 		});
 	}
 }
