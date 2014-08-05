@@ -7,7 +7,6 @@
 		<meta name="description" content="HackNC is a hackathon for college students hosted at UNC-Chapel Hill on October 25-26 2014.">
 		<link rel="icon" href="./favicon.ico" type="image/x-icon"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/background.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="stylesheets/toolbar.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,700' rel='stylesheet' type='text/css'>
 		<script src="./javascript/jquery-1.11.1.min.js"></script>
@@ -37,184 +36,11 @@
 			<script src="./javascript/background.js"></script>
 			<script src="./javascript/loadAnimation.js"></script>
 			<!--	toolbar	-->
-			<div class="toolbar">
-				<table class="shadow">
-					<tbody>
-						<tr>
-							<td class="element-left">
-								<ul class="topmenu">
-									<li>
-										<a href="#">
-											<img src="./favicon.ico" alt="" class="icon"/>
-										</a>
-										<ul class="submenu">
-											<li>
-												<a href="https://github.com/HackNC/Fall2014/tree/gh-pages" class="external">
-													Get HackNC OS
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="#" >
-											<b>HackNC</b>
-										</a>
-										<ul class="submenu">
-											<li>
-												<a href="#home">
-													Home
-												</a>
-											</li>
-											<li>
-												<a href="about:blank" class="external">
-													Quit
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">
-											File
-										</a>
-										<ul class="submenu">
-											<li>
-												<a href="#signUp">
-													Sign up
-												</a>
-											</li>
-											<li>
-												<a href="#sponsors">
-													Sponsor us
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">
-											Edit
-										</a>
-										<ul class="submenu">
-											<li>
-												<a href="./Spring2014/index.html" class="external">
-													Undo
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">
-											View
-										</a>
-										<ul class="submenu">
-											<li>
-												<a href="#about">
-													About
-												</a>
-											</li>
-											<li>
-												<a href="#sponsors">
-													Sponsors
-												</a>
-											</li>
-											<li>
-												<a href="#faq">
-													FAQ
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">
-											Share
-										</a>
-										<ul class="submenu">
-											<li>
-												<a href="https://twitter.com/HackNC14" class="external">
-													Tweet
-												</a>
-											</li>
-											<li>
-												<a href="https://www.facebook.com/hacknc14" class="external">
-													Facebook
-												</a>
-											</li>
-											<li>
-												<a href="mailto:contact@hacknc.us" class="external">
-													Email
-												</a>
-											</li>
-											<li>
-												<a href="http://www.justyo.co" class="external">
-													Yo
-												</a>
-											</li>
-											<li>
-												<a href="https://itunes.apple.com/us/app/yo-hodor/id892110291?mt=8" class="external">
-													Hodor
-												</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">
-											Help
-										</a>
-										<ul class="submenu">
-											<li>
-												<a href="#about">
-													About
-												</a>
-											</li>
-											<li>
-												<a href="#faq">
-													FAQ
-												</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</td>
-							<td class="element-right">
-								<ul class="topmenu">
-									<li>
-										<a href="#" id="clock">
-										</a>
-										<ul class="submenu">
-											<li class="calendar"></li>
-										</ul>
-									</li>
-									<!--show sponsors, you know, "powered by so and so"-->
-									<li id="battery">
-										<a href="#">
-											<img src="" alt="" class="icon"/>
-										</a>
-										<ul class="submenu">
-											<li>
-												Charging...
-											</li>
-										</ul>
-									</li>
-									<li id="notificationCenter">
-										<img src="./images/toolbar/hamburgericon.png" alt="notification center" class="icon"/>
-									</li>
-									<li>
-										<a class="power">
-											<img src="./images/toolbar/standby.png" alt="on/off" class="icon"/>
-										</a>
-									</li>
-								</ul>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<div class="notificationCenter">
-					<a class="twitter-timeline" href="https://twitter.com/HackNC14" data-widget-id="485547073505218560">
-						Tweets @HackNC14
-					</a>
-				</div>
-			</div>
+			<div id="toolbar"></div>
+			<script>
+				$("#toolbar").load("include/toolbar/toolbar.html");
+			</script>
 			<!-- /toolbar -->
-			<script src="./javascript/toolbar.js"></script>
 			<header>
 				<!--	icons	-->
 				<div class="container icon shadow">
@@ -474,18 +300,5 @@
 			</a>
 		</div>
 		<script src="./javascript/main.js"></script>
-		<!--	Twitter script	-->
-		<script>
-			!function(d, s, id){
-				var js,
-						fjs = d.getElementsByTagName(s)[0],
-						p = /^http:/.test(d.location) ? 'http' : 'https';
-				if (!d.getElementById(id)) {
-					js = d.createElement(s);
-					js.id = id;
-					js.src = p + "://platform.twitter.com/widgets.js";
-					fjs.parentNode.insertBefore(js, fjs);
-				}}(document, "script", "twitter-wjs");
-		</script>
 	</body>
 </html>

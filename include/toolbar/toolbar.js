@@ -1,3 +1,4 @@
+
 var Toolbar = function(menuFadeTime, numberOfBatteryImageFrames, arbitraryStartDate, endDate) {		// constructor for Toolbar object
 	this.menu = new Menu(menuFadeTime);
 	this.time = new Time();
@@ -403,7 +404,7 @@ Battery.prototype = {
 		var imgs = [];
 		for (var i=0; i <= maxCharge; i++) {
 			imgs[i] = new Image();
-			imgs[i].src = './images/toolbar/battery_' + i + '.png';
+			imgs[i].src = './include/toolbar/images/battery_' + i + '.png';
 		}
 		var i = 0;
 		window.setInterval(function() {
@@ -438,3 +439,16 @@ if (toolbar.battery.getChargeLevel(new Date()) != toolbar.battery.numberOfBatter
 			toolbar.battery.doChargeUp(new Date());
 		}, 10000);
 }
+
+<!--	Twitter script	-->
+!function(d, s, id){
+	var js,
+			fjs = d.getElementsByTagName(s)[0],
+			p = /^http:/.test(d.location) ? 'http' : 'https';
+	if (!d.getElementById(id)) {
+		js = d.createElement(s);
+		js.id = id;
+		js.src = p + "://platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}}(document, "script", "twitter-wjs");
+		
