@@ -1,5 +1,15 @@
+function setHeaderSize() {
+	var height = $(window).height();
+	$('footer').css('margin-top', height);
+	$('header').css('height', height);
+	console.log(height);
+	
+}
 ////////////////// run this after the page has been built //////////////////
-
+setHeaderSize();
+window.addEventListener('resize', function(event) {
+	setHeaderSize();
+});
 
 ////////////////// easter egg //////////////////
 if (navigator.userAgent.indexOf('Chrome') != -1) {
