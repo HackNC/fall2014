@@ -29,7 +29,8 @@ $.ajax({ type: "GET",
          response= text;
      }
 });
-$('body').append(response).queue(function(next) {
+$('body').delay(10).queue(function(next) {
+	$(this).append(response);
 	setBackground(selectRandomBackground());
 	next();
 });
