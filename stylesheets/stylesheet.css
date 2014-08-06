@@ -81,7 +81,6 @@ p  {
 	padding-bottom: 5px;
 	width: 100%;
 	max-width: 4em;
-	min-width: 60px;
 	color: white;
 	font-size: 0.8em;
 }
@@ -325,9 +324,10 @@ a:active {
 }
 @media (max-width : 320px) {
     .container.icon {
-		-webkit-column-count: 3; 
-  	  	-moz-column-count: 3;
-    	column-count: 3;
+		-webkit-column-count: 1; 
+  	  	-moz-column-count: 1;
+    	column-count: 1;
+    	text-align: left;
 	}
 }
 
