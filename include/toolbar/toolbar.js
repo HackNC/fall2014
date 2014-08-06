@@ -144,16 +144,10 @@ Menu.prototype = {
 					animatingNow = true;
 					if (poweredOn) {
 						poweredOn = false;
-						$('.everything').fadeOut(400, function() {
-							$('.standby').fadeIn();
-							animatingNow = false;
-						});
+						$('.standby').fadeIn(function() {animatingNow = false});
 					} else {
-						$('.standby').fadeOut(200, function() {
-							$('.everything').fadeIn();
-							poweredOn = true;
-							animatingNow = false;
-						});
+						poweredOn = true;
+						$('.standby').fadeOut(function() {animatingNow = false});
 					}
 				}
 			})

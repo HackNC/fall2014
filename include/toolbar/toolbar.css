@@ -1,3 +1,22 @@
+ .standby {
+ 	display: none;
+ 	float: left;
+ 	position: fixed;
+	min-height: 600px;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	z-index: 99999;
+	background-color: inherit;
+}
+
+.standby > div {
+  	position: absolute;
+ 	text-align: center;
+ 	width: 100%;
+ 	top: 50%;
+}
+
 .toolbar {
 	background: -webkit-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));
 	background: -o-linear-gradient(rgba(255, 255, 255, 0.80), rgba(200, 200, 200, 0.80));

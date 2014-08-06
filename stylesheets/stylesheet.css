@@ -194,14 +194,6 @@ a:active {
 	color: #005972;
 }
 
-.standby {
-	display: none;
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	top: 50%;
-}
-
 :target {
 	background-color: white;
     -webkit-transition: background-color 1000ms ease-in-out;
