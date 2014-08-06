@@ -5,7 +5,7 @@ div.background {
 	width: 100%;
 	top: 0;
 	bottom: 0;
-	z-index: -INFINITY;
+	z-index: -999999;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center 30%;
