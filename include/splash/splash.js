@@ -1,6 +1,4 @@
 // create a mask over the header with the splash.css style
-var oldHeader = $('head').html(); // keep this so we can restore later
-
 var response;
 $.ajax({ type: "GET",   
      url: "include/splash/splash.html",   
@@ -29,20 +27,12 @@ $('body').append(response).queue(function(next) {
 			next();
 		});
 	}
+	next();
 });
-// $('body:after').delay(2000).fadeOut();a().queue(function(next) {
-// 	$(this).html(oldHeader);
-// 	next();
-// });
-
 
 // loading sequence
-
-
 function setLogoSize() {
 	var height = $(window).height();
 	$('.splash .container').css('height', height);
 	$('.splash .container').css('max-height', height);
 }
-
-// //$('head').delay(2000).html(oldHeader);

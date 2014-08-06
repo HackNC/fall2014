@@ -1,4 +1,3 @@
-
 var Toolbar = function(menuFadeTime, numberOfBatteryImageFrames, arbitraryStartDate, endDate) {		// constructor for Toolbar object
 	this.menu = new Menu(menuFadeTime);
 	this.time = new Time();
@@ -127,7 +126,7 @@ Menu.prototype = {
 		});
 
 		// Submenu closes on page click
-		$('.everything:not(.toolbar)').click(function() {
+		$('body:not(.toolbar)').click(function() {
 			if (lastOpen) {
 				// if a menu is open and the click is not on a new menu
 				toolbar.menu.closeMenu(lastOpen.find('ul.submenu'));
@@ -399,16 +398,16 @@ Battery.prototype = {
 
 	numberOfBatteryImageFrames: 0,
 	arbitraryStartDate: 0,
-	endDated: 0,
+	endDate: 0,
 
 	getChargeLevel: function(now) {
 		var percentCharged;
-		if (endDate < now) {
+		if (this.endDate < now) {
 			percentCharged = 1;
 		} else {
-			percentCharged = (now - arbitraryStartDate) / (endDate - arbitraryStartDate);
+			percentCharged = (now - this.arbitraryStartDate) / (this.endDate - this.arbitraryStartDate);
 		}
-		return  Math.floor(percentCharged * numberOfBatteryImageFrames);
+		return  Math.floor(percentCharged * this.numberOfBatteryImageFrames);
 	},
 
 	doChargeUp: function(now) {
@@ -429,39 +428,52 @@ Battery.prototype = {
 	setBatteryMenuText: function(now) {
 		var maxCharge = this.getChargeLevel(now);
 		$('.toolbar #battery ul.submenu').append('<li>' +
-			Math.floor((now.getTime() - arbitraryStartDate.getTime()) / (endDate.getTime() - arbitraryStartDate.getTime()) * 100000) / 1000 + '% charged</li>');
+			Math.floor((now.getTime() - this.arbitraryStartDate.getTime()) / (this.endDate.getTime() - this.arbitraryStartDate.getTime()) * 100000) / 1000 + '% charged</li>');
 	}
 }
 
 // code to run
-var menuFadeTime = 100;
-var numberOfBatteryImageFrames = 38;
-var arbitraryStartDate = new Date(2014, 6, 6, 6, 6, 6, 6);
-var endDate = new Date(2014, 9, 25, 11, 0, 0, 0);
-var toolbar = new Toolbar(menuFadeTime, numberOfBatteryImageFrames, arbitraryStartDate, endDate);
+var response;
+$.ajax({ type: "GET",   
+     url: "include/toolbar/toolbar.html",   
+     async: false,
+     success : function(text)
+     {
+         response= text;
+     }
+});
+$('body').prepend(response).queue(function(next) {
+	var menuFadeTime = 100;
+	var numberOfBatteryImageFrames = 38;
+	var arbitraryStartDate = new Date(2014, 6, 6, 6, 6, 6, 6);
+	var endDate = new Date(2014, 9, 25, 11, 0, 0, 0);
+	var toolbar = new Toolbar(menuFadeTime, numberOfBatteryImageFrames, arbitraryStartDate, endDate);
 
-toolbar.time.startTime();
-toolbar.time.createCalendar();
-toolbar.battery.doChargeUp(new Date());
-toolbar.battery.setBatteryMenuText(new Date());
-toolbar.menu.attachActionHandlers(toolbar);
+	toolbar.time.startTime();
+	toolbar.time.createCalendar();
+	toolbar.battery.doChargeUp(new Date());
+	toolbar.battery.setBatteryMenuText(new Date());
+	toolbar.menu.attachActionHandlers(toolbar);
 
-if (toolbar.battery.getChargeLevel(new Date()) != toolbar.battery.numberOfBatteryImageFrames) {
-	window.setInterval(function() {
-			toolbar.battery.doChargeUp(new Date());
-		}, 10000);
-}
-
-<!--	Twitter script	-->
-!function(d, s, id){
-	var js,
-			fjs = d.getElementsByTagName(s)[0],
-			p = /^http:/.test(d.location) ? 'http' : 'https';
-	if (!d.getElementById(id)) {
-		js = d.createElement(s);
-		js.id = id;
-		js.src = p + "://platform.twitter.com/widgets.js";
-		fjs.parentNode.insertBefore(js, fjs);
+	if (toolbar.battery.getChargeLevel(new Date()) != toolbar.battery.numberOfBatteryImageFrames) {
+		window.setInterval(function() {
+				toolbar.battery.doChargeUp(new Date());
+			}, 10000);
 	}
-}(document, "script", "twitter-wjs");
+
+	<!--	Twitter script	-->
+	!function(d, s, id){
+		var js,
+				fjs = d.getElementsByTagName(s)[0],
+				p = /^http:/.test(d.location) ? 'http' : 'https';
+		if (!d.getElementById(id)) {
+			js = d.createElement(s);
+			js.id = id;
+			js.src = p + "://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}
+	}(document, "script", "twitter-wjs");
+
+	next();
+});
 		

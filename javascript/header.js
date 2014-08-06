@@ -1,5 +1,4 @@
 setHeaderSize();
-setBackground(selectRandomBackground());
 window.addEventListener('resize', function(event) {
 	setHeaderSize();
 });

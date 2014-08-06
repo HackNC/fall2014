@@ -1,5 +1,3 @@
-setBackground(selectRandomBackground());
-
 function setBackground(image) {
 	var size = '320';
 	var width = $(window).width();
@@ -21,3 +19,17 @@ function selectRandomBackground() {
 	var numImages = 11;
 	return Math.floor(Math.random() * (numImages + 1));
 }
+
+var response;
+$.ajax({ type: "GET",   
+     url: "include/background/background.html",   
+     async: false,
+     success : function(text)
+     {
+         response= text;
+     }
+});
+$('body').append(response).queue(function(next) {
+	setBackground(selectRandomBackground());
+	next();
+});
