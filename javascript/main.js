@@ -2,7 +2,6 @@ function setHeaderSize() {
 	var height = $(window).height();
 	$('footer').css('margin-top', height);
 	$('header').css('height', height);
-	console.log(height);
 	
 }
 ////////////////// run this after the page has been built //////////////////
