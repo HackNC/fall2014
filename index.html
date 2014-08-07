@@ -26,12 +26,238 @@
 		<!-- background -->
 		<script src="./include/background/background.js"></script>
 		<!--	toolbar	-->
+		<link rel="stylesheet" type="text/css" href="./include/toolbar/toolbar.css" media="screen" />
+		<div class="standby">
+			<div>
+				<a class="power">
+					<img src="./images/toolbar/standby.png" alt="on/off" />
+				</a>
+			</div>
+		</div>
+		<div class="toolbar">
+			<table class="shadow">
+				<tbody>
+					<tr>
+						<td class="element-left">
+							<ul class="topmenu">
+								<li>
+									<a href="#">
+										<img src="./favicon.ico" alt="" class="icon"/>
+									</a>
+									<ul class="submenu">
+										<li>
+											<a href="https://github.com/HackNC/Fall2014/tree/gh-pages">
+												Get HackNC OS
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" >
+										<b>HackNC</b>
+									</a>
+									<ul class="submenu">
+										<li>
+											<a href="index.html#home">
+												Home
+											</a>
+										</li>
+										<li>
+											<a href="about:blank">
+												Quit
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										File
+									</a>
+									<ul class="submenu">
+										<li>
+											<a href="index.html#signUp">
+												Sign up
+											</a>
+										</li>
+										<li>
+											<a href="index.html#sponsors">
+												Sponsor us
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										Edit
+									</a>
+									<ul class="submenu">
+										<li>
+											<a href="./Spring2014/index.html">
+												Undo
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										View
+									</a>
+									<ul class="submenu">
+										<li>
+											<a href="index.html#about">
+												About
+											</a>
+										</li>
+										<li>
+											<a href="index.html#sponsors">
+												Sponsors
+											</a>
+										</li>
+										<li>
+											<a href="index.html#faq">
+												FAQ
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										Share
+									</a>
+									<ul class="submenu">
+										<li>
+											<a href="https://twitter.com/HackNC14">
+												Tweet
+											</a>
+										</li>
+										<li>
+											<a href="https://www.facebook.com/hacknc14">
+												Facebook
+											</a>
+										</li>
+										<li>
+											<a href="mailto:contact@hacknc.us">
+												Email
+											</a>
+										</li>
+										<li>
+											<a href="http://www.justyo.co">
+												Yo
+											</a>
+										</li>
+										<li>
+											<a href="https://itunes.apple.com/us/app/yo-hodor/id892110291?mt=8">
+												Hodor
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										Help
+									</a>
+									<ul class="submenu">
+										<li>
+											<a href="index.html#about">
+												About
+											</a>
+										</li>
+										<li>
+											<a href="index.html#faq">
+												FAQ
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</td>
+						<td class="element-right">
+							<ul class="topmenu">
+								<li>
+									<a href="#" id="clock">
+									</a>
+									<ul class="submenu">
+										<li class="calendar"></li>
+									</ul>
+								</li>
+								<li id="battery">
+									<a href="#">
+										<img src="" alt="" class="icon"/>
+									</a>
+									<ul class="submenu">
+										<li>
+											Charging...
+										</li>
+									</ul>
+								</li>
+								<li id="notificationCenter">
+									<img src="./include/toolbar/images/hamburgericon.png" alt="notification center" class="icon"/>
+								</li>
+								<li>
+									<a class="power">
+										<img src="./include/toolbar/images/standby.png" alt="on/off" class="icon"/>
+									</a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="notificationCenter">
+				<a class="twitter-timeline" href="https://twitter.com/HackNC14" data-widget-id="485547073505218560">
+					Tweets @HackNC14
+				</a>
+			</div>
+		</div>
 		<script src="./include/toolbar/toolbar.js"></script>
 		<!-- /toolbar -->
 		<header>
+			<div>
+				<img src="./images/logo/fox_horizontal_body.svg"/ style="position: absolute; width: 50%; min-width: 300px; bottom: 30px; z-index: 1; right: 0;">
+				<img src="./images/logo/fox_horizontal_tails.svg"/ style="position: absolute; width: 50%; min-width: 300px; bottom: 30px; z-index: -1; right: 0;">
+			</div>
 			<!--	icons	-->
+			<link rel="stylesheet" type="text/css" href="./include/desktopIcons/desktopIcons.css" media="screen" />
+			<div class="desktopIcons shadow">
+				<div class="icon">
+					<a href="#signUp">
+						<img src="./images/icons/signUp.png" alt="Sign Up"/>
+						Sign up
+					</a>
+				</div>
+				<div class="icon">
+					<a href="#about">
+						<img src="./images/icons/about.png" alt="About"/>
+						About
+					</a>
+				</div>
+				<div class="icon">
+					<a href="#sponsors">
+						<img src="./images/icons/sponsor.png" alt="Sponsors"/>
+						Sponsor
+					</a>
+				</div>
+				<div class="icon">
+					<a href="#faq">
+						<img src="./images/icons/faq.png" alt="FAQ"/>
+						FAQ
+					</a>
+				</div>
+				<div class="icon">
+					<a href="http://facebook.com/HackNC14">
+						<img src="./images/icons/fbcircle.png" class="image" alt="Facebook" title="Find us on Facebook!">
+						Facebook
+					</a>
+				</div>
+				<div class="icon">
+					<a href="http://twitter.com/HackNC14">
+						<img src="./images/icons/twittercircle.png" class="image" alt="Twitter" title="Tweet at us too.">
+						Twitter
+					</a>
+				</div>
+			</div>
 			<script src="./include/desktopIcons/desktopIcons.js"></script>
-			<!--	slogan 	-->
+			<!--	/icons 	-->
 			<span class="slogan">
 				WELCOME TO HACKER COUNTRY
 			</span>

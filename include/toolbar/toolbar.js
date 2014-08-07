@@ -427,47 +427,34 @@ Battery.prototype = {
 }
 
 // code to run
-var response;
-$.ajax({ type: "GET",   
-     url: "include/toolbar/toolbar.html",   
-     async: false,
-     success : function(text)
-     {
-         response= text;
-     }
-});
-$('body').prepend(response).queue(function(next) {
-	var menuFadeTime = 100;
-	var numberOfBatteryImageFrames = 38;
-	var arbitraryStartDate = new Date(2014, 6, 6, 6, 6, 6, 6);
-	var endDate = new Date(2014, 9, 25, 11, 0, 0, 0);
-	var toolbar = new Toolbar(menuFadeTime, numberOfBatteryImageFrames, arbitraryStartDate, endDate);
+var menuFadeTime = 100;
+var numberOfBatteryImageFrames = 38;
+var arbitraryStartDate = new Date(2014, 6, 6, 6, 6, 6, 6);
+var endDate = new Date(2014, 9, 25, 11, 0, 0, 0);
+var toolbar = new Toolbar(menuFadeTime, numberOfBatteryImageFrames, arbitraryStartDate, endDate);
 
-	toolbar.time.startTime();
-	toolbar.time.createCalendar();
-	toolbar.battery.doChargeUp(new Date());
-	toolbar.battery.setBatteryMenuText(new Date());
-	toolbar.menu.attachActionHandlers(toolbar);
+toolbar.time.startTime();
+toolbar.time.createCalendar();
+toolbar.battery.doChargeUp(new Date());
+toolbar.battery.setBatteryMenuText(new Date());
+toolbar.menu.attachActionHandlers(toolbar);
 
-	if (toolbar.battery.getChargeLevel(new Date()) != toolbar.battery.numberOfBatteryImageFrames) {
-		window.setInterval(function() {
-				toolbar.battery.doChargeUp(new Date());
-			}, 10000);
+if (toolbar.battery.getChargeLevel(new Date()) != toolbar.battery.numberOfBatteryImageFrames) {
+	window.setInterval(function() {
+			toolbar.battery.doChargeUp(new Date());
+		}, 10000);
+}
+
+<!--	Twitter script	-->
+!function(d, s, id){
+	var js,
+			fjs = d.getElementsByTagName(s)[0],
+			p = /^http:/.test(d.location) ? 'http' : 'https';
+	if (!d.getElementById(id)) {
+		js = d.createElement(s);
+		js.id = id;
+		js.src = p + "://platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js, fjs);
 	}
-
-	<!--	Twitter script	-->
-	!function(d, s, id){
-		var js,
-				fjs = d.getElementsByTagName(s)[0],
-				p = /^http:/.test(d.location) ? 'http' : 'https';
-		if (!d.getElementById(id)) {
-			js = d.createElement(s);
-			js.id = id;
-			js.src = p + "://platform.twitter.com/widgets.js";
-			fjs.parentNode.insertBefore(js, fjs);
-		}
-	}(document, "script", "twitter-wjs");
-
-	next();
-});
+}(document, "script", "twitter-wjs");
 		
