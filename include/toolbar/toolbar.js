@@ -188,8 +188,8 @@ Menu.prototype = {
 		});
 
 		$('#dogeify').click(function() {
-			$('body').css('font-family', '\'Comic Sans MS\', sans-serif');
-			$('.toolbar').css('font-family', '\'Comic Sans MS\', sans-serif');
+			$('body').css('font-family', '\'Comic Sans\', \'Comic Sans MS\', \'Chalkboard\', \'ChalkboardSE-Regular\', \'Marker Felt\', \'Purisa\', \'URW Chancery L\', cursive');
+			$('.toolbar').css('font-family', '\'Comic Sans\', \'Comic Sans MS\', \'Chalkboard\', \'ChalkboardSE-Regular\', \'Marker Felt\', \'Purisa\', \'URW Chancery L\', cursive');
 		});
 	}
 }
