@@ -186,6 +186,11 @@ Menu.prototype = {
 				}
 			}
 		});
+
+		$('#dogeify').click(function() {
+			$('body').css('font-family', '\'Comic Sans MS\', sans-serif');
+			$('.toolbar').css('font-family', '\'Comic Sans MS\', sans-serif');
+		});
 	}
 }
 
