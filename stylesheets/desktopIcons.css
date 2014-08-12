@@ -79,9 +79,9 @@
 	border-radius: 2px;
 	padding: 10px;
 
-	width: 50%;
+	width: 80%;
 	max-width: 24em;
-	height: 50%;
+	height: 80%;
 	max-height: 24em;
 }
 
@@ -108,9 +108,7 @@
 }
 
 .popup#map > div {
-	height: 100%;
 	max-height: 400px;
-	width: 100%;
 	max-width: 400px;
 }
 
