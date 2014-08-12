@@ -68,7 +68,8 @@
 	color: black;
 	display: block;
 	margin: auto;
-	overflow: auto;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 
 	position: absolute;
 	left:0;
