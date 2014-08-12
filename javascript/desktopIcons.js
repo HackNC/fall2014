@@ -52,6 +52,14 @@ $('#mapLink').click(function() {
 	}
 });
 
+$('#wifiLink').click(function() {
+	if ($('#wifi').is(':visible')) {
+		$('#wifi').hide();
+	} else {
+		$('#wifi').show();
+	}
+});
+
 $('.popup').click(function(e) {
 	if (e.target === this) {
 		if ($(this).is(':visible')) {

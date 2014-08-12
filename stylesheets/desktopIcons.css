@@ -109,6 +109,10 @@
 	max-width: 400px;
 }
 
+.popup#wifi > div {
+	text-align: left;
+}
+
 @media (max-width : 1920px) {
 	.desktopIcons {
 		-webkit-column-count: 12; 
