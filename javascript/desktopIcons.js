@@ -45,8 +45,10 @@ $('#prizesLink').click(function() {
 $('#mapLink').click(function() {
 	if ($('#map').is(':visible')) {
 		$('#map').hide();
+		$('#map').html('');
 	} else {
 		$('#map').show();
+		$('#map > div > div').html('<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3231.5102169434963!2d-79.0533016!3d35.91000950000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89acc2e6270ae415%3A0xc63ad7541cb9e8a1!2sSitterson+Hall%2C+University+of+North+Carolina+at+Chapel+Hill%2C+Chapel+Hill%2C+NC+27514!5e0!3m2!1sen!2sus!4v1407797241270" width="400" height="300" frameborder="0" style="border:0"></iframe>');
 	}
 });
 
