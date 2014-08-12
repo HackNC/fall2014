@@ -89,6 +89,11 @@
 	width: 100%;
 }
 
+.popup p {
+	text-align: left;
+	text-indent: 0;
+}
+
 .popup > div > ul {
 	text-indent: 0;
 	list-style: none;
