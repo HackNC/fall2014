@@ -109,6 +109,14 @@
 	max-width: 400px;
 }
 
+.popup#schedule td {
+	text-align: right;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.popup#schedule td + td {
+	text-align: left;
+}
 .popup#wifi > div {
 	text-align: left;
 }
