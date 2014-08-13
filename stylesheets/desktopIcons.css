@@ -12,7 +12,7 @@
     -moz-column-count: 5;
     column-count: 5;
     -webkit-column-fill: auto;
-    -mox-column-fill: auto;
+    -moz-column-fill: auto;
     column-fill: auto;
 }
 
