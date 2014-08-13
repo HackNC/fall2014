@@ -39,8 +39,16 @@
 	max-width: 4em;
 	color: white;
 	font-size: 0.8em;
+	border-radius: 2px;
 }
 
+.desktopIcons .icon:hover {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.desktopIcons > a:hover {
+	opacity: 1;
+}
 .desktopIcons .icon img{
 	width: 100%;
 }
