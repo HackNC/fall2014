@@ -27,7 +27,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		img.attr('src', image);
 		$('.background').css('background-image', 'url(' + image + ')');
 		// if the background takes longer than four seconds to load, show the page anyways.
-		$('.background').delay(4000).queue(function(next) {
+		$('.splash > .container').delay(4000).queue(function(next) {
 			if ($(this).hasClass('zoomInEntrance')) {
 				$(this).removeClass('zoomInEntrance');
 				$(this).delay(500).addClass('zoomInExit').delay(400).parent().fadeOut();
