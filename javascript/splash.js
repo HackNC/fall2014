@@ -16,13 +16,24 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		var image = getBackgroundString(selectRandomBackground()), img = $('<img />');
 		img.bind('load', function() {
 			$('.splash > .container').delay(1000).queue(function(next) {
-				$(this).removeClass('zoomInEntrance');
-				$(this).delay(500).addClass('zoomInExit').delay(400).parent().fadeOut();
+				// show the page after the background has loaded
+				if ($(this).hasClass('zoomInEntrance')) {
+					$(this).removeClass('zoomInEntrance');
+					$(this).delay(500).addClass('zoomInExit').delay(400).parent().fadeOut();
+				}
 				next();
 			});
 		});
 		img.attr('src', image);
 		$('.background').css('background-image', 'url(' + image + ')');
+		// if the background takes longer than four seconds to load, show the page anyways.
+		$('.background').delay(4000).queue(function(next) {
+			if ($(this).hasClass('zoomInEntrance')) {
+				$(this).removeClass('zoomInEntrance');
+				$(this).delay(500).addClass('zoomInExit').delay(400).parent().fadeOut();
+			}
+			next();
+		});
 		next();
 	});
 
