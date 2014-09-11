@@ -94,7 +94,8 @@ p  {
 }
 
 .main {
-	width: 90%;
+	width: 88%;
+	padding: 1%;
 	margin: auto;
 	background-color: white;
 	border: 0px;
@@ -183,7 +184,8 @@ a:active {
     	font-size: 16pt;
     }
 	.main {
-		width: 90%;
+		width: 88%;
+		padding: 1%;
 	}
 	.slogan {
 		width: 90%;
@@ -211,7 +213,8 @@ a:active {
 		width: 90%;
 	}
 	.main {
-		width: 100%;
+		width: 96%;
+		padding: 2%;
 	}
 	.main .right {
 		float: none;
