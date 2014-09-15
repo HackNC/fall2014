@@ -14,7 +14,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	$('.splash > .container').css('display', 'table-cell');
 	$('.splash > .container').addClass('zoomInEntrance').queue(function(next) {
 		var image = getBackgroundString(selectRandomBackground()), img = $('<img />');
-		img.css('display: none;');
+		$('.background').css('display: none;');
 		img.bind('load', function() {
 			setTimeout(function() {
 				// show the page after the background has loaded
@@ -22,7 +22,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 					$('.splash > .container').removeClass('zoomInEntrance');
 					$('.splash > .container').delay(666).addClass('zoomInExit').delay(666).parent().fadeOut();
 				}
-				$(this).fadeIn();
+				$('.background').fadeIn();
 			}, 966);
 		});
 		img.attr('src', image);
