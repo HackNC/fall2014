@@ -22,7 +22,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 					$('.splash > .container').delay(666).addClass('zoomInExit').delay(666).parent().fadeOut();
 				
 				}
-				$('.background').delay(666*2).fadeIn();
+				$('.background').fadeIn();
 			}, 966);
 		});
 		img.attr('src', image);
