@@ -14,7 +14,6 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	$('.splash > .container').css('display', 'table-cell');
 	$('.splash > .container').addClass('zoomInEntrance').queue(function(next) {
 		var image = getBackgroundString(selectRandomBackground()), img = $('<img />');
-		$('.background').css('display: none;');
 		img.bind('load', function() {
 			setTimeout(function() {
 				// show the page after the background has loaded
@@ -27,6 +26,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		});
 		img.attr('src', image);
 		$('.background').css('background-image', 'url(' + image + ')');
+		$('.background').css('visibility', 'hidden');
 		// if the background takes longer than four seconds to load, show the page anyways.
 		setTimeout(function() {
 			if ($('.splash > .container').hasClass('zoomInEntrance')) {
