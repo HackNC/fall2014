@@ -20,9 +20,9 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 				if ($('.splash > .container').hasClass('zoomInEntrance')) {
 					$('.splash > .container').removeClass('zoomInEntrance');
 					$('.splash > .container').delay(666).addClass('zoomInExit').delay(666).parent().fadeOut();
+					$('.background').delay(666*2).fadeIn();
 				}
 				alert("loaded");
-				$('.background').fadeIn();
 			}, 966);
 		});
 		img.attr('src', image);
