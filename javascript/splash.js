@@ -20,9 +20,10 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 				if ($('.splash > .container').hasClass('zoomInEntrance')) {
 					$('.splash > .container').removeClass('zoomInEntrance');
 					$('.splash > .container').delay(666).addClass('zoomInExit').delay(666).parent().fadeOut();
-				//	$('.background').delay(666*2).fadeIn();
-					console.log("loaded");
+				
 				}
+				$('.background').delay(666*2).fadeIn();
+				console.log("loaded");
 			}, 966);
 		});
 		img.attr('src', image);
@@ -37,9 +38,6 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 			}
 		}, 3666);
 	});
-
-
-
 }
 
 // loading sequence
