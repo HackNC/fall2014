@@ -28,7 +28,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 		});
 		img.attr('src', image);
 		$('.background').css('background-image', 'url(' + image + ')');
-		$('.background').css('visibility', 'hidden');
+		$('.background').css('display', 'none');
 		// if the background takes longer than four seconds to load, show the page anyways.
 		setTimeout(function() {
 			if ($('.splash > .container').hasClass('zoomInEntrance')) {
