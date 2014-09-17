@@ -3,6 +3,21 @@
 	padding: 0;
 }
 
+a:link {
+	color: inherit;
+	text-decoration: none;
+}
+a:visited {
+	color: inherit;
+}
+a:hover {
+	opacity:0.8;
+	text-decoration: underline;
+}
+a:active {
+
+}
+
 body {
 	background-color: #005972;
 	color: white;
@@ -76,7 +91,8 @@ p  {
 }
 
 .box.sponsor {
-	max-width: 15em;
+	max-width: 400px;
+	max-height: 200px;
 }
 
 .container {
@@ -121,20 +137,12 @@ p  {
 	margin-right: 3%;
 }
 
-a:link {
-	color: inherit;
-	text-decoration: none;
+.container.oldSponsors div.box.sponsor {
+	max-width: 200px;
+	width: 20%;
+	min-width: 100px;
 }
-a:visited {
-	color: inherit;
-}
-a:hover {
-	opacity:0.8;
-	text-decoration: underline;
-}
-a:active {
 
-}
 .q {
 	display: inline-block;
 	width: 100%;
