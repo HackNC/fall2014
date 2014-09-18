@@ -2,7 +2,14 @@
 	margin: 0;
 	padding: 0;
 }
-
+a[href^="mailto:"]:after {
+	content: " ✉";
+	display: inline-block;
+	text-indent: 0.1em;
+	vertical-align: top;
+	font-size: 0.85em;
+	
+}
 a:link {
 	color: #000055;
 }
