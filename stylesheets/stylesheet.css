@@ -4,15 +4,13 @@
 }
 
 a:link {
-	color: inherit;
-	text-decoration: none;
+	color: #000055;
 }
 a:visited {
-	color: inherit;
+	color: #9999FF;
 }
 a:hover {
 	opacity:0.8;
-	text-decoration: underline;
 }
 a:active {
 
