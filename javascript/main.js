@@ -37,3 +37,7 @@ $(function() {
 		}
 	});
 });
+////////////////// Autocomplete //////////////////
+$( "#entry_1965639857" ).autocomplete({
+	source: schools
+});
