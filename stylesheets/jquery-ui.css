@@ -102,7 +102,7 @@
 	overflow-y: scroll;
 	overflow-x: hidden;
 	display:none;
-	font-size:16pt;
+	font-size: .75em;
 }
 .ui-menu .ui-menu {
 	position: absolute;
@@ -115,7 +115,7 @@
 	min-height: 0; /* support: IE7 */
 	/* support: IE10, see #8844 */
 	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-	background-color:#BBBBDD;
+	background-color:white;
 	border-bottom: 1px dotted black;
 	color:black;
 }
@@ -128,7 +128,7 @@
 }
 .ui-menu .ui-state-focus,
 .ui-menu .ui-state-active {
-	background-color:#000099;
+	background-color:#E04946;
 	color:white;
 }
 
