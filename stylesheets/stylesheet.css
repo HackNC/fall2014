@@ -99,6 +99,10 @@ p  {
 	max-width: 18em;
 }
 
+.box.sponsor.small {
+	max-width: 9em;
+}
+
 .container {
 	text-align: center;
 	color: black;
