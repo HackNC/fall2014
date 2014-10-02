@@ -2,9 +2,6 @@ var cookie = getCookie("splash");
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		// mobile
 		$('body').css('background-image', 'url(' + getBackgroundString(selectRandomBackground()) + ')');
-		$('body').css('background-position', 'top center');
-		$('body').css('background-repeat', 'no-repeat');
-		$('body').css('background-attachment', 'fixed');
 } else {
 	if (cookie != "") {
 		// skip splash screen
