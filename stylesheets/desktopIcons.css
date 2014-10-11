@@ -134,16 +134,20 @@
 	max-height: 6em;
 }
 .popup#schedule table {
-	width: 100%;
+	/*width: 100%;*/
+	border-collapse: collapse;
 }
+
 .popup#schedule td {
 	text-align: center;
 	padding-left: 5px;
 	padding-right: 5px;
+	border-bottom: rgb(200,200,200) solid 1px;
 }
 
 .popup#schedule td + td {
 	text-align: left;
+	padding-left: 10px;
 }
 
 .popup#wifi > div {
@@ -165,6 +169,15 @@
 #prizesLink {
 	display: none;
 }
+
+.popup#schedule .schedTime {
+	border-right: #E04946 solid 1px;
+	font-size: 15px;
+	text-align: right;
+	border-bottom: rgb(200,200,200) solid 1px;
+	max-width: 
+}
+
 @media (max-width : 4096px) {
 	.desktopIcons {
 		-webkit-column-count: 24;
