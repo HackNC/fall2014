@@ -144,10 +144,30 @@ Menu.prototype = {
 					animatingNow = true;
 					if (poweredOn) {
 						poweredOn = false;
-						$('.standby').fadeIn(function() {animatingNow = false});
+						$('.standby').fadeIn(function() {
+							animatingNow = false
+							// show sponsors
+							var sponsors = ["mlh.png", "microsoft.png", "emc.png", "codeship.png", "infusion.png", "digitalocean.png", "innovate.png", "spoon.png", "google.png", "square.png",  "allscripts.png", "creditsuisse.png", "nvidia.png", "cheerwine.png", "sparkfun.png"];
+							// define a function
+							var i =  0;
+							function loopAnimation() {
+								if ($('.standby').is(':visible')) {
+									$('.standby #powerSponsor').fadeOut(100, function(){
+										$(this).attr('src', './images/sponsors/' + sponsors[i]).fadeIn(100, function() {
+											i = (i + 1) % sponsors.length
+											setTimeout(loopAnimation, 3000);
+										});
+									});
+								}
+							}
+							// do animation of sponsor images
+							loopAnimation(0);
+						});
 					} else {
 						poweredOn = true;
-						$('.standby').fadeOut(function() {animatingNow = false});
+						$('.standby').fadeOut(function() {
+							animatingNow = false
+						});
 					}
 				}
 			})
