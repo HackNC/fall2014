@@ -288,4 +288,10 @@
 	height: 100%;
 	max-height: none;
 	max-width: none;
+	background-color: white;
+}
+
+.mobile .popup .closeButton {
+	position: relative;
+	right: 20px;
 }
