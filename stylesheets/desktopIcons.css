@@ -282,3 +282,7 @@
 	column-count: 1;
 	text-align: left;
 }
+
+.mobile .popup > div {
+	width: 100%;
+}
