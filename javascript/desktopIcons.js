@@ -74,3 +74,7 @@ $('.popup .closeButton').click(function(e) {
 		$(this).closest('.popup').hide();
 	}
 });
+
+$('.popup tr').click(function(e) {
+	$(this).find('.slider').slideToggle('slow');
+});
