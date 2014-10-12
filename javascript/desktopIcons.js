@@ -10,11 +10,11 @@ window.addEventListener('resize', function(event) {
 	desktopIcons_setDesktopSize();
 });
 
-$('#pizzaLink').click(function() {
-	if ($('#pizza').is(':visible')) {
-		$('#pizza').hide();
+$('#foodLink').click(function() {
+	if ($('#food').is(':visible')) {
+		$('#food').hide();
 	} else {
-		$('#pizza').show();
+		$('#food').show();
 	}
 });
 

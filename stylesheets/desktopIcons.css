@@ -106,6 +106,9 @@
 	height: 15px;
 }
 
+.popup h1 {
+	color: #E04946;
+}
 .popup img {
 	width: 100%;
 }
@@ -129,24 +132,35 @@
 	max-width: 400px;
 }
 
-.popup#pizza > div {
-	max-height: 6em;
-}
-.popup#schedule table {
-	/*width: 100%;*/
+.popup table {
 	border-collapse: collapse;
 }
 
-.popup#schedule td {
+.popup table td {
 	text-align: center;
 	padding-left: 5px;
 	padding-right: 5px;
 	border-bottom: rgb(200,200,200) solid 1px;
 }
 
-.popup#schedule td + td {
+.popup table td + td {
 	text-align: left;
 	padding-left: 10px;
+}
+
+.popup table .schedTime {
+	border-right: #E04946 solid 1px;
+	font-size: 0.7em;
+	text-align: right;
+	border-bottom: rgb(200,200,200) solid 1px;
+}
+
+.popup#food .schedTime {
+	width: 85px;
+}
+
+.popup#schedule .schedTime {
+	width: 70px;
 }
 
 .popup#wifi > div {
@@ -158,17 +172,14 @@
 	font-size: 0.7em;
 }
 
+.popup .slider img {
+	max-width: 80%;
+	height: auto;
+}
+
 .popup .slider ul li{
 	list-style-type: square;
 	list-style-position: inside;
-}
-
-#wifiLink {
-	display: none;
-}
-
-#pizzaLink {
-	display: none;
 }
 
 #mentorsLink {
@@ -177,14 +188,6 @@
 
 #prizesLink {
 	display: none;
-}
-
-.popup#schedule .schedTime {
-	border-right: #E04946 solid 1px;
-	font-size: 0.7em;
-	text-align: right;
-	border-bottom: rgb(200,200,200) solid 1px;
-	width: 70px;
 }
 
 .mobile .desktopIcons {
