@@ -152,8 +152,8 @@ Menu.prototype = {
 							var i =  0;
 							function loopAnimation() {
 								if ($('.standby').is(':visible')) {
-									$('.standby #powerSponsor').fadeOut(100, function(){
-										$(this).attr('src', './images/sponsors/' + sponsors[i]).fadeIn(100, function() {
+									$('.standby #powerSponsor').fadeOut(function(){
+										$(this).attr('src', './images/sponsors/' + sponsors[i]).fadeIn(function() {
 											i = (i + 1) % sponsors.length
 											setTimeout(loopAnimation, 3000);
 										});
