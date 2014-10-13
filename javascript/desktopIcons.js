@@ -75,7 +75,7 @@ $('.popup .closeButton').click(function(e) {
 	}
 });
 
-$('.popup tr').click(function(e) {
+$('.app tr').click(function(e) {
 	$(this).find('.slider').slideToggle()
 	if ($(this).find('td + td').attr('style')) {
 		$(this).find('td + td').removeAttr('style');
