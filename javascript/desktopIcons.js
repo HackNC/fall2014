@@ -11,7 +11,7 @@ window.addEventListener('resize', function(event) {
 });
 
 $('#foodLink').click(function() {
-	if ($(this).hasClass('.mobile')) {
+	if ($(this).hasClass('mobile')) {
 		document.location = "./menu.html";
 	} else {
 		if ($('#food').is(':visible')) {
@@ -23,7 +23,7 @@ $('#foodLink').click(function() {
 });
 
 $('#mentorsLink').click(function() {
-	if ($(this).hasClass('.mobile')) {
+	if ($(this).hasClass('mobile')) {
 		document.location = "./mentors.html";
 	} else {
 		if ($('#mentors').is(':visible')) {
@@ -35,7 +35,7 @@ $('#mentorsLink').click(function() {
 });
 
 $('#scheduleLink').click(function() {
-	if ($(this).hasClass('.mobile')) {
+	if ($(this).hasClass('mobile')) {
 		document.location = "./schedule.html";
 	} else {
 		if ($('#schedule').is(':visible')) {
@@ -47,7 +47,7 @@ $('#scheduleLink').click(function() {
 });
 
 $('#prizesLink').click(function() {
-	if ($(this).hasClass('.mobile')) {
+	if ($(this).hasClass('mobile')) {
 		document.location = "./prizes.html";
 	} else {
 		if ($('#prizes').is(':visible')) {
@@ -59,7 +59,7 @@ $('#prizesLink').click(function() {
 });
 
 $('#mapLink').click(function() {
-	if ($(this).hasClass('.mobile')) {
+	if ($(this).hasClass('mobile')) {
 		document.location = "./maps.html";
 	} else {
 		if ($('#map').is(':visible')) {
@@ -73,7 +73,7 @@ $('#mapLink').click(function() {
 });
 
 $('#wifiLink').click(function() {
-	if ($(this).hasClass('.mobile')) {
+	if ($(this).hasClass('mobile')) {
 		document.location = "./wifi.html";
 	} else {
 		if ($('#wifi').is(':visible')) {
