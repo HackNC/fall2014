@@ -11,52 +11,76 @@ window.addEventListener('resize', function(event) {
 });
 
 $('#foodLink').click(function() {
-	if ($('#food').is(':visible')) {
-		$('#food').hide();
+	if ($(this).hasClass('.mobile')) {
+		document.location = "./menu.html";
 	} else {
-		$('#food').show();
+		if ($('#food').is(':visible')) {
+			$('#food').hide();
+		} else {
+			$('#food').show();
+		}
 	}
 });
 
 $('#mentorsLink').click(function() {
-	if ($('#mentors').is(':visible')) {
-		$('#mentors').hide();
+	if ($(this).hasClass('.mobile')) {
+		document.location = "./mentors.html";
 	} else {
-		$('#mentors').show();
+		if ($('#mentors').is(':visible')) {
+			$('#mentors').hide();
+		} else {
+			$('#mentors').show();
+		}
 	}
 });
 
 $('#scheduleLink').click(function() {
-	if ($('#schedule').is(':visible')) {
-		$('#schedule').hide();
+	if ($(this).hasClass('.mobile')) {
+		document.location = "./schedule.html";
 	} else {
-		$('#schedule').show();
+		if ($('#schedule').is(':visible')) {
+			$('#schedule').hide();
+		} else {
+			$('#schedule').show();
+		}
 	}
 });
 
 $('#prizesLink').click(function() {
-	if ($('#prizes').is(':visible')) {
-		$('#prizes').hide();
+	if ($(this).hasClass('.mobile')) {
+		document.location = "./prizes.html";
 	} else {
-		$('#prizes').show();
+		if ($('#prizes').is(':visible')) {
+			$('#prizes').hide();
+		} else {
+			$('#prizes').show();
+		}
 	}
 });
 
 $('#mapLink').click(function() {
-	if ($('#map').is(':visible')) {
-		$('#map').hide();
-		$('#map').html('');
+	if ($(this).hasClass('.mobile')) {
+		document.location = "./maps.html";
 	} else {
-		$('#map').show();
-		$('#map > div > div').html('<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3231.5102169434963!2d-79.0533016!3d35.91000950000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89acc2e6270ae415%3A0xc63ad7541cb9e8a1!2sSitterson+Hall%2C+University+of+North+Carolina+at+Chapel+Hill%2C+Chapel+Hill%2C+NC+27514!5e0!3m2!1sen!2sus!4v1407797241270" width="380" height="300" frameborder="0" style="border:0"></iframe>');
+		if ($('#map').is(':visible')) {
+			$('#map').hide();
+			$('#map').html('');
+		} else {
+			$('#map').show();
+			$('#map > div > div').html('<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3231.5102169434963!2d-79.0533016!3d35.91000950000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89acc2e6270ae415%3A0xc63ad7541cb9e8a1!2sSitterson+Hall%2C+University+of+North+Carolina+at+Chapel+Hill%2C+Chapel+Hill%2C+NC+27514!5e0!3m2!1sen!2sus!4v1407797241270" width="380" height="300" frameborder="0" style="border:0"></iframe>');
+		}
 	}
 });
 
 $('#wifiLink').click(function() {
-	if ($('#wifi').is(':visible')) {
-		$('#wifi').hide();
+	if ($(this).hasClass('.mobile')) {
+		document.location = "./wifi.html";
 	} else {
-		$('#wifi').show();
+		if ($('#wifi').is(':visible')) {
+			$('#wifi').hide();
+		} else {
+			$('#wifi').show();
+		}
 	}
 });
 
