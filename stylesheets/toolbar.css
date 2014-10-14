@@ -222,6 +222,11 @@
 	position: relative;
 }
 
+.toolbar #battery .icon {
+	max-height:1em;
+	max-width:.65em;
+}
+
 .toolbar .notificationCenter {
 	display: none;
 	top: 35px;
