@@ -43,7 +43,7 @@
 	-ms-writing-mode: lr-tb;
 	-webkit-writing-mode: horizontal-tb;
 	-moz-writing-mode: horizontal-tb;
-	-ms-writing-mode: horizontal-tb;				
+	-ms-writing-mode: horizontal-tb;
 	writing-mode: horizontal-tb;
 }
 
@@ -81,7 +81,7 @@
 	left:0;
 	right: 0;
 	top: 0;
-	bottom: 0;  
+	bottom: 0;
 	border-radius: 2px;
 	-webkit-border-radius: 2px;
 	padding: 10px;
@@ -105,14 +105,14 @@
 	right: 20px;
 }
 
-#mentorsLink {
+/*#mentorsLink {
 	display: none;
-}
+}*/
 
 .mobile .desktopIcons {
 	-webkit-writing-mode: horizontal-tb;
 	-moz-writing-mode: horizontal-tb;
-	-ms-writing-mode: horizontal-tb;				
+	-ms-writing-mode: horizontal-tb;
 	writing-mode: horizontal-tb;
 	text-align: left;
 }
