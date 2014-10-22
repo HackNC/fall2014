@@ -214,11 +214,11 @@ Menu.prototype = {
 			$('.slogan').text("WOW HACK. SUCH COUNTRY");	
 			var i = 0;
 			$('.icon img').each(function() {
-				$(this).attr("src", "./images/doge/icon/(" + ++i + ").jpg");
+				$(this).attr("src", "./images/doge/icon/i (" + ++i + ").jpg");
 			});
 			var i = 0;
 			$('.sponsor img').each(function() {
-				$(this).attr("src", "./images/doge/sponsor/(" + ++i + ").jpg");
+				$(this).attr("src", "./images/doge/sponsor/s (" + ++i + ").jpg");
 			});
 			$('background img').attr("src", "./images/doge/background.jpg");
 		});
